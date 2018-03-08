@@ -13,6 +13,7 @@ public class FrontPageController {
     @RequestMapping("/")
     @CrossOrigin
     public String index(){
+
         return "index.html";
     }
 
