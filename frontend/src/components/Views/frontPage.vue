@@ -1,5 +1,14 @@
 <template>
+<<<<<<< HEAD
   <div id="divPage" v-if="authorized">
+=======
+<<<<<<< HEAD
+  <div id="divPage" v-if="authorized">
+=======
+
+  <div id="divPage">
+>>>>>>> 144cc515b719d059d19d5c418d8152fb8ef731da
+>>>>>>> 7e3e1682b882e96d4c92197d4706e1aec671b47c
     <div id="blur"></div>
 
     <div id="navBar">
@@ -60,11 +69,22 @@
       </div>
     </div>
   </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 144cc515b719d059d19d5c418d8152fb8ef731da
+>>>>>>> 7e3e1682b882e96d4c92197d4706e1aec671b47c
 </template>
 
 <script>
 
   //import Alert from '../Modals/alert.vue';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7e3e1682b882e96d4c92197d4706e1aec671b47c
   import axios from 'axios';
 
 
@@ -74,6 +94,17 @@
     // mounted(){
     //   this.authorize();
     // },
+<<<<<<< HEAD
+=======
+=======
+
+
+
+
+  export default{
+    name: 'index',
+>>>>>>> 144cc515b719d059d19d5c418d8152fb8ef731da
+>>>>>>> 7e3e1682b882e96d4c92197d4706e1aec671b47c
     components: { },
     methods: {
       alertDisplay(){
@@ -81,7 +112,15 @@
           title:"Solar panel",
           html:
           '<p>Dimension <br/>' +
+<<<<<<< HEAD
           '<p>Estimated output voltage: ' + this.posts[0].value +
+=======
+<<<<<<< HEAD
+          '<p>Estimated output voltage: ' + this.posts[0].value +
+=======
+          '<p>Estimated output voltage: <br/>' +
+>>>>>>> 144cc515b719d059d19d5c418d8152fb8ef731da
+>>>>>>> 7e3e1682b882e96d4c92197d4706e1aec671b47c
           '<p>Daily power output: <br/>' +
           '<p>Yearly power output <br/>'+
           '<p>Monthly power output: <br/>',
@@ -89,6 +128,10 @@
           showCancelButton: true,
           focusConfirm: false,
         });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7e3e1682b882e96d4c92197d4706e1aec671b47c
       },
       async authorize() {
 
@@ -200,6 +243,16 @@
         authorized:false,
         posts: [],
         errors: []
+<<<<<<< HEAD
+=======
+=======
+      }
+    },
+    data () {
+      return {
+
+>>>>>>> 144cc515b719d059d19d5c418d8152fb8ef731da
+>>>>>>> 7e3e1682b882e96d4c92197d4706e1aec671b47c
       };
     }
   };

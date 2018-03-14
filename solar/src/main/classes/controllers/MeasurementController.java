@@ -1,6 +1,10 @@
 package main.classes.controllers;
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7e3e1682b882e96d4c92197d4706e1aec671b47c
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
@@ -14,11 +18,30 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 @RestController
+<<<<<<< HEAD
+=======
+=======
+import main.classes.models.Measurement;
+import main.classes.services.MeasurementService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.List;
+
+@Controller
+>>>>>>> 144cc515b719d059d19d5c418d8152fb8ef731da
+>>>>>>> 7e3e1682b882e96d4c92197d4706e1aec671b47c
 public class MeasurementController {
 
     @Autowired
     MeasurementService ms;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7e3e1682b882e96d4c92197d4706e1aec671b47c
     @RequestMapping(value ="/measurements", method= RequestMethod.GET, produces={"application/json"} )
 
     @CrossOrigin
@@ -89,6 +112,16 @@ public class MeasurementController {
 
         }
 
+<<<<<<< HEAD
+=======
+=======
+    @RequestMapping("/measurements")
+    @CrossOrigin
+    public List<Measurement> getMeasurements(){
+
+        return ms.getAllMeasurements();
+>>>>>>> 144cc515b719d059d19d5c418d8152fb8ef731da
+>>>>>>> 7e3e1682b882e96d4c92197d4706e1aec671b47c
 
     }
 
