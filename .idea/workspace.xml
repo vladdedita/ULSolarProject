@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="316c03e6-2cef-42d7-bc77-a26707b94821" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" afterPath="$PROJECT_DIR$/frontend/package.json" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Views/frontPage.vue" afterPath="$PROJECT_DIR$/frontend/src/components/Views/frontPage.vue" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.js" afterPath="$PROJECT_DIR$/frontend/src/main.js" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/router/index.js" afterPath="$PROJECT_DIR$/frontend/src/router/index.js" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/index.html" afterPath="$PROJECT_DIR$/frontend/target/dist/index.html" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/css/app.26df0e2736c5d463df17d806421b94e1.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/css/app.26df0e2736c5d463df17d806421b94e1.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/app.19f4c16d1f383d480cb1.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/app.19f4c16d1f383d480cb1.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterPath="$PROJECT_DIR$/frontend/target/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/vendor.8bd4e0893fab156a96a3.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/vendor.8bd4e0893fab156a96a3.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/frontend-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/frontend/target/frontend-1.0-SNAPSHOT.jar" />
+      <change beforePath="$PROJECT_DIR$/solar/pom.xml" afterPath="$PROJECT_DIR$/solar/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/solar/solar.iml" afterPath="$PROJECT_DIR$/solar/solar.iml" />
+      <change beforePath="$PROJECT_DIR$/solar/src/main/classes/controllers/MeasurementController.java" afterPath="$PROJECT_DIR$/solar/src/main/classes/controllers/MeasurementController.java" />
+      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/index.html" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/index.html" />
+      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" />
+      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/classes/controllers/MeasurementController.class" afterPath="$PROJECT_DIR$/solar/target/classes/main/classes/controllers/MeasurementController.class" />
+      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/index.html" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/index.html" />
+      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" />
+      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/index.html" afterPath="$PROJECT_DIR$/solar/target/classes/public/index.html" />
+      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" />
+      <change beforePath="$PROJECT_DIR$/solar/target/solar-0.0.1-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/solar/target/solar-0.0.1-SNAPSHOT.jar" />
+      <change beforePath="$PROJECT_DIR$/solar/target/solar-0.0.1-SNAPSHOT.jar.original" afterPath="$PROJECT_DIR$/solar/target/solar-0.0.1-SNAPSHOT.jar.original" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/backend/target/" />
+    <ignored path="$PROJECT_DIR$/frontend/target/" />
+    <ignored path="$PROJECT_DIR$/solar/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="solar@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="frontPage.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/Views/frontPage.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="143" column="0" lean-forward="true" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+              <folding>
+                <element signature="n#div#0;n#template#0;n#!!top" expanded="false" />
+                <marker date="1521050983078" expanded="true" signature="2051:2081" ph="..." />
+                <marker date="1521050983078" expanded="true" signature="2084:2147" ph="..." />
+                <marker date="1521050983078" expanded="true" signature="2150:2190" ph="..." />
+                <marker date="1521050983078" expanded="true" signature="2193:2232" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/solar/src/main/classes/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MeasurementController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/solar/src/main/classes/controllers/MeasurementController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="71" column="31" lean-forward="false" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MeasurementService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/solar/src/main/classes/services/MeasurementService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FrontPageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/solar/src/main/classes/controllers/FrontPageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/router/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+              <folding>
+                <element signature="e#107#155#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>index:</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/my-project/src/components/frontPage.vue" />
+        <option value="$PROJECT_DIR$/my-project/src/components/alert.vue" />
+        <option value="$PROJECT_DIR$/my-project/postcss.config.js" />
+        <option value="$PROJECT_DIR$/my-project/src/components/Modals/popup.vue" />
+        <option value="$PROJECT_DIR$/my-project/src/App.vue" />
+        <option value="$PROJECT_DIR$/my-project/index.html" />
+        <option value="$PROJECT_DIR$/my-project/package.json" />
+        <option value="$PROJECT_DIR$/my-project/src/components/Modals/alert.vue" />
+        <option value="$PROJECT_DIR$/my-project/src/main.js" />
+        <option value="$PROJECT_DIR$/my-project/src/router/index.js" />
+        <option value="$PROJECT_DIR$/my-project/src/components/Views/frontPage.vue" />
+        <option value="$PROJECT_DIR$/my-project/config/index.js" />
+        <option value="$PROJECT_DIR$/backend/src/main/Main.java" />
+        <option value="$PROJECT_DIR$/backend/pom.xml" />
+        <option value="$PROJECT_DIR$/backend/src/Main.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/frontend/pom.xml" />
+        <option value="$PROJECT_DIR$/solar/src/main/resources/applicaton.properties" />
+        <option value="$PROJECT_DIR$/solar/src/main/classes/Main.java" />
+        <option value="$PROJECT_DIR$/solar/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/solar/src/main/classes/daos/MeasurementDao.java" />
+        <option value="$PROJECT_DIR$/solar/src/main/classes/services/MeasurementService.java" />
+        <option value="$PROJECT_DIR$/solar/src/main/classes/models/Measurement.java" />
+        <option value="$PROJECT_DIR$/solar/src/main/classes/controllers/FrontPageController.java" />
+        <option value="$PROJECT_DIR$/solar/pom.xml" />
+        <option value="$PROJECT_DIR$/frontend/src/main.js" />
+        <option value="$PROJECT_DIR$/solar/src/main/classes/models/SolarPanel.java" />
+        <option value="$PROJECT_DIR$/frontend/src/router/index.js" />
+        <option value="$PROJECT_DIR$/solar/src/main/classes/controllers/MeasurementController.java" />
+        <option value="$PROJECT_DIR$/frontend/src/components/Views/frontPage.vue" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/frontend/node/node_modules" />
+    <handled-path value="$PROJECT_DIR$/frontend/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="735" />
+    <option name="height" value="604" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="solar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="solar_v2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="solar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="solar_v2" type="462c0819:PsiDirectoryNode" />
+              <item name="solar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="solar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="solar_v2" type="462c0819:PsiDirectoryNode" />
+              <item name="solar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="solar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="solar_v2" type="462c0819:PsiDirectoryNode" />
+              <item name="solar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="solar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="solar_v2" type="462c0819:PsiDirectoryNode" />
+              <item name="solar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="solar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="solar_v2" type="462c0819:PsiDirectoryNode" />
+              <item name="solar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="solar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="solar_v2" type="462c0819:PsiDirectoryNode" />
+              <item name="solar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/solar/src/main/resources" />
+      <recent name="$PROJECT_DIR$/solar/src/main" />
+      <recent name="$PROJECT_DIR$/solar/src" />
+      <recent name="$PROJECT_DIR$/solar" />
+      <recent name="$PROJECT_DIR$/my-project/node_modules/vue-popup/lib" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="main.classes.Main" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="/usr/lib/jvm/java-1.8.0-openjdk-amd64" />
+      <module name="solar" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="Main" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="/usr/lib/jvm/java-1.8.0-openjdk-amd64" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="316c03e6-2cef-42d7-bc77-a26707b94821" name="Default" comment="" />
+      <created>1520335862014</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1520335862014</updated>
+      <workItem from="1520335867371" duration="6697000" />
+      <workItem from="1520343638352" duration="11906000" />
+      <workItem from="1520357858888" duration="469000" />
+      <workItem from="1520360333130" duration="1667000" />
+      <workItem from="1520362392837" duration="2010000" />
+      <workItem from="1520502791212" duration="1467000" />
+      <workItem from="1520505110019" duration="2703000" />
+      <workItem from="1520508716416" duration="9446000" />
+      <workItem from="1520872352946" duration="129000" />
+      <workItem from="1520873530787" duration="821000" />
+      <workItem from="1520945321314" duration="3886000" />
+      <workItem from="1521025531972" duration="49000" />
+      <workItem from="1521025665892" duration="23800000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="65050000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="65" y="-4" width="1537" height="1212" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969034" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969034" sideWeight="0.5022801" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32969034" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2495114" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13811074" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="SQL Generator" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969034" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969034" sideWeight="0.49771988" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Authorization" />
+    <option name="LAST_COMMIT_MESSAGE" value="Authorization" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="7" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/backend/src/Main.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/frontend/src/router/index.js" />
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Views/frontPage.vue" />
+    <entry file="file://$PROJECT_DIR$/my-project/src/components/Modals/alert.vue" />
+    <entry file="file://$PROJECT_DIR$/frontend/src/App.vue" />
+    <entry file="file://$PROJECT_DIR$/frontend/src/main.js" />
+    <entry file="file://$PROJECT_DIR$/my-project/src/components/Modals/popup.vue" />
+    <entry file="file://$PROJECT_DIR$/frontend/node_modules/vue-popup/lib/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/node_modules/vue-popup/lib/postcss.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-project/src/components/Modals/popup.vue" />
+    <entry file="file://$PROJECT_DIR$/frontend/src/App.vue" />
+    <entry file="file://$PROJECT_DIR$/my-project/src/components/Modals/alert.vue" />
+    <entry file="file://$PROJECT_DIR$/frontend/package.json" />
+    <entry file="file://$PROJECT_DIR$/frontend/config/index.js" />
+    <entry file="file://$PROJECT_DIR$/backend/pom.xml" />
+    <entry file="uml://SpringLocalModels/module=backend">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>SpringLocalModels</ID>
+          <OriginalElement>module=backend</OriginalElement>
+          <nodes>
+            <node x="" y="">module=backend</node>
+            <node x="" y="">fileset=backend/Main</node>
+            <node x="" y="">Main</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration.ThymeleafViewResolverConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration.ThymeleafConditionalCommentsDialectConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration.ThymeleafSecurityDialectConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration.DataAttributeDialectConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration.ThymeleafWebLayoutConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration.ThymeleafDefaultConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration.DefaultTemplateResolverConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.web.JacksonHttpMessageConvertersConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.web.JacksonHttpMessageConvertersConfiguration.MappingJackson2XmlHttpMessageConverterConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.web.JacksonHttpMessageConvertersConfiguration.MappingJackson2HttpMessageConverterConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration.DispatcherServletConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration.RabbitConnectionFactoryCreator</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration.ApplicationWebSecurityConfigurerAdapter</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration.ApplicationNoWebSecurityConfigurerAdapter</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration.DefaultWebSecurityConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration.WebMvcSecurityConfigurationConditions</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration.WebMvcSecurityConfigurationConditions.DefaultWebMvcSecurityConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jta.AtomikosJtaConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jta.AtomikosJtaConfiguration.AtomikosJtaJmsConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration.TransactionManagementConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.mobile.DeviceResolverAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.mobile.DeviceResolverAutoConfiguration.DeviceResolverMvcConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.reactor.ReactorAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.reactor.ReactorAutoConfiguration.ReactorConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration.MustacheWebConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.MessageSourceAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.PropertyPlaceholderAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jms.JmsAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jms.JmsAnnotationDrivenConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jms.JndiConnectionFactoryAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jms.hornetq.HornetQConnectionFactoryConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jms.hornetq.HornetQAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jms.hornetq.HornetQXAConnectionFactoryConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jms.hornetq.HornetQEmbeddedServerConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jms.activemq.ActiveMQXAConnectionFactoryConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jms.activemq.ActiveMQAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jms.activemq.ActiveMQConnectionFactoryConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jta.JndiJtaConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jta.BitronixJtaConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.web.GzipFilterAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.web.HttpEncodingAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.web.MultipartAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.amqp.RabbitAnnotationDrivenConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.data.rest.SpringBootRepositoryRestMvcConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.data.solr.SolrRepositoriesAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchRepositoriesAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jdbc.EmbeddedDataSourceConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jdbc.JndiDataSourceAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.solr.SolrAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.cloud.CloudAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.mongo.MongoDataAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.security.AuthenticationManagerConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.security.BootGlobalAuthenticationConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.elasticsearch.ElasticsearchDataAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.elasticsearch.ElasticsearchAutoConfiguration</node>
+            <node x="" y="">org.springframework.cache.annotation.ProxyCachingConfiguration</node>
+            <node x="" y="">org.springframework.context.annotation.LoadTimeWeavingConfiguration</node>
+            <node x="" y="">org.springframework.context.annotation.MBeanExportConfiguration</node>
+            <node x="" y="">org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration</node>
+            <node x="" y="">org.springframework.scheduling.annotation.ProxyAsyncConfiguration</node>
+            <node x="" y="">org.springframework.scheduling.annotation.SchedulingConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayJpaDependencyConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration.LiquibaseJpaDependencyConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration.LiquibaseConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration.JodaDateTimeJacksonConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration.JacksonObjectMapperConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.aop.AopAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.aop.AopAutoConfiguration.CglibAutoProxyConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.aop.AopAutoConfiguration.JdkDynamicAutoProxyConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration.GroovyWebConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration.GroovyMarkupConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration.EmbeddedUndertow</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration.EmbeddedJetty</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration.EmbeddedTomcat</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.JpaWebConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.JpaWebConfiguration.JpaWebMvcConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration.TomcatDataSourceJmxConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration.JdbcTemplateConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration.DataSourceInitializerConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.social.SocialWebAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.social.SocialWebAutoConfiguration.SpringSocialThymeleafConfig</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.social.SocialWebAutoConfiguration.AuthenticationUserIdSourceConfig</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.social.SocialWebAutoConfiguration.AnonymousUserIdSourceConfig</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.social.SocialWebAutoConfiguration.SocialAutoConfigurationAdapter</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration.JpaBatchConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.social.TwitterAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.social.TwitterAutoConfiguration.TwitterConfigurerAdapter</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.social.FacebookAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.social.FacebookAutoConfiguration.FacebookConfigurerAdapter</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.social.LinkedInAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.social.LinkedInAutoConfiguration.LinkedInConfigurerAdapter</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.mobile.SitePreferenceAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.mobile.SitePreferenceAutoConfiguration.SitePreferenceMvcConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration.EntityLinksConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration.HypermediaConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration.EnableWebMvcConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter.FaviconConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration.UndertowWebSocketConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration.JettyWebSocketConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration.TomcatWebSocketConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.redis.RedisAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.redis.RedisAutoConfiguration.RedisConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.redis.RedisAutoConfiguration.RedisPooledConnectionConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.redis.RedisAutoConfiguration.RedisConnectionConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.mobile.DeviceDelegatingViewResolverAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.mobile.DeviceDelegatingViewResolverAutoConfiguration.DeviceDelegatingViewResolverConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.mobile.DeviceDelegatingViewResolverAutoConfiguration.DeviceDelegatingViewResolverConfiguration.InternalResourceViewResolverDelegateConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.mobile.DeviceDelegatingViewResolverAutoConfiguration.DeviceDelegatingViewResolverConfiguration.ThymeleafViewResolverViewResolverDelegateConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration.CommonsDbcpPoolDataSourceMetadataProviderConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration.HikariPoolDataSourceMetadataProviderConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration.TomcatDataSourcePoolMetadataProviderConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.web.GsonHttpMessageConvertersConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.web.GsonHttpMessageConvertersConfiguration.GsonHttpMessageConverterConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.velocity.VelocityAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.velocity.VelocityAutoConfiguration.VelocityWebConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.velocity.VelocityAutoConfiguration.VelocityNonWebConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration.FreeMarkerWebConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration.FreeMarkerNonWebConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration.IntegrationJmxConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration.IntegrationConfiguration</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.SpringBootApplication</node>
+            <node x="" y="">fileset=backend/Main MVC</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.06932303313681643" x="468.0" y="4909.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Show filesets as groups</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/Main.java" />
+    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-dependencies/2.0.0.RELEASE/spring-boot-dependencies-2.0.0.RELEASE.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="2695" column="16" lean-forward="false" selection-start-line="2695" selection-start-column="16" selection-end-line="2695" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/solar/src/main/resources/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/model.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/fe98e7d7-d128-4bb5-b8d2-da6cfe615428/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/Daos.java" />
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/daos/MeasurementDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/ef8eff0b/fe98e7d7-d128-4bb5-b8d2-da6cfe615428/solar.Measurement">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/HelloWorld.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="51" lean-forward="false" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="50" column="21" lean-forward="false" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/models/SolarPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/models/Measurement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.2/gson-2.8.2.jar!/com/google/gson/Gson.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.4/jackson-databind-2.9.4.jar!/com/fasterxml/jackson/databind/ObjectMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.4.RELEASE/spring-webmvc-5.0.4.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.4.RELEASE/spring-webmvc-5.0.4.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="495" column="0" lean-forward="false" selection-start-line="495" selection-start-column="0" selection-end-line="495" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.4.RELEASE/spring-webmvc-5.0.4.RELEASE.jar!/org/springframework/web/servlet/mvc/method/AbstractHandlerMethodAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.4.RELEASE/spring-webmvc-5.0.4.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="430" column="0" lean-forward="false" selection-start-line="430" selection-start-column="0" selection-end-line="430" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.4.RELEASE/spring-webmvc-5.0.4.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="422" column="0" lean-forward="false" selection-start-line="422" selection-start-column="0" selection-end-line="422" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.28/tomcat-embed-core-8.5.28.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.28/tomcat-embed-websocket-8.5.28.jar!/org/apache/tomcat/websocket/server/WsFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="46" column="18" lean-forward="true" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding>
+            <element signature="e#107#155#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/controllers/FrontPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/services/MeasurementService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.4.RELEASE/spring-web-5.0.4.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/controllers/MeasurementController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="71" column="31" lean-forward="false" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Views/frontPage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="143" column="0" lean-forward="true" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#0;n#template#0;n#!!top" expanded="false" />
+            <marker date="1521050983078" expanded="true" signature="2051:2081" ph="..." />
+            <marker date="1521050983078" expanded="true" signature="2084:2147" ph="..." />
+            <marker date="1521050983078" expanded="true" signature="2150:2190" ph="..." />
+            <marker date="1521050983078" expanded="true" signature="2193:2232" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>frontend</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.2.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
