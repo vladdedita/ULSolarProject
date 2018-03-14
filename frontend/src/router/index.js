@@ -3,9 +3,14 @@ import Router from 'vue-router'
 
 // import HelloWorld from '@/components/HelloWorld'
 import Index from '@/components/Views/frontPage'
+<<<<<<< HEAD
 import VueCookies from 'vue-cookies';
 Vue.use(Router)
 Vue.use(VueCookies)
+=======
+
+Vue.use(Router)
+>>>>>>> 144cc515b719d059d19d5c418d8152fb8ef731da
 
 export default new Router({
   routes: [
@@ -14,6 +19,7 @@ export default new Router({
       name: 'index',
       component: Index
     }
+<<<<<<< HEAD
     //
     // {
     //   path: '/measurements',
@@ -25,5 +31,8 @@ export default new Router({
     //   name: 'measurements',
     //   component: Index
     // }
+=======
+
+>>>>>>> 144cc515b719d059d19d5c418d8152fb8ef731da
   ]
 })

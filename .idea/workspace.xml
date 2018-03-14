@@ -68,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/frontend/src/components/Views/frontPage.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="143" column="0" lean-forward="true" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+              <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
               <folding>
                 <element signature="n#div#0;n#template#0;n#!!top" expanded="false" />
                 <marker date="1521050983078" expanded="true" signature="2051:2081" ph="..." />
@@ -463,16 +463,15 @@
       <workItem from="1520873530787" duration="821000" />
       <workItem from="1520945321314" duration="3886000" />
       <workItem from="1521025531972" duration="49000" />
-      <workItem from="1521025665892" duration="23800000" />
+      <workItem from="1521025665892" duration="23814000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65050000" />
+    <option name="totallyTimeSpent" value="65064000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1537" height="1212" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -966,7 +965,7 @@
     <entry file="file://$PROJECT_DIR$/frontend/src/components/Views/frontPage.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="143" column="0" lean-forward="true" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+          <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
           <folding>
             <element signature="n#div#0;n#template#0;n#!!top" expanded="false" />
             <marker date="1521050983078" expanded="true" signature="2051:2081" ph="..." />

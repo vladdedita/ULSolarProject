@@ -1,5 +1,10 @@
 <template>
+<<<<<<< HEAD
   <div id="divPage" v-if="authorized">
+=======
+
+  <div id="divPage">
+>>>>>>> 144cc515b719d059d19d5c418d8152fb8ef731da
     <div id="blur"></div>
 
     <div id="navBar">
@@ -60,11 +65,16 @@
       </div>
     </div>
   </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 144cc515b719d059d19d5c418d8152fb8ef731da
 </template>
 
 <script>
 
   //import Alert from '../Modals/alert.vue';
+<<<<<<< HEAD
   import axios from 'axios';
 
 
@@ -74,6 +84,14 @@
     // mounted(){
     //   this.authorize();
     // },
+=======
+
+
+
+
+  export default{
+    name: 'index',
+>>>>>>> 144cc515b719d059d19d5c418d8152fb8ef731da
     components: { },
     methods: {
       alertDisplay(){
@@ -81,7 +99,11 @@
           title:"Solar panel",
           html:
           '<p>Dimension <br/>' +
+<<<<<<< HEAD
           '<p>Estimated output voltage: ' + this.posts[0].value +
+=======
+          '<p>Estimated output voltage: <br/>' +
+>>>>>>> 144cc515b719d059d19d5c418d8152fb8ef731da
           '<p>Daily power output: <br/>' +
           '<p>Yearly power output <br/>'+
           '<p>Monthly power output: <br/>',
@@ -89,6 +111,7 @@
           showCancelButton: true,
           focusConfirm: false,
         });
+<<<<<<< HEAD
       },
       async authorize() {
 
@@ -200,6 +223,13 @@
         authorized:false,
         posts: [],
         errors: []
+=======
+      }
+    },
+    data () {
+      return {
+
+>>>>>>> 144cc515b719d059d19d5c418d8152fb8ef731da
       };
     }
   };

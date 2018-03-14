@@ -1,6 +1,7 @@
 package main.classes.controllers;
 
 
+<<<<<<< HEAD
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
@@ -14,11 +15,24 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 @RestController
+=======
+import main.classes.models.Measurement;
+import main.classes.services.MeasurementService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.List;
+
+@Controller
+>>>>>>> 144cc515b719d059d19d5c418d8152fb8ef731da
 public class MeasurementController {
 
     @Autowired
     MeasurementService ms;
 
+<<<<<<< HEAD
     @RequestMapping(value ="/measurements", method= RequestMethod.GET, produces={"application/json"} )
 
     @CrossOrigin
@@ -89,6 +103,13 @@ public class MeasurementController {
 
         }
 
+=======
+    @RequestMapping("/measurements")
+    @CrossOrigin
+    public List<Measurement> getMeasurements(){
+
+        return ms.getAllMeasurements();
+>>>>>>> 144cc515b719d059d19d5c418d8152fb8ef731da
 
     }
 
