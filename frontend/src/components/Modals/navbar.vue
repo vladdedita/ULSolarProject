@@ -15,7 +15,6 @@
         <div class="opac"></div>
         <p><router-link to="/statistics" class="navBarChoiceLink">Statistics</router-link></p>
       </div>
-
       <div class="navBarChoice">
         <div class="opac"></div>
         <p>Device Management</p>
@@ -31,11 +30,10 @@
 </template>
 <script>
   export default {
-    name:'navbar',
-    data() {}
+    name:'navbar'
   }
 </script>
-<style>
+<style scoped>
   #navBar {
 
     position: relative;

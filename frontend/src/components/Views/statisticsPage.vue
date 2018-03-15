@@ -1,6 +1,5 @@
 <template>
   <pageLayout>
-
     <line-chart :chart-data="this.datacollection" :options="this.chartOptions"></line-chart>
   </pageLayout>
 </template>
