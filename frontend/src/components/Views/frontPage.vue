@@ -1,71 +1,22 @@
 <template>
-  <div id="divPage" v-if="authorized">
-    <div id="blur"></div>
 
-    <div id="navBar">
+      <pageLayout v-if="authorized">
 
-      <div id="navBarIcon">
-        <img src="../../utils/icon1.png" />
-      </div>
-      <div id="navBarMenu">
+        <solarpanel style="width:10%; height: 10%;"></solarpanel>
+        <solarpanel style="width:15%; height: 15%;"></solarpanel>
+        <solarpanel style="width:20%; height: 20%;"></solarpanel>
+        <solarpanel style="width:30%; height: 30%;"></solarpanel>
+    </pageLayout>
 
-        <div class="navBarChoice">
-          <div class="opac"></div>
-          <p>Homepage</p>
-        </div>
-        <div class="navBarChoice">
-          <div class="opac"></div>
-          <p>Statistics</p>
-        </div>
-
-        <div class="navBarChoice">
-          <div class="opac"></div>
-          <p>Device Management</p>
-        </div>
-        <div class="navBarChoice">
-          <div class="opac"></div>
-          <p>Authorize device</p>
-        </div>
-      </div>
-
-    </div>
-
-    <div id="divPageDiv">
-      <div class="opac"></div>
-      <div id="divPageFlexbox">
-
-
-        <div class="divPageFlexboxDiv">
-
-
-          <img src="../../utils/solar_panel_tr.png" v-on:click="alertDisplay" style="width:10%; height:10%">
-
-
-          <img src="../../utils/solar_panel_tr.png"  v-on:click="alertDisplay" style="width:15%; height:15%"/>
-
-          <img src="../../utils/solar_panel_tr.png"  v-on:click="alertDisplay" style="width:20%; height:20%"/>
-        </div>
-
-        <div class="divPageFlexboxDiv">
-          <img src="../../utils/solar_panel_tr.png"  v-on:click="alertDisplay" style="width:30%; height:30%"/>
-        </div>
-        <div class="divPageFlexboxDiv">
-          <img src="../../utils/solar_panel_tr.png"  v-on:click="alertDisplay" style="width:30%; height:30%"/>
-        </div>
-        <div class="divPageFlexboxDiv">
-          <img src="../../utils/solar_panel_tr.png"  v-on:click="alertDisplay" style="width:30%; height:30%"/>
-
-        </div>
-
-      </div>
-    </div>
-  </div>
 </template>
 
 <script>
 
   //import Alert from '../Modals/alert.vue';
   import axios from 'axios';
+  //import navbar from '../Modals/navbar.vue';
+  import pageLayout from '../Modals/page.vue'
+  import solarpanel from "../Modals/solarPanel";
 
 
   export default{
@@ -74,22 +25,12 @@
     // mounted(){
     //   this.authorize();
     // },
-    components: { },
+    components: {
+      solarpanel,
+      pageLayout
+    },
     methods: {
-      alertDisplay(){
-        this.$swal({
-          title:"Solar panel",
-          html:
-          '<p>Dimension <br/>' +
-          '<p>Estimated output voltage: ' + this.posts[0].value +
-          '<p>Daily power output: <br/>' +
-          '<p>Yearly power output <br/>'+
-          '<p>Monthly power output: <br/>',
-          showCloseButton: true,
-          showCancelButton: true,
-          focusConfirm: false,
-        });
-      },
+
       async authorize() {
 
         if(!this.$cookies.isKey('devName') && !this.$cookies.isKey('appKey')) {
@@ -197,7 +138,7 @@
     },
     data () {
       return {
-        authorized:false,
+        authorized:true,
         posts: [],
         errors: []
       };
@@ -213,81 +154,6 @@
 
     /*border-color: white;*/
     /*border-style: solid;*/
-
-  }
-
-  #navBar {
-
-    position: relative;
-    width:90%;
-    height: 256px;
-    margin:auto;
-    margin-top:10px;
-    margin-bottom:10px;
-
-    display: block;
-
-  }
-
-  #navBarMenu{
-
-    display: block;
-    position: relative;
-    margin-top:5%;
-    width:60%;
-    height: 50%;
-    float:right;
-
-  }
-
-  #navBarIcon{
-
-    position:relative;
-    width:38%;
-    height: auto;
-    float:left;
-
-  }
-  #navBarIcon > img {
-
-    height: 256px;
-    width:256px;
-    margin-left:30%;
-  }
-  .navBarChoice{
-
-    position: relative;
-    display:block;
-    width:24%;
-    height: 80%;
-    text-align: center;
-    float:left;
-    border: solid white;
-    border-top-width: 0;
-    border-left-width: 0;
-
-  }
-
-  .navBarChoice:hover {
-
-    background: lightblue;
-
-  }
-  .navBarChoice:hover > p {
-    color:darkblue;
-  }
-  .navBarChoice:hover > .opac {
-    display: none;
-  }
-  .navBarChoice > p {
-
-    text-align: center;
-    vertical-align: middle;
-    font-size:18px;
-    color:white;
-    line-height: 65px;
-    font-family: "DejaVu Sans";
-    z-index: 2;
 
   }
 
@@ -348,29 +214,6 @@
 
   }
 
-  .divPageFlexboxDiv {
 
-    position: relative;
-    margin:auto;
-    width:80%;
-    height: auto;
-    /*border-color:darkorchid;*/
-
-  }
-  .divPageFlexboxDiv > img {
-
-    display: block;
-    position: relative;
-    margin:auto;
-
-  }
-  .divPageFlexboxDiv > img:hover {
-
-    background: lightblue;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-
-  }
 
 </style>
