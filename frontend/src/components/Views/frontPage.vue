@@ -6,6 +6,7 @@
         <solarpanel style="width:15%; height: 15%;"></solarpanel>
         <solarpanel style="width:20%; height: 20%;"></solarpanel>
         <solarpanel style="width:30%; height: 30%;"></solarpanel>
+        <solarpanel style="width:40%; height: 40%;"></solarpanel>
     </pageLayout>
 
 </template>
@@ -30,7 +31,6 @@
       pageLayout
     },
     methods: {
-
       async authorize() {
 
         if(!this.$cookies.isKey('devName') && !this.$cookies.isKey('appKey')) {
@@ -146,74 +146,5 @@
   };
 </script>
 
-<style scoped>
-
-
-
-  div{
-
-    /*border-color: white;*/
-    /*border-style: solid;*/
-
-  }
-
-  #divPage{
-
-    position: relative;
-    width:100%;
-    height: auto;
-
-    /*border-color:green;*/
-
-  }
-  #blur {
-
-    position: absolute;
-    background: url("../../utils/3.jpeg") no-repeat;
-    width:100%;
-    height:100%;
-    background-size:cover;
-    -webkit-filter: blur(4px);
-    -moz-filter: blur(4px);
-    -ms-filter: blur(4px);
-    -o-filter: blur(4px);
-    filter: blur(3px);
-    /*border-color:red;*/
-    /*border-style: solid;*/
-    z-index: -1;
-  }
-  .opac{
-    position: absolute;
-    background-color: #86a6b4;
-    opacity:0.3;
-    width:100%;
-    height: 100%;
-    z-index:0;
-  }
-
-  #divPageDiv{
-    position: relative;
-    margin:auto;
-    width:80%;
-    height: auto;
-    /*border-color:blue;*/
-  }
-
-  #divPageFlexbox{
-
-    position: relative;
-    width:80%;
-    min-height: 10%;
-    height: auto;
-    top:5%;
-    left:10%;
-    right: 10%;
-    bottom:5%;
-    /*border-style: solid;*/
-    /*border-color: #a50003;*/
-
-  }
-
-
-
+<style>
 </style>

@@ -2,13 +2,15 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 // import HelloWorld from '@/components/HelloWorld'
-import Index from '@/components/Views/frontPage'
-import Statistics from '@/components/Views/statisticsPage'
+import Index from '../components/Views/frontPage.vue'
+import Statistics from '../components/Views/statisticsPage.vue'
 import VueCookies from 'vue-cookies';
+
 Vue.use(Router)
 Vue.use(VueCookies)
 
 export default new Router({
+  name:'router',
   routes: [
     {
       path: '/',
@@ -31,5 +33,6 @@ export default new Router({
     //   name: 'measurements',
     //   component: Index
     // }
-  ]
+  ],
+  mode:'history'
 })
