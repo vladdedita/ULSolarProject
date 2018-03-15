@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 // import HelloWorld from '@/components/HelloWorld'
 import Index from '@/components/Views/frontPage'
+import Statistics from '@/components/Views/statisticsPage'
 import VueCookies from 'vue-cookies';
 Vue.use(Router)
 Vue.use(VueCookies)
@@ -13,6 +14,11 @@ export default new Router({
       path: '/',
       name: 'index',
       component: Index
+    },
+    {
+      path: '/statistics',
+      name: 'statistics',
+      component: Statistics
     }
     //
     // {
