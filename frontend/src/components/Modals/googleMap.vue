@@ -1,6 +1,11 @@
 <template>
 
-  <div class="google-map" id="mapName"></div>
+  <div>
+
+    <div class="google-map" id="mapName"></div>
+    <button v-bind:onclick="getPos()"></button>
+  </div>
+
 </template>
 
 <script>
@@ -38,7 +43,7 @@
           if(navigator.geolocation){
             console.log("Getting position...");
             navigator.geolocation.getCurrentPosition(function(position){
-              self.pos = {
+                self.pos = {
                   lat: position.coords.latitude,
                   lng: position.coords.longitude
                 };
@@ -52,6 +57,22 @@
                   map:map,
                   draggable:true
                 })
+
+
+                google.maps.event.addListener(marker, 'dragend', function(evt){
+                  self.pos.lat=evt.latLng.lat().toFixed(5);
+                  self.pos.lng=evt.latLng.lng().toFixed(5);
+
+                  infoWindow.setOptions({
+                    content: '<p>Marker dropped: Current Lat: ' + evt.latLng.lat().toFixed(3) + ' Current Lng: ' + evt.latLng.lng().toFixed(3) + '</p>'
+
+                  });
+                  infoWindow.open(map, marker);
+                });
+
+                google.maps.event.addListener(marker, 'drag', function(evt){
+                  console.log("marker is being dragged");
+                });
               },
               function() {
                 console.log("Success handling..");
@@ -70,6 +91,11 @@
           'Error: The Geolocation service failed.' :
           'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
+      },
+
+      getPos()
+      {
+        console.log("Latt: "+ this.pos.lat + " Lng: "+ this.pos.lng);
       }
 
     },
@@ -77,7 +103,6 @@
     mounted() {
 
       this.initMap()
-
 
     },
     data() {
