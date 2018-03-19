@@ -143,7 +143,7 @@
     },
     data () {
       return {
-        authorized:true,
+        authorized: true,
         posts: [],
         errors: []
       };

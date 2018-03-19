@@ -21,7 +21,7 @@
       </div>
       <div class="navBarChoice">
         <div class="opac"></div>
-        <p>Location</p>
+        <p><router-link to="/location" class="navBarChoiceLink">Location</router-link></p>
       </div>
 
       <div class="navBarChoice">
@@ -113,7 +113,8 @@
 
     text-align: center;
     vertical-align: middle;
-    font-size:18px;
+    font-size:15px;
+    font-style: bold;
     color:white;
     line-height: 65px;
     font-family: "DejaVu Sans";
