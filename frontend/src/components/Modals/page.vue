@@ -27,9 +27,9 @@
   html,body {
     height:100%;
     margin:0;
+    background-color:black;
   }
   #divPage{
-
     /*position: fixed;*/
     /*width: 100%;*/
     /*height: 100%;*/
@@ -43,7 +43,9 @@
   #blur {
 
     position: absolute;
-    background: url("../../utils/2.jpeg") no-repeat;
+    /*background: url("../../utils/1.jpeg") no-repeat;*/
+    background-color:black;
+    background-attachment: fixed;
     width:100%;
     height:100%;
     background-size:cover;

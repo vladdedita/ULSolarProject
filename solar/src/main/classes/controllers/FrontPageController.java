@@ -17,13 +17,5 @@ public class FrontPageController {
         return "index.html";
     }
 
-//    @RequestMapping("/statistics")
-//    @CrossOrigin
-//    public String statistics(){
-//
-//        return "statistics";
-//    }
-
-
 
 }

@@ -21,7 +21,12 @@
       </div>
       <div class="navBarChoice">
         <div class="opac"></div>
-        <p>Authorize device</p>
+        <p>Location</p>
+      </div>
+
+      <div class="navBarChoice">
+        <div class="opac"></div>
+        <p>About</p>
       </div>
     </div>
 
@@ -76,7 +81,7 @@
 
     position: relative;
     display:block;
-    width:24%;
+    width:19%;
     height: 80%;
     text-align: center;
     float:left;

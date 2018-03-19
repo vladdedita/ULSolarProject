@@ -39,6 +39,7 @@
             title: 'Authorization',
             confirmButtonText: 'Submit',
             confirmButtonClass: 'btn btn-success',
+
             html:
             '<input id="swal-input1" class="swal2-input" placeholder="Device name">' +
             '<input id="swal-input2" class="swal2-input" placeholder="App Access Key">' +
@@ -60,10 +61,12 @@
             console.log(this.authorized);
 
             if (this.authorized=='1') {
-              await this.$swal(
-                'Authorized!',
-                'Your app has been successfully authorized!',
-                'success'
+              await this.$swal({
+                title:'Authorized!',
+                text:'Your app has been successfully authorized!',
+                type:'success'
+
+              }
               );
               console.log("Here");
               if (formValues[2] == 1) {
@@ -96,10 +99,12 @@
             this.authorize();
           }
           else {
-            await this.$swal(
-              'Authorized by cookies!',
-              'Your app has been successfully authorized!',
-              'success'
+            await this.$swal({
+                title:'Authorized by cookies!',
+                text:'Your app has been successfully authorized!',
+                type:'success',
+                position:'top-end'
+              }
             );
           }
         }
