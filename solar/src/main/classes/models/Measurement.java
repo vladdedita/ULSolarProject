@@ -1,26 +1,32 @@
 package main.classes.models;
 
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
+@Table(name = "solar")
 public class Measurement {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name="measurement")
-    private String value;
+    @Column(name="power")
+    private String power;
 
-    @Column(name="date")
-    private String date;
+    @Column(name="time")
+    private @DateTimeFormat(pattern = "2018-03-27T13:52:39.057164Z yyyy-mm-ddThh:mm:ss") Date time;
 
-    protected Measurement(){}
+    protected Measurement(){
 
-    public Measurement(String value, String date) {
-        this.value = value;
-        this.date = date;
+    }
+
+    public Measurement(String power, Date time) {
+        this.power = power;
+        this.time = time;
     }
 
     public Integer getId() {
@@ -31,19 +37,19 @@ public class Measurement {
         this.id = id;
     }
 
-    public String getValue() {
-        return value;
+    public String getPower() {
+        return power;
     }
 
-    public void setValue(String value) {
-        this.value = value;
+    public void setPower(String power) {
+        this.power = power;
     }
 
-    public String getDate() {
-        return date;
+    public Date getTime() {
+        return time;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setTime(Date time) {
+        this.time = time;
     }
 }

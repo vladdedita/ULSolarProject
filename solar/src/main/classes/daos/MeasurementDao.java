@@ -8,5 +8,7 @@ public interface MeasurementDao extends CrudRepository<Measurement,Long> {
 
     public Measurement findById(Integer id);
 
+//    Query("SELECT * FROM solar WHERE time > ")
+//    public Measurement findMeasurementByTime(@Param("time") String time);
 
 }

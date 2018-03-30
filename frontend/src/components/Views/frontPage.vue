@@ -1,7 +1,25 @@
 <template>
 
-      <pageLayout v-if="authorized">
+      <!--<div>-->
+        <!--<full-page :options="options">-->
+          <!--<div class = "section">-->
+            <!--Home-->
+          <!--</div>-->
+         <!--<div class = "section">-->
+            <!--Location-->
+          <!--</div>-->
+         <!--<div class = "section">-->
+            <!--Statistics-->
+          <!--</div>-->
 
+        <!--</full-page>-->
+
+
+      <!--</div>-->
+
+
+
+      <pageLayout v-if="authorized">
         <solarpanel style="width:10%; height: 10%;"></solarpanel>
         <solarpanel style="width:15%; height: 15%;"></solarpanel>
         <solarpanel style="width:20%; height: 20%;"></solarpanel>
@@ -14,14 +32,15 @@
 <script>
 
   //import Alert from '../Modals/alert.vue';
+
+  import $ from 'jquery'
+
   import axios from 'axios';
   //import navbar from '../Modals/navbar.vue';
   import pageLayout from '../Modals/page.vue'
   import solarpanel from "../Modals/solarPanel";
 
-
   export default{
-
     name: 'index',
     // mounted(){
     //   this.authorize();
@@ -29,6 +48,7 @@
     components: {
       solarpanel,
       pageLayout
+
     },
     methods: {
       async authorize() {
@@ -127,13 +147,13 @@
       },
       getMeasurements(){
 
-        axios.get(window.ApiUrl + /measurements/)
-          .then(response=>{
-            this.posts=response.data;
-            console.log(this.posts)
-          })
-          .catch(e=>{console.log("ERROR:",e);
-          })
+        // axios.get(window.ApiUrl + /measurements/)
+        //   .then(response=>{
+        //     this.posts=response.data;
+        //     console.log(this.posts)
+        //   })
+        //   .catch(e=>{console.log("ERROR:",e);
+        //   })
       }
     },
 
@@ -145,7 +165,10 @@
       return {
         authorized: true,
         posts: [],
-        errors: []
+        errors: [],
+        options:{
+          paddingTop: '30px'
+        }
       };
     }
   };

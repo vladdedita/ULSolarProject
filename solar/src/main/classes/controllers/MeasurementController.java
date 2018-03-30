@@ -4,14 +4,15 @@ package main.classes.controllers;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
+import main.classes.models.Measurement;
 import main.classes.services.MeasurementService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 @RestController
 public class MeasurementController {
@@ -19,8 +20,12 @@ public class MeasurementController {
     @Autowired
     MeasurementService ms;
 
-    @RequestMapping(value ="/measurements", method= RequestMethod.GET, produces={"application/json"} )
+    @Autowired
+    APIController ttn;
 
+
+
+    @RequestMapping(value ="/measurements", method= RequestMethod.GET, produces={"application/json"} )
     @CrossOrigin
     public @ResponseBody String getMeasurements(){
 
@@ -36,8 +41,6 @@ public class MeasurementController {
     @CrossOrigin
     public Integer authorize(@RequestBody String str) throws IOException {
 
-
-        Integer authorized = 0;
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode node = objectMapper.readTree(str);
 
@@ -47,50 +50,74 @@ public class MeasurementController {
 
         if(name.isEmpty()){
             System.out.println("authorize: empty name");
-            return authorized;
+            return 0;
 
         }
 
         if(accessKey.isEmpty()) {
             System.out.println("authorize: empty key");
-            return authorized;
+            return 0;
 
         }
 
-        StringBuilder sb=new StringBuilder("https://");
-        sb.append(name);
-        sb.append(".data.thethingsnetwork.org/api/v2/devices");
-        URL url=null;
-        try{
-            url = new URL (sb.toString());
-            HttpURLConnection con = (HttpURLConnection) url.openConnection();
-            con.setRequestMethod("GET");
-            con.setRequestProperty("Content-Type","application/json");
-            con.setRequestProperty("Authorization","key "+accessKey);
-            int status = con.getResponseCode();
-            if(status == 200) {
-                authorized = 1;
-                return authorized;
+        if(ttn.authorize(name,accessKey,"ded-things-uno"))
+            return 1;
+
+        return 0;
+    }
+
+
+    /**
+     *
+     *
+     * @return list of registered data
+     */
+    @RequestMapping(value="/getdata", method=RequestMethod.GET,produces={"application/json"})
+    @CrossOrigin
+    public void getData() {
+
+//        if(period == 0)
+//            return ms.getAllMeasurements();
+//        else {
+//            return ms.getMeasurements(period);
+//        }
+        Gson gson = new Gson();
+          List<Measurement> measurementList = ms.getAllMeasurements();
+        List<Measurement> toSendBuffer = new ArrayList<>();
+        for (Measurement m: measurementList) {
+            toSendBuffer.add(m);
+            if(toSendBuffer.size() == 10)
+            {
+                ttn.getPusher().trigger("chart", "chartData", gson.toJson(Collections.singletonMap("data",toSendBuffer)));
+                System.out.println("Pushing" + gson.toJson(Collections.singletonMap("data",toSendBuffer)));
+
+                toSendBuffer.clear();
             }
-            else return authorized;
-
-
-        }
-        catch (MalformedURLException e)
-        {
-            System.out.println(e.toString());
-            return authorized;
-
-        }
-        catch (IOException urlError)
-        {
-            System.out.println("Could not open connection" + urlError.toString());
-            return authorized;
 
         }
 
+
+       // return ms.getAllMeasurements();
 
     }
+
+    @RequestMapping(value = "/changeTime",method = RequestMethod.POST)
+    @CrossOrigin
+    public void changeTime(@RequestBody String str)  {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            JsonNode node = objectMapper.readTree(str);
+            String time = objectMapper.convertValue(node.get("time"), String.class);
+            String processId = objectMapper.convertValue(node.get("processId"), String.class);
+            System.out.println("Trying to schedule changetime downlink: " + time + " - " + processId);
+            System.out.println(ttn.scheduleDownlink(processId, APIController.DOWNLINK_TYPE.INTEROGATION_TIME, time.toString()));
+            System.out.println("Done");
+        }
+        catch(IOException e){
+            System.out.printf(e.toString());
+        }
+    }
+
 
 
 }

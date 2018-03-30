@@ -1,12 +1,18 @@
 <template>
   <pageLayout>
-    <line-chart :chart-data="this.datacollection" :options="this.chartOptions"></line-chart>
+    <line-chart id="chart" v-if="visible" :chart-data="chartData" :options="this.chartOptions"></line-chart>
   </pageLayout>
 </template>
 
 <script>
   import LineChart from '../Modals/lineChart'
   import pageLayout from '../Modals/page'
+  import axios from 'axios'
+
+  import Pusher from 'pusher-js' // import Pusher
+
+  Pusher.logToConsole = true;
+
 
   export default {
     name: 'statistics',
@@ -14,46 +20,113 @@
       pageLayout,
       LineChart
     },
+    created(){
+      this.subscribe()
+    },
+    methods:{
+      subscribe() {
+        this.pusher = new Pusher('43efaf697390e4298a8f', {
+          encrypted:true,
+          cluster: 'eu'
+        })
+        let that=this
+
+        this.channel = this.pusher.subscribe('chart')
+        this.channel.bind('chartData',function(data) {
+          //that.incomingChartData(data)
+          let theData = JSON.parse(data)
+          that.$emit('incoming_chart_data', theData.data)
+          console.log("Was here")
+        })
+
+        this.$on('incoming_chart_data', function(data){
+
+          this.incomingChartData(data)
+        })
+      },
+      incomingChartData(data){
+        console.log("Updating data...")
+        for(let i=0; i< data.length;i++) {
+          this.msLabels.push(data[i].time);
+          this.msData.push(data[i].power);
+          console.log(data[i].power)
+        }
+
+        this.chartData={
+          labels:this.msLabels,
+            datasets:[
+            {
+              label:'Radiation',
+              // backgroundColor: '#dace69',
+              borderColor:'white',
+              pointBackgroundColor: 'red',
+              data: this.msData
+            }
+          ]
+        }
+
+        console.log("OK")
+        console.log(data);
+      }
+    },
+    mounted(){
+      axios.get(window.ApiUrl + /getdata/)
+        .then(response=>{
+          this.visible=true;
+        })
+        .catch(e=>{console.log("ERROR:",e);
+        })
+    },
+
     data() {
       return {
+        pusher:null,
+        channel:null,
+        visible:false,
+        msLabels:['0'],
+        msData:['0'],
         chartOptions:{
           legend: {
             labels: {
               fontColor: 'white'
             }
           },
+          responsive:true,
             scales: {
               yAxes: [{
                 ticks: {
-                  fontColor: "#921500",
+                  fontColor: "white",
                   fontSize: 10,
-                  stepSize: 5,
-                  beginAtZero: true
+                  beginAtZero: true,
+                  stepSize: 100,
+                  suggestedMax:2000,
+                  autoSkip:true
                 }
               }],
               xAxes: [{
                 ticks: {
-                  fontColor: "#921500",
+                  fontColor: "white",
                   fontSize: 10,
-                  stepSize: 5,
+                  stepSize: 10,
                   beginAtZero: true
                 }
               }]
             }
           },
-        datacollection: {
-
-          labels: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],
+        chartData:{
+          labels:['0'],
           datasets:[
             {
               label:'Radiation',
               // backgroundColor: '#dace69',
-              borderColor:'darkred',
+              borderColor:'white',
               pointBackgroundColor: 'red',
-              data: [20, 40, 60, 30 ,10 ,5 ,15, 26, 39, 12, 49, 12, 59, 73, 24, 44, 26,20, 40, 60, 30 ,10 ,5]
+              data: ['0']
             }
           ]
         }
+
+
       }
     }
   }

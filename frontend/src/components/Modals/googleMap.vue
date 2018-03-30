@@ -1,11 +1,7 @@
 <template>
-
   <div>
-
     <div class="google-map" id="mapName"></div>
-    <button v-bind:onclick="getPos()"></button>
   </div>
-
 </template>
 
 <script>
@@ -76,12 +72,12 @@
               },
               function() {
                 console.log("Success handling..");
-                this.handleLocationError(true,infoWindow,map.getCenter());
+                self.handleLocationError(true,infoWindow,map.getCenter());
               });
           } else {
 
             console.log("Fail handling..");
-            this.handleLocationError(false,infoWindow,map.getCenter());
+            self.handleLocationError(false,infoWindow,map.getCenter());
           }
         })},
 
@@ -101,9 +97,7 @@
     },
 
     mounted() {
-
       this.initMap()
-
     },
     data() {
       return {
@@ -120,13 +114,11 @@
 
 <style scoped>
   .google-map {
-    width: 800px;
-    height: 600px;
-
+    width: 400px;
+    min-height: 500px;
+    height:auto;
     margin: 0 auto;
     background: gray;
     border-radius: 3px;
-
-
   }
 </style>

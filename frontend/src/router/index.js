@@ -7,10 +7,9 @@ import Statistics from '../components/Views/statisticsPage.vue'
 import LocationPage from '../components/Views/locationPage.vue'
 import VueCookies from 'vue-cookies';
 import GoogleMaps from 'google-maps'
+
 Vue.use(Router)
 Vue.use(VueCookies)
-
-
 
 export default new Router({
   name:'router',

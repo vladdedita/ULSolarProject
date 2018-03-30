@@ -26,8 +26,21 @@ public class MeasurementService {
 
 
         return measurements;
+    }
+
+    public List<Measurement> getMeasurements(Integer period){
+
+        List<Measurement> measurements=new ArrayList<>();
+
+//        for(Measurement m : dao.find
+//            measurements.add(m);
+
+
+        return measurements;
 
     }
 
 
 }
+
+

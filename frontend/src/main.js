@@ -4,8 +4,13 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 import VueSweetAlert2 from 'vue-sweetalert2';
+// import jQuery from 'jquery'
+import $ from 'jquery'
+
+
 Vue.config.productionTip = false;
 Vue.use(VueSweetAlert2);
+
 /* eslint-disable */
 
 
