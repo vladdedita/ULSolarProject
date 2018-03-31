@@ -17,7 +17,7 @@
       </div>
       <div class="navBarChoice">
         <div class="opac"></div>
-        <p>Device Management</p>
+        <p><router-link to="/management" class="navBarChoiceLink">Device Management</router-link></p>
       </div>
       <div class="navBarChoice">
         <div class="opac"></div>

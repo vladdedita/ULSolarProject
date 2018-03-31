@@ -245,12 +245,13 @@ public class APIController {
                 URL url = new URL("https://integrations.thethingsnetwork.org/ttn-eu/api/v2/down/" + this.appName+ "/" + this.processId+ "?key=" + this.accessKey);
                 System.out.println("Sending request to:" + url.toString());
                 HttpURLConnection con = (HttpURLConnection) url.openConnection();
-                String payload = "data={" +
-                        "\"dev-id\" : \"" + this.devName + "\"," +
-                        "\"confirmed:false\"," +
+                String payload = "{" +
+                        "\"port\":1," +
+                        "\"dev_id\" : \"" + this.devName + "\"," +
+                        "\"confirmed\":false," +
                         "\"payload_fields\" : {" +
                         "\"type\": \"" + type.toString() + "\"," +
-                        "\"value\": \""+value+"\"}}";
+                        "\"value\": "+value+"}}";
 
                 System.out.println("Payload:"+payload);
 

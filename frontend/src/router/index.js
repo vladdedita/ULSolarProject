@@ -5,6 +5,8 @@ import Router from 'vue-router'
 import Index from '../components/Views/frontPage.vue'
 import Statistics from '../components/Views/statisticsPage.vue'
 import LocationPage from '../components/Views/locationPage.vue'
+import ManagementPage from '../components/Views/managementPage.vue'
+
 import VueCookies from 'vue-cookies';
 import GoogleMaps from 'google-maps'
 
@@ -28,6 +30,11 @@ export default new Router({
       path: '/location',
       name: 'location-page',
       component: LocationPage
+    },
+    {
+      path: '/management',
+      name: 'management-page',
+      component: ManagementPage
     }
     //
     // {
