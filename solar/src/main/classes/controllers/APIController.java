@@ -47,7 +47,18 @@ public class APIController {
     private ScheduledExecutorService executor;
 
     public enum DOWNLINK_TYPE{
-        INTEROGATION_TIME
+        INTEROGATION_TIME(2),
+        POSITION(3),
+        STATE(4);
+        private int value;
+
+        DOWNLINK_TYPE(int i) {
+            this.value=i;
+        }
+
+        public int getValue() {
+            return value;
+        }
     }
     Runnable dataUpdate = new Runnable() {
         public void run() {
@@ -236,9 +247,11 @@ public class APIController {
 //        }
 
             //https://integrations.thethingsnetwork.org/ttn-eu/api/v2/down/my-app-id/my-process-id?key=ttn-account-v2.secret
-        authorized=true;
+        //authorized=true;
         if(authorized)
         {
+
+
             if(!processId.isEmpty())
                 this.processId=processId;
             try {
@@ -246,15 +259,13 @@ public class APIController {
                 System.out.println("Sending request to:" + url.toString());
                 HttpURLConnection con = (HttpURLConnection) url.openConnection();
                 String payload = "{" +
-                        "\"port\":1," +
+                        "\"port\":"+ type.getValue() +"," +
                         "\"dev_id\" : \"" + this.devName + "\"," +
                         "\"confirmed\":false," +
                         "\"payload_fields\" : {" +
-                        "\"type\": \"" + type.toString() + "\"," +
-                        "\"value\": "+value+"}}";
+                        "\"value\": "+ (type.getValue()==1 ? value : "\""+ value + "\"") + "}}";
 
                 System.out.println("Payload:"+payload);
-
                 con.setRequestMethod("POST");
                 con.setDoOutput(true);
                 con.setRequestProperty("Content-Type", "application/json; CHARSET=UTF-8");

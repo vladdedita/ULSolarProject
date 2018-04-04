@@ -6,12 +6,14 @@ import Index from '../components/Views/frontPage.vue'
 import Statistics from '../components/Views/statisticsPage.vue'
 import LocationPage from '../components/Views/locationPage.vue'
 import ManagementPage from '../components/Views/managementPage.vue'
+import vSelect from 'vue-select'
 
 import VueCookies from 'vue-cookies';
 import GoogleMaps from 'google-maps'
 
 Vue.use(Router)
 Vue.use(VueCookies)
+Vue.use('v-select',vSelect)
 
 export default new Router({
   name:'router',

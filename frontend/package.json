@@ -17,11 +17,13 @@
     "express": "^4.16.3",
     "fullpage.js": "^2.9.6",
     "jquery": "^3.3.1",
+    "npm": "^5.8.0",
     "pusher": "^1.5.1",
     "pusher-js": "^4.2.2",
     "vue": "^2.5.2",
     "vue-cookies": "^1.5.6",
     "vue-router": "^3.0.1",
+    "vue-select": "^2.4.0",
     "vue-sweetalert2": "^1.2.4"
   },
   "devDependencies": {

@@ -99,7 +99,6 @@
                   fontSize: 10,
                   beginAtZero: true,
                   stepSize: 100,
-                  suggestedMax:2000,
                   autoSkip:true
                 }
               }],

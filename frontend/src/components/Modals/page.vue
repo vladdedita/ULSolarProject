@@ -27,8 +27,12 @@
   html,body {
     height:100%;
     margin:0;
-    background-color:black;
+    /*background-color:black;*/
+    font-family:'Metrophobic',sans-serif;
+    background: url("../../utils/3.jpeg") no-repeat;
+    background-attachment: fixed;
   }
+
   #divPage{
     /*position: fixed;*/
     /*width: 100%;*/
@@ -43,8 +47,8 @@
   #blur {
 
     position: absolute;
-    /*background: url("../../utils/1.jpeg") no-repeat;*/
-    background-color:black;
+
+    /*background-color:black;*/
     background-attachment: fixed;
     width:100%;
     height:100%;
@@ -90,7 +94,6 @@
 
   }
   .divPageFlexboxDiv {
-
     position: relative;
     margin:auto;
     width:80%;

@@ -48,13 +48,13 @@ public class MeasurementController {
         String accessKey = objectMapper.convertValue(node.get("key"),String.class);
 
 
-        if(name.isEmpty()){
+        if(name == null || name.isEmpty()){
             System.out.println("authorize: empty name");
             return 0;
 
         }
 
-        if(accessKey.isEmpty()) {
+        if(accessKey == null || accessKey.isEmpty()) {
             System.out.println("authorize: empty key");
             return 0;
 
@@ -66,12 +66,12 @@ public class MeasurementController {
         return 0;
     }
 
-
     /**
      *
      *
      * @return list of registered data
      */
+
     @RequestMapping(value="/getdata", method=RequestMethod.GET,produces={"application/json"})
     @CrossOrigin
     public void getData() {
@@ -110,7 +110,41 @@ public class MeasurementController {
             String time = objectMapper.convertValue(node.get("time"), String.class);
             String processId = objectMapper.convertValue(node.get("processId"), String.class);
             System.out.println("Trying to schedule changetime downlink: " + time + " - " + processId);
-            System.out.println(ttn.scheduleDownlink(processId, APIController.DOWNLINK_TYPE.INTEROGATION_TIME, time.toString()));
+            System.out.println(ttn.scheduleDownlink(processId, APIController.DOWNLINK_TYPE.INTEROGATION_TIME, time));
+            System.out.println("Done");
+        }
+        catch(IOException e){
+            System.out.printf(e.toString());
+        }
+    }
+
+    @RequestMapping(value = "/changePosition",method = RequestMethod.POST)
+    @CrossOrigin
+    public void changePosition(@RequestBody String str)  {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            JsonNode node = objectMapper.readTree(str);
+            String position = objectMapper.convertValue(node.get("position"), String.class);
+            String processId = objectMapper.convertValue(node.get("processId"), String.class);
+            System.out.println("Trying to schedule change position downlink: " + position + " - " + processId);
+            System.out.println(ttn.scheduleDownlink(processId, APIController.DOWNLINK_TYPE.POSITION, position));
+            System.out.println("Done");
+        }
+        catch(IOException e){
+            System.out.printf(e.toString());
+        }
+    }
+
+    @RequestMapping(value = "/changeState",method = RequestMethod.POST)
+    @CrossOrigin
+    public void changeState(@RequestBody String str)  {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            JsonNode node = objectMapper.readTree(str);
+            String state = objectMapper.convertValue(node.get("state"), String.class);
+            String processId = objectMapper.convertValue(node.get("processId"), String.class);
+            System.out.println("Trying to schedule change state downlink: " + state + " - " + processId);
+            System.out.println(ttn.scheduleDownlink(processId, APIController.DOWNLINK_TYPE.STATE, state));
             System.out.println("Done");
         }
         catch(IOException e){

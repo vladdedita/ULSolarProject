@@ -81,14 +81,14 @@
 
     position: relative;
     display:block;
-    width:19%;
+    min-width: 120px;
+    width:auto;
     height: 80%;
     text-align: center;
     float:left;
     border: solid white;
     border-top-width: 0;
     border-left-width: 0;
-
 
   }
   .navBarChoiceLink{
@@ -99,25 +99,25 @@
     height: 100%;
   }
   .navBarChoice:hover {
-
     background: lightblue;
-
   }
-  .navBarChoice:hover > p {
+  .navBarChoiceLink:hover{
     color:darkblue;
   }
+  .navBarChoice:hover > .navBarChoiceLink {
+    color:darkblue;
+  }
+
   .navBarChoice:hover > .opac {
     display: none;
   }
   .navBarChoice > p {
-
     text-align: center;
     vertical-align: middle;
     font-size:15px;
-    font-style: bold;
     color:white;
     line-height: 65px;
-    font-family: "DejaVu Sans";
+    /*font-family: "DejaVu Sans",serif;*/
     z-index: 2;
 
   }
