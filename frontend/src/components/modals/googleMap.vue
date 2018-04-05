@@ -54,8 +54,7 @@
                   map: map,
                   draggable: true
                 })
-
-
+                self.$emit('updatedLocation',self.pos)
                 google.maps.event.addListener(marker, 'dragend', function (evt) {
                   self.pos.lat = evt.latLng.lat().toFixed(5);
                   self.pos.lng = evt.latLng.lng().toFixed(5);
@@ -65,6 +64,7 @@
 
                   });
                   infoWindow.open(map, marker);
+                  self.$emit('updatedLocation',self.pos)
                 });
 
                 google.maps.event.addListener(marker, 'drag', function (evt) {
@@ -74,6 +74,7 @@
               function () {
                 console.log("Success handling..");
                 self.handleLocationError(true, infoWindow, map.getCenter());
+
               });
           } else {
 
@@ -89,6 +90,7 @@
           'Error: The Geolocation service failed.' :
           'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
+
       },
 
       getPos() {

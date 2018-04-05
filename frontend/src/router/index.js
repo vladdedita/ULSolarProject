@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld'
-import Index from '../components/Views/frontPage.vue'
-import Statistics from '../components/Views/statisticsPage.vue'
-import LocationPage from '../components/Views/locationPage.vue'
-import ManagementPage from '../components/Views/managementPage.vue'
+import Index from '../components/views/frontPage.vue'
+import Statistics from '../components/views/statisticsPage.vue'
+import LocationPage from '../components/views/locationPage.vue'
+import ManagementPage from '../components/views/managementPage.vue'
 import vSelect from 'vue-select'
 
 import VueCookies from 'vue-cookies';

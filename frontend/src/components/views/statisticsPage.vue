@@ -7,8 +7,8 @@
 </template>
 
 <script>
-  import LineChart from '../Modals/lineChart'
-  import pageLayout from '../Modals/page'
+  import LineChart from '../modals/lineChart'
+  import pageLayout from '../modals/page'
   import axios from 'axios'
 
   import Pusher from 'pusher-js' // import Pusher
@@ -56,7 +56,7 @@
         console.log("Updating data...")
         for (let i = 0; i < data.length; i++) {
           this.msLabels.push(data[i].time);
-          this.msData.push(data[i].power);
+            this.msData.push(data[i].power*60/10000);
           console.log(data[i].power)
         }
 
@@ -160,7 +160,7 @@
                 fontColor: "white",
                 fontSize: 10,
                 beginAtZero: true,
-                stepSize: 100,
+                stepSize: 10,
                 autoSkip: true
               }
             }],

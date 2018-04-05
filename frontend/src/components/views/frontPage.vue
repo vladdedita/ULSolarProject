@@ -18,12 +18,12 @@
   <!--</div>-->
 
 
-  <pageLayout v-if="authorized">
-    <solarpanel style="width:10%; height: 10%;"></solarpanel>
-    <solarpanel style="width:15%; height: 15%;"></solarpanel>
-    <solarpanel style="width:20%; height: 20%;"></solarpanel>
-    <solarpanel style="width:30%; height: 30%;"></solarpanel>
-    <solarpanel style="width:40%; height: 40%;"></solarpanel>
+  <pageLayout v-if="this.toBeShown">
+    <solarpanel style="width:10%; height: 10%;" :dimension='0.014' :energy="this.energy" :lastEnergy="this.lastEnergy"></solarpanel>
+    <solarpanel style="width:15%; height: 15%;" :dimension='8' :energy="this.energy" :lastEnergy="this.lastEnergy"></solarpanel>
+    <solarpanel style="width:20%; height: 20%;" :dimension='14' :energy="this.energy" :lastEnergy="this.lastEnergy"></solarpanel>
+    <solarpanel style="width:30%; height: 30%;" :dimension='21' :energy="this.energy" :lastEnergy="this.lastEnergy"></solarpanel>
+    <solarpanel style="width:40%; height: 40%;" :dimension='28' :energy="this.energy" :lastEnergy="this.lastEnergy"></solarpanel>
   </pageLayout>
 
 </template>
@@ -34,11 +34,13 @@
 
   import axios from 'axios';
   //import navbar from '../Modals/navbar.vue';
-  import pageLayout from '../Modals/page.vue'
-  import solarpanel from "../Modals/solarPanel";
+  import pageLayout from '../modals/page.vue'
+  import solarpanel from "../modals/solarPanel";
+
 
   export default {
     name: 'index',
+
     // mounted(){
     //   this.authorize();
     // },
@@ -47,35 +49,13 @@
       pageLayout
     },
     methods: {
-      async isAuthorized() {
-        let isAuthorized;
-        await axios.post(/isauthorized/,
-          {
-          })
-          .then(response => {
-            console.log(response.data)
-            //this.authorized = response.data;
-            console.log("Authorization response:" + response.data)
-            isAuthorized=response.data
-          })
-          .catch(e => {
-            console.log("ERROR:", e);
-          })
-
-        if(isAuthorized === false)
-        {
-          console.log("e cam fals")
-          this.authorize();
-        }
-        else
-          this.authorized=true;
-
-      },
       async authorize() {
+        if (this.$store.getters.isAuthorized !== true) {
           if (!this.$cookies.isKey('devName') && !this.$cookies.isKey('appKey')) {
 
             const {value: formValues} = await this.$swal({
               title: 'Authorization',
+              allowOutsideClick: false,
               confirmButtonText: 'Submit',
               confirmButtonClass: 'btn btn-success',
               html:
@@ -88,11 +68,10 @@
                 return [
                   document.getElementById('swal-input1').value,
                   document.getElementById('swal-input2').value,
-                  document.getElementById('swal-checkbox1').value
+                  document.getElementById('swal-checkbox1').checked
                 ]
               }
             });
-
             if (formValues) {
               await this.checkCredentials(formValues[0], formValues[1]);
 
@@ -104,7 +83,10 @@
 
                   }
                 );
-                console.log("Here");
+
+                this.$store.commit('authorize');
+
+                console.log("Checkbox:" + formValues[2]);
                 if (formValues[2] == 1) {
                   this.$cookies.set('devName', formValues[0]);
                   this.$cookies.set('appKey', formValues[1]);
@@ -126,7 +108,6 @@
           }
           else {
             await this.checkCredentials(this.$cookies.get('devName'), this.$cookies.get('appKey'));
-
             if (!this.authorized) {
               this.$cookies.remove('devName');
               this.$cookies.remove('appKey');
@@ -140,9 +121,11 @@
                   position: 'top-end'
                 }
               );
+              this.$store.commit('authorize');
             }
           }
-
+        }
+        console.log("State authorized:"+this.$store.getters.isAuthorized);
       },
       async checkCredentials(_name, _key) {
         await axios.post(/auth/,
@@ -159,26 +142,33 @@
             console.log("ERROR:", e);
           })
       },
-      getMeasurements() {
+      async getMeasurements() {
 
-        // axios.get(window.ApiUrl + /measurements/)
-        //   .then(response=>{
-        //     this.posts=response.data;
-        //     console.log(this.posts)
-        //   })
-        //   .catch(e=>{console.log("ERROR:",e);
-        //   })
+       await axios.get(window.ApiUrl + /measurements/)
+          .then(response=>{
+          //   console.log(response.data);
+          //   let data = JSON.parse(response.data)
+            this.energy=response.data.average;
+            this.lastEnergy = response.data.last;
+            this.toBeShown = true;
+
+            console.log(this.energy)
+          })
+          .catch(e=>{console.log("ERROR:",e);
+          })
       }
     },
 
     mounted() {
-      this.isAuthorized();
-      //this.authorize();
+      this.authorize();
       this.getMeasurements();
     },
     data() {
       return {
         authorized: false,
+        toBeShown:false,
+        energy: 0,
+        lastEnergy: 0,
         posts: [],
         errors: [],
         options: {

@@ -4,8 +4,6 @@ import com.google.gson.Gson;
 import com.pusher.rest.Pusher;
 import main.classes.daos.MeasurementDao;
 import main.classes.models.Measurement;
-import org.joda.time.DateTime;
-import org.joda.time.Minutes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Component;
@@ -17,6 +15,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -24,11 +23,13 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-import static java.lang.Math.abs;
-
 
 @Component
 public class APIController {
+
+
+    private static final int DEFAULT_UPDATERATE=1;
+    private static final TimeUnit DEFAULT_UPDATERATE_TIMEUNIT=TimeUnit.MINUTES;
 
     @Autowired
     MeasurementDao dao;
@@ -40,14 +41,14 @@ public class APIController {
     private String processId;
     private Boolean authorized = false;
 
-    private int updateRate = 7; // time period to check for updates
-    private TimeUnit timeUnit = TimeUnit.DAYS;
+    private Integer updateRate=null; // time period to check for updates
+    private TimeUnit timeUnit = null;
     private Pusher pusher;
 
     private ScheduledExecutorService executor;
     Runnable dataUpdate = new Runnable() {
         public void run() {
-
+            System.out.println("Ma execut");
             getLatestData();
 
         }
@@ -64,6 +65,10 @@ public class APIController {
         pusher = new Pusher("500372", "43efaf697390e4298a8f", "c5f63fc8d80b1ae2c138");
         pusher.setCluster("eu");
         pusher.setEncrypted(true);
+
+        executor.scheduleAtFixedRate(dataUpdate, 0, DEFAULT_UPDATERATE/*(updateRate==15?1:15-updateRate)*/, DEFAULT_UPDATERATE_TIMEUNIT);
+
+        System.out.println("Scheduled task at: " + DEFAULT_UPDATERATE+" "+ DEFAULT_UPDATERATE_TIMEUNIT);
 
 
     }
@@ -146,12 +151,17 @@ public class APIController {
             System.out.println("\tNot authorized!");
 
         } else {
-            String dataUrl = apiUrl.toString() + "/query/" + this.devName + "?last=" + updateRate;
+            if(updateRate == null)
+                updateRate = DEFAULT_UPDATERATE;
+            if(timeUnit == null)
+                timeUnit = DEFAULT_UPDATERATE_TIMEUNIT;
 
+            String dataUrl = apiUrl.toString() + "/query/" + this.devName + "?last=" + updateRate;
             if (timeUnit == TimeUnit.MINUTES)
                 dataUrl += "m";
             else
                 dataUrl += "d";
+
 
             System.out.println("Send request to:" + dataUrl);
             String jsonData = request(dataUrl);
@@ -159,50 +169,39 @@ public class APIController {
                 System.out.println("No data to fetch");
                 return;
             }
-            System.out.println("OK");
 
+            System.out.println("OK");
             Gson gson = new Gson();
             Measurement[] data = gson.fromJson(jsonData, Measurement[].class);
-            Measurement last = null;
 
             System.out.print("Updating database...");
+
             for (Measurement m : data) {
                 if (m.getPower() != null && m.getTime() != null) {
                     try {
-                        last = dao.save(m);
-                        pusher.trigger("chart", "chartData", new ArrayList<Measurement>().add(dao.findById(m.getId())));
-                    } catch (DataIntegrityViolationException e) {
+                        SimpleDateFormat format = new SimpleDateFormat("EEE MMM dd hh:mm:ss zzz yyyy");
+                        Date d1 = null;
+                        d1=format.parse(m.getTime().toString());
+
+                        String d2 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(d1);
+                        System.out.println("DB: "+dao.findByTime(d2));
+                        System.out.println("Response: " + d2);
+                        if(dao.findByTime(d2) == null) {
+                            dao.save(m);
+                            pusher.trigger("chart", "chartData", new ArrayList<Measurement>().add(dao.findById(m.getId())));
+                        }
+                        } catch (DataIntegrityViolationException ee) {
 
                     }
-                }
+                    catch(ParseException parseEx){System.out.println(parseEx.toString());}
+
+                    }
             }
             System.out.println("OK");
+            Date d =  dao.getLast().getTime();
 
 
-            SimpleDateFormat format = new SimpleDateFormat("EEE MMM dd hh:mm:ss zzz yyyy");
-            Date d1 = null;
 
-            try {
-                if (last != null) {
-                    System.out.println("Trying to parse date:" + last.getTime().toString());
-                    d1 = format.parse(last.getTime().toString());
-                    System.out.println("Parsed:" + d1.toString());
-                    DateTime dt1 = new DateTime(d1);
-                    DateTime dt2 = new DateTime();
-                    if (abs(Minutes.minutesBetween(dt1, dt2).getMinutes()) > 15)
-                        updateRate = Minutes.minutesBetween(dt1, dt2).getMinutes();
-                    else
-                        updateRate = 15 - abs(Minutes.minutesBetween(dt1, dt2).getMinutes());
-                    System.out.println("Update rate:" + updateRate);
-                    timeUnit = TimeUnit.MINUTES;
-                    executor.scheduleAtFixedRate(dataUpdate, 0, 1/*(updateRate==15?1:15-updateRate)*/, timeUnit);
-                    System.out.print("Scheduled task...");
-
-                } else
-                    System.out.println("Nothing found");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
             System.out.println("OK");
 
 

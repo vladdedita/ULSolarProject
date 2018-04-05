@@ -2,445 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="316c03e6-2cef-42d7-bc77-a26707b94821" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/components/store/store.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/frontend/.babelrc" afterPath="$PROJECT_DIR$/frontend/.babelrc" />
-      <change beforePath="$PROJECT_DIR$/frontend/.eslintrc.js" afterPath="$PROJECT_DIR$/frontend/.eslintrc.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/build/check-versions.js" afterPath="$PROJECT_DIR$/frontend/build/check-versions.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/build/utils.js" afterPath="$PROJECT_DIR$/frontend/build/utils.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/build/webpack.base.conf.js" afterPath="$PROJECT_DIR$/frontend/build/webpack.base.conf.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/build/webpack.dev.conf.js" afterPath="$PROJECT_DIR$/frontend/build/webpack.dev.conf.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/build/webpack.prod.conf.js" afterPath="$PROJECT_DIR$/frontend/build/webpack.prod.conf.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/index.html" afterPath="$PROJECT_DIR$/frontend/index.html" />
-      <change beforePath="$PROJECT_DIR$/frontend/pom.xml" afterPath="$PROJECT_DIR$/frontend/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" afterPath="$PROJECT_DIR$/frontend/src/App.vue" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Modals/googleMap.vue" afterPath="$PROJECT_DIR$/frontend/src/components/Modals/googleMap.vue" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Modals/lineChart.vue" afterPath="$PROJECT_DIR$/frontend/src/components/Modals/lineChart.vue" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Modals/navbar.vue" afterPath="$PROJECT_DIR$/frontend/src/components/Modals/navbar.vue" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Modals/page.vue" afterPath="$PROJECT_DIR$/frontend/src/components/Modals/page.vue" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Modals/solarPanel.vue" afterPath="$PROJECT_DIR$/frontend/src/components/Modals/solarPanel.vue" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Views/frontPage.vue" afterPath="$PROJECT_DIR$/frontend/src/components/Views/frontPage.vue" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Views/locationPage.vue" afterPath="$PROJECT_DIR$/frontend/src/components/Views/locationPage.vue" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Views/managementPage.vue" afterPath="$PROJECT_DIR$/frontend/src/components/Views/managementPage.vue" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Views/statisticsPage.vue" afterPath="$PROJECT_DIR$/frontend/src/components/Views/statisticsPage.vue" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" afterPath="$PROJECT_DIR$/frontend/package.json" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Modals/googleMap.vue" afterPath="$PROJECT_DIR$/frontend/src/components/modals/googleMap.vue" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Modals/lineChart.vue" afterPath="$PROJECT_DIR$/frontend/src/components/modals/lineChart.vue" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Modals/navbar.vue" afterPath="$PROJECT_DIR$/frontend/src/components/modals/navbar.vue" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Modals/page.vue" afterPath="$PROJECT_DIR$/frontend/src/components/modals/page.vue" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Modals/solarPanel.vue" afterPath="$PROJECT_DIR$/frontend/src/components/modals/solarPanel.vue" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Views/frontPage.vue" afterPath="$PROJECT_DIR$/frontend/src/components/views/frontPage.vue" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Views/locationPage.vue" afterPath="$PROJECT_DIR$/frontend/src/components/views/locationPage.vue" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Views/managementPage.vue" afterPath="$PROJECT_DIR$/frontend/src/components/views/managementPage.vue" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Views/statisticsPage.vue" afterPath="$PROJECT_DIR$/frontend/src/components/views/statisticsPage.vue" />
       <change beforePath="$PROJECT_DIR$/frontend/src/main.js" afterPath="$PROJECT_DIR$/frontend/src/main.js" />
       <change beforePath="$PROJECT_DIR$/frontend/src/router/index.js" afterPath="$PROJECT_DIR$/frontend/src/router/index.js" />
       <change beforePath="$PROJECT_DIR$/frontend/target/dist/index.html" afterPath="$PROJECT_DIR$/frontend/target/dist/index.html" />
       <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterPath="$PROJECT_DIR$/frontend/target/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change beforePath="$PROJECT_DIR$/solar/pom.xml" afterPath="$PROJECT_DIR$/solar/pom.xml" />
       <change beforePath="$PROJECT_DIR$/solar/solar.iml" afterPath="$PROJECT_DIR$/solar/solar.iml" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/classes/Main.java" afterPath="$PROJECT_DIR$/solar/src/main/classes/Main.java" />
       <change beforePath="$PROJECT_DIR$/solar/src/main/classes/controllers/APIController.java" afterPath="$PROJECT_DIR$/solar/src/main/classes/controllers/APIController.java" />
       <change beforePath="$PROJECT_DIR$/solar/src/main/classes/controllers/FrontPageController.java" afterPath="$PROJECT_DIR$/solar/src/main/classes/controllers/FrontPageController.java" />
       <change beforePath="$PROJECT_DIR$/solar/src/main/classes/controllers/MeasurementController.java" afterPath="$PROJECT_DIR$/solar/src/main/classes/controllers/MeasurementController.java" />
       <change beforePath="$PROJECT_DIR$/solar/src/main/classes/daos/MeasurementDao.java" afterPath="$PROJECT_DIR$/solar/src/main/classes/daos/MeasurementDao.java" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/classes/models/Measurement.java" afterPath="$PROJECT_DIR$/solar/src/main/classes/models/Measurement.java" />
       <change beforePath="$PROJECT_DIR$/solar/src/main/classes/services/MeasurementService.java" afterPath="$PROJECT_DIR$/solar/src/main/classes/services/MeasurementService.java" />
       <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/index.html" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/index.html" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.016baa4f19bb035364cb591f4a637607.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.016baa4f19bb035364cb591f4a637607.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.0438606ca50fbb944e286cc32129f8e3.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.0438606ca50fbb944e286cc32129f8e3.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.08a7fe208e73f63a738fd1d4603e9556.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.08a7fe208e73f63a738fd1d4603e9556.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.0f983749f4740da9d0b15777ca08aaee.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.0f983749f4740da9d0b15777ca08aaee.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.11062ffe39d4d6b7303ae81de31f13b5.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.11062ffe39d4d6b7303ae81de31f13b5.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.16ce8649aac836ee27085cf19bcdc8b0.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.16ce8649aac836ee27085cf19bcdc8b0.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.24066c878bbd1c978937f6573eaa9f04.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.24066c878bbd1c978937f6573eaa9f04.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.26df0e2736c5d463df17d806421b94e1.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.26df0e2736c5d463df17d806421b94e1.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.29e5e0738e8c5c523488ef8f87390c00.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.29e5e0738e8c5c523488ef8f87390c00.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.2d449b0b14f3d7ac13727908610b7436.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.2d449b0b14f3d7ac13727908610b7436.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.35c79385ea98d7dec83e16fd55165221.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.35c79385ea98d7dec83e16fd55165221.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.36c2bf8a1120c5f0b972563a9e177038.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.36c2bf8a1120c5f0b972563a9e177038.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.37e1c908478012034c2159ed373912da.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.37e1c908478012034c2159ed373912da.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.3c2fd33193f0d01381225c2b66032dca.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.3c2fd33193f0d01381225c2b66032dca.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.3fb129f85bb04caff5fdbacb09c884c4.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.3fb129f85bb04caff5fdbacb09c884c4.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.40217396c69b7a25636e3235e808199b.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.40217396c69b7a25636e3235e808199b.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.43210cbe29dae0a2c912309ae893da0b.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.43210cbe29dae0a2c912309ae893da0b.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.43736baa02a8326ad014ef7330eae9ce.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.43736baa02a8326ad014ef7330eae9ce.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.49800c6a634a6fa2cebe0b1b02a0a883.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.49800c6a634a6fa2cebe0b1b02a0a883.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.4db806a8c71198394ca8434e40172197.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.4db806a8c71198394ca8434e40172197.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.4e97d64ec86b5970ac4ebf8d86db2ee1.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.4e97d64ec86b5970ac4ebf8d86db2ee1.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.595077025cb284154d8800fdb58944aa.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.595077025cb284154d8800fdb58944aa.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.5ac333d66d1f35dd332ebd56fbc2d673.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.5ac333d66d1f35dd332ebd56fbc2d673.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.5b559e79e1f97ab57898a5d45c185c42.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.5b559e79e1f97ab57898a5d45c185c42.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.5f0c925c2b3cc3e9c268b7ff1da09a4b.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.5f0c925c2b3cc3e9c268b7ff1da09a4b.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.6321dba471d1255710ae0e0e208e5e89.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.6321dba471d1255710ae0e0e208e5e89.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.65c0f1e067bc3ad1378a5bd04b66138d.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.65c0f1e067bc3ad1378a5bd04b66138d.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.69e82146a0111f7efc07fdc674bb7b97.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.69e82146a0111f7efc07fdc674bb7b97.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.6bc61b7c9b70407ac8e5be129ab68612.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.6bc61b7c9b70407ac8e5be129ab68612.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.6d12fee7fdaa34a1dd80e8c0b9baac9d.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.6d12fee7fdaa34a1dd80e8c0b9baac9d.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.70e3790b3f616a021a75d46522e0a744.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.70e3790b3f616a021a75d46522e0a744.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.769fbf6054263515e0da294d17fa0683.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.769fbf6054263515e0da294d17fa0683.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.7a7717358e776a3625d937c9b9192339.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.7a7717358e776a3625d937c9b9192339.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.7d2263cade28bb58e974caf30956c6be.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.7d2263cade28bb58e974caf30956c6be.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.83104422803c93b7e7533b841c9210f3.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.83104422803c93b7e7533b841c9210f3.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.874729d6946b05f92c267877151ae9fc.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.874729d6946b05f92c267877151ae9fc.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.8c80479d77223bb65b8754704583a9d7.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.8c80479d77223bb65b8754704583a9d7.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.8e650d27501d6e3486b7ef926caba15b.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.8e650d27501d6e3486b7ef926caba15b.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.8eb50c1daa76acb3dedf8c8b4e062b33.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.8eb50c1daa76acb3dedf8c8b4e062b33.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.94969481fe067af7526c9bac34fb0f66.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.94969481fe067af7526c9bac34fb0f66.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.95570e63fd70a34008dd0b12280fda14.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.95570e63fd70a34008dd0b12280fda14.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.97459281e38f39b55fc83043e2fea830.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.97459281e38f39b55fc83043e2fea830.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.977e53a844e65022e665a6902baf8b7e.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.977e53a844e65022e665a6902baf8b7e.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.9c43ea5b24a8122374b8a875cf20ba3a.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.9c43ea5b24a8122374b8a875cf20ba3a.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.a39e40d6a6eab02d9197f113b6ef77a5.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.a39e40d6a6eab02d9197f113b6ef77a5.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.a68df3a85f7bc48e34000e932d326e61.css.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/css/app.a68df3a85f7bc48e34000e932d326e61.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.0352600c8b1f88f933bb.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.0352600c8b1f88f933bb.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.159da798488836c96393.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.159da798488836c96393.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.1749c2271a527982df1a.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.1749c2271a527982df1a.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.1894fc218a7ef2b9f8a5.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.1894fc218a7ef2b9f8a5.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.19453b8f9aec868b4989.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.19453b8f9aec868b4989.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.19f4c16d1f383d480cb1.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.19f4c16d1f383d480cb1.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.1dece588ffbf6615477a.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.1dece588ffbf6615477a.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.236f2ec20695403f1853.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.236f2ec20695403f1853.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.24185590ac5def934dbb.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.24185590ac5def934dbb.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.2784d5e19be896e32994.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.2784d5e19be896e32994.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.31203cbbfdb38204213f.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.31203cbbfdb38204213f.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.36c63f452fd1f8ab1c00.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.36c63f452fd1f8ab1c00.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.36fc356c96a31edafb80.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.36fc356c96a31edafb80.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.384fd6c99ee5ba11240e.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.384fd6c99ee5ba11240e.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.3ebbc996bdea385d83a4.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.3ebbc996bdea385d83a4.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.3f89d3e6abbb671c6e4a.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.3f89d3e6abbb671c6e4a.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.4b8d677f0ec847a1bae2.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.4b8d677f0ec847a1bae2.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.4cc8507d23ed527c814c.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.4cc8507d23ed527c814c.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.508bbea62960ff087baa.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.508bbea62960ff087baa.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.522c5b18c68bcb5f592e.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.522c5b18c68bcb5f592e.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.52a910e31073d02057d7.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.52a910e31073d02057d7.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.5c9bcb4c91f3ed2dfbca.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.5c9bcb4c91f3ed2dfbca.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.634fed7589dc96cbff88.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.634fed7589dc96cbff88.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.6582ab037fe7cae37d1e.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.6582ab037fe7cae37d1e.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.658d7b71f0fd2546e85c.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.658d7b71f0fd2546e85c.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.68165087f56eb27acb95.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.68165087f56eb27acb95.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.6978a246383181ff6473.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.6978a246383181ff6473.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.6af469a056621725f3eb.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.6af469a056621725f3eb.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.6c73d8026be2500a8223.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.6c73d8026be2500a8223.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.6d147c0df79c47a9b71a.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.6d147c0df79c47a9b71a.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.6e35b3cf27f12b947fa9.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.6e35b3cf27f12b947fa9.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.701d73b2c86dd7a0c7cc.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.701d73b2c86dd7a0c7cc.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.717b465b1ff1b0737e48.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.717b465b1ff1b0737e48.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.744b4cc9fe71ea0cbbca.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.744b4cc9fe71ea0cbbca.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.77f446b29fc80ec6dbc9.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.77f446b29fc80ec6dbc9.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.77f95408452ec4a9bc7a.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.77f95408452ec4a9bc7a.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.787a8fa16258ff245330.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.787a8fa16258ff245330.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.79c00fb7ce23d817986c.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.79c00fb7ce23d817986c.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.7aa9629cc5d73ec97858.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.7aa9629cc5d73ec97858.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.7b0948fabfe7fbe7b06e.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.7b0948fabfe7fbe7b06e.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.8061e9194b1cfdeb3757.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.8061e9194b1cfdeb3757.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.82951209007ed9bcbaac.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.82951209007ed9bcbaac.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.875b1daf08c037a71119.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.875b1daf08c037a71119.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.8a69061ea9a4bd8bfcaa.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.8a69061ea9a4bd8bfcaa.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.9934d1d2456725493816.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.9934d1d2456725493816.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.99e56479e930b5331ab0.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.99e56479e930b5331ab0.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.9a5f25cf622e0f0b78f6.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.9a5f25cf622e0f0b78f6.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.9b7b8d0572d9543f90ae.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.9b7b8d0572d9543f90ae.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.9efea6fbf132ded0a542.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.9efea6fbf132ded0a542.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.9f138c1ba9ff2c59d7e9.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.9f138c1ba9ff2c59d7e9.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.a05a1ef816ac10a19fea.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.a05a1ef816ac10a19fea.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.a1e3279e9d53dffa4e1c.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.a1e3279e9d53dffa4e1c.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.a86ac3372724d3921dd4.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.a86ac3372724d3921dd4.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.a965e98113ee46e45ba4.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.a965e98113ee46e45ba4.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.acaf49a035d1c62836c8.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.acaf49a035d1c62836c8.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.ae429b368b5f78be3ca3.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.ae429b368b5f78be3ca3.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.b6e801900366c44073ee.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.b6e801900366c44073ee.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.b76c25fbc13b157b971f.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.b76c25fbc13b157b971f.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.b98370b03a172c4c994e.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.b98370b03a172c4c994e.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.c41c1f70aa7c8c44633f.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.c41c1f70aa7c8c44633f.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.c7c047479edb34b0817a.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.c7c047479edb34b0817a.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.cb8aa2807a9ffde00e26.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.cb8aa2807a9ffde00e26.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.cc48b7d4715d5a829e30.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.cc48b7d4715d5a829e30.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.d6cc061ccbb4c0b48f60.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.d6cc061ccbb4c0b48f60.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.da67c8b8f001cfec1850.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.da67c8b8f001cfec1850.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.dc7798ad3e0f7d0d0797.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.dc7798ad3e0f7d0d0797.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.dc8cca7ec4eca3e12215.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.dc8cca7ec4eca3e12215.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.ddfedc1c47dc7af40f74.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.ddfedc1c47dc7af40f74.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.de5476744a563400c0f9.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.de5476744a563400c0f9.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.e169ad9fd222d4d5c9bd.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.e169ad9fd222d4d5c9bd.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.e7f413ef5365c1fe0af2.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.e7f413ef5365c1fe0af2.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.ec55c222a10ae9d8d955.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.ec55c222a10ae9d8d955.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.f1e89ac57327c5e08056.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.f1e89ac57327c5e08056.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.f212e3cbb2bd31372804.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.f212e3cbb2bd31372804.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.f2d320754fbb05738ef6.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.f2d320754fbb05738ef6.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.f576827b8df8bc467fe4.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.f576827b8df8bc467fe4.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.fd265b680a081619a701.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.fd265b680a081619a701.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.fd7d63319da912882e3b.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.fd7d63319da912882e3b.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.fef01f23d64604b539f1.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/app.fef01f23d64604b539f1.js.map" />
       <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/vendor.3a6155d336fb4eaa6ae7.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/vendor.3a6155d336fb4eaa6ae7.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/vendor.88b5164bda10a5921cce.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/vendor.88b5164bda10a5921cce.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/vendor.8bd4e0893fab156a96a3.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/vendor.8bd4e0893fab156a96a3.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/vendor.9a36e4eb74ea14aa6021.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/vendor.9a36e4eb74ea14aa6021.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/vendor.d24f2b3a323be99afc03.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/vendor.d24f2b3a323be99afc03.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/vendor.d8f577eb3118a1d7ce45.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/vendor.d8f577eb3118a1d7ce45.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/classes/Main.class" afterPath="$PROJECT_DIR$/solar/target/classes/main/classes/Main.class" />
       <change beforePath="$PROJECT_DIR$/solar/target/classes/main/classes/controllers/FrontPageController.class" afterPath="$PROJECT_DIR$/solar/target/classes/main/classes/controllers/FrontPageController.class" />
       <change beforePath="$PROJECT_DIR$/solar/target/classes/main/classes/controllers/MeasurementController.class" afterPath="$PROJECT_DIR$/solar/target/classes/main/classes/controllers/MeasurementController.class" />
       <change beforePath="$PROJECT_DIR$/solar/target/classes/main/classes/daos/MeasurementDao.class" afterPath="$PROJECT_DIR$/solar/target/classes/main/classes/daos/MeasurementDao.class" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/classes/models/Measurement.class" afterPath="$PROJECT_DIR$/solar/target/classes/main/classes/models/Measurement.class" />
       <change beforePath="$PROJECT_DIR$/solar/target/classes/main/classes/services/MeasurementService.class" afterPath="$PROJECT_DIR$/solar/target/classes/main/classes/services/MeasurementService.class" />
       <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/index.html" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/index.html" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.016baa4f19bb035364cb591f4a637607.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.016baa4f19bb035364cb591f4a637607.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.0438606ca50fbb944e286cc32129f8e3.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.0438606ca50fbb944e286cc32129f8e3.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.0f983749f4740da9d0b15777ca08aaee.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.0f983749f4740da9d0b15777ca08aaee.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.11062ffe39d4d6b7303ae81de31f13b5.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.11062ffe39d4d6b7303ae81de31f13b5.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.16ce8649aac836ee27085cf19bcdc8b0.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.16ce8649aac836ee27085cf19bcdc8b0.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.24066c878bbd1c978937f6573eaa9f04.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.24066c878bbd1c978937f6573eaa9f04.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.26df0e2736c5d463df17d806421b94e1.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.26df0e2736c5d463df17d806421b94e1.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.29e5e0738e8c5c523488ef8f87390c00.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.29e5e0738e8c5c523488ef8f87390c00.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.2d449b0b14f3d7ac13727908610b7436.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.2d449b0b14f3d7ac13727908610b7436.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.35c79385ea98d7dec83e16fd55165221.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.35c79385ea98d7dec83e16fd55165221.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.36c2bf8a1120c5f0b972563a9e177038.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.36c2bf8a1120c5f0b972563a9e177038.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.37e1c908478012034c2159ed373912da.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.37e1c908478012034c2159ed373912da.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.3c2fd33193f0d01381225c2b66032dca.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.3c2fd33193f0d01381225c2b66032dca.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.3fb129f85bb04caff5fdbacb09c884c4.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.3fb129f85bb04caff5fdbacb09c884c4.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.40217396c69b7a25636e3235e808199b.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.40217396c69b7a25636e3235e808199b.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.43210cbe29dae0a2c912309ae893da0b.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.43210cbe29dae0a2c912309ae893da0b.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.43736baa02a8326ad014ef7330eae9ce.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.43736baa02a8326ad014ef7330eae9ce.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.49800c6a634a6fa2cebe0b1b02a0a883.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.49800c6a634a6fa2cebe0b1b02a0a883.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.4db806a8c71198394ca8434e40172197.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.4db806a8c71198394ca8434e40172197.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.4e97d64ec86b5970ac4ebf8d86db2ee1.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.4e97d64ec86b5970ac4ebf8d86db2ee1.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.595077025cb284154d8800fdb58944aa.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.595077025cb284154d8800fdb58944aa.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.5ac333d66d1f35dd332ebd56fbc2d673.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.5ac333d66d1f35dd332ebd56fbc2d673.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.5b559e79e1f97ab57898a5d45c185c42.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.5b559e79e1f97ab57898a5d45c185c42.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.5f0c925c2b3cc3e9c268b7ff1da09a4b.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.5f0c925c2b3cc3e9c268b7ff1da09a4b.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.6321dba471d1255710ae0e0e208e5e89.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.6321dba471d1255710ae0e0e208e5e89.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.65c0f1e067bc3ad1378a5bd04b66138d.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.65c0f1e067bc3ad1378a5bd04b66138d.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.69e82146a0111f7efc07fdc674bb7b97.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.69e82146a0111f7efc07fdc674bb7b97.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.6bc61b7c9b70407ac8e5be129ab68612.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.6bc61b7c9b70407ac8e5be129ab68612.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.6d12fee7fdaa34a1dd80e8c0b9baac9d.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.6d12fee7fdaa34a1dd80e8c0b9baac9d.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.70e3790b3f616a021a75d46522e0a744.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.70e3790b3f616a021a75d46522e0a744.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.769fbf6054263515e0da294d17fa0683.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.769fbf6054263515e0da294d17fa0683.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.7a7717358e776a3625d937c9b9192339.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.7a7717358e776a3625d937c9b9192339.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.7d2263cade28bb58e974caf30956c6be.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.7d2263cade28bb58e974caf30956c6be.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.83104422803c93b7e7533b841c9210f3.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.83104422803c93b7e7533b841c9210f3.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.874729d6946b05f92c267877151ae9fc.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.874729d6946b05f92c267877151ae9fc.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.8c80479d77223bb65b8754704583a9d7.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.8c80479d77223bb65b8754704583a9d7.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.8e650d27501d6e3486b7ef926caba15b.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.8e650d27501d6e3486b7ef926caba15b.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.8eb50c1daa76acb3dedf8c8b4e062b33.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.8eb50c1daa76acb3dedf8c8b4e062b33.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.94969481fe067af7526c9bac34fb0f66.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.94969481fe067af7526c9bac34fb0f66.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.95570e63fd70a34008dd0b12280fda14.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.95570e63fd70a34008dd0b12280fda14.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.97459281e38f39b55fc83043e2fea830.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.97459281e38f39b55fc83043e2fea830.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.977e53a844e65022e665a6902baf8b7e.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.977e53a844e65022e665a6902baf8b7e.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.9c43ea5b24a8122374b8a875cf20ba3a.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.9c43ea5b24a8122374b8a875cf20ba3a.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.a39e40d6a6eab02d9197f113b6ef77a5.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.a39e40d6a6eab02d9197f113b6ef77a5.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.a68df3a85f7bc48e34000e932d326e61.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/css/app.a68df3a85f7bc48e34000e932d326e61.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.0352600c8b1f88f933bb.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.0352600c8b1f88f933bb.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.159da798488836c96393.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.159da798488836c96393.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.1749c2271a527982df1a.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.1749c2271a527982df1a.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.1894fc218a7ef2b9f8a5.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.1894fc218a7ef2b9f8a5.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.19453b8f9aec868b4989.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.19453b8f9aec868b4989.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.19f4c16d1f383d480cb1.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.19f4c16d1f383d480cb1.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.1dece588ffbf6615477a.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.1dece588ffbf6615477a.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.236f2ec20695403f1853.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.236f2ec20695403f1853.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.24185590ac5def934dbb.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.24185590ac5def934dbb.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.2784d5e19be896e32994.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.2784d5e19be896e32994.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.31203cbbfdb38204213f.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.31203cbbfdb38204213f.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.36c63f452fd1f8ab1c00.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.36c63f452fd1f8ab1c00.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.36fc356c96a31edafb80.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.36fc356c96a31edafb80.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.384fd6c99ee5ba11240e.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.384fd6c99ee5ba11240e.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.3ebbc996bdea385d83a4.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.3ebbc996bdea385d83a4.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.3f89d3e6abbb671c6e4a.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.3f89d3e6abbb671c6e4a.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.4b8d677f0ec847a1bae2.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.4b8d677f0ec847a1bae2.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.4cc8507d23ed527c814c.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.4cc8507d23ed527c814c.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.508bbea62960ff087baa.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.508bbea62960ff087baa.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.522c5b18c68bcb5f592e.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.522c5b18c68bcb5f592e.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.52a910e31073d02057d7.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.52a910e31073d02057d7.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.5c9bcb4c91f3ed2dfbca.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.5c9bcb4c91f3ed2dfbca.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.634fed7589dc96cbff88.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.634fed7589dc96cbff88.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.6582ab037fe7cae37d1e.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.6582ab037fe7cae37d1e.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.658d7b71f0fd2546e85c.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.658d7b71f0fd2546e85c.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.68165087f56eb27acb95.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.68165087f56eb27acb95.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.6978a246383181ff6473.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.6978a246383181ff6473.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.6c73d8026be2500a8223.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.6c73d8026be2500a8223.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.6d147c0df79c47a9b71a.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.6d147c0df79c47a9b71a.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.6e35b3cf27f12b947fa9.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.6e35b3cf27f12b947fa9.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.701d73b2c86dd7a0c7cc.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.701d73b2c86dd7a0c7cc.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.717b465b1ff1b0737e48.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.717b465b1ff1b0737e48.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.744b4cc9fe71ea0cbbca.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.744b4cc9fe71ea0cbbca.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.77f446b29fc80ec6dbc9.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.77f446b29fc80ec6dbc9.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.77f95408452ec4a9bc7a.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.77f95408452ec4a9bc7a.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.787a8fa16258ff245330.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.787a8fa16258ff245330.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.79c00fb7ce23d817986c.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.79c00fb7ce23d817986c.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.7aa9629cc5d73ec97858.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.7aa9629cc5d73ec97858.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.7b0948fabfe7fbe7b06e.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.7b0948fabfe7fbe7b06e.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.8061e9194b1cfdeb3757.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.8061e9194b1cfdeb3757.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.82951209007ed9bcbaac.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.82951209007ed9bcbaac.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.875b1daf08c037a71119.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.875b1daf08c037a71119.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.8a69061ea9a4bd8bfcaa.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.8a69061ea9a4bd8bfcaa.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.9934d1d2456725493816.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.9934d1d2456725493816.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.99e56479e930b5331ab0.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.99e56479e930b5331ab0.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.9a5f25cf622e0f0b78f6.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.9a5f25cf622e0f0b78f6.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.9b7b8d0572d9543f90ae.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.9b7b8d0572d9543f90ae.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.9efea6fbf132ded0a542.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.9efea6fbf132ded0a542.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.9f138c1ba9ff2c59d7e9.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.9f138c1ba9ff2c59d7e9.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.a05a1ef816ac10a19fea.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.a05a1ef816ac10a19fea.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.a1e3279e9d53dffa4e1c.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.a1e3279e9d53dffa4e1c.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.a86ac3372724d3921dd4.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.a86ac3372724d3921dd4.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.a965e98113ee46e45ba4.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.a965e98113ee46e45ba4.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.acaf49a035d1c62836c8.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.acaf49a035d1c62836c8.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.ae429b368b5f78be3ca3.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.ae429b368b5f78be3ca3.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.b6e801900366c44073ee.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.b6e801900366c44073ee.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.b76c25fbc13b157b971f.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.b76c25fbc13b157b971f.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.b98370b03a172c4c994e.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.b98370b03a172c4c994e.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.c41c1f70aa7c8c44633f.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.c41c1f70aa7c8c44633f.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.c7c047479edb34b0817a.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.c7c047479edb34b0817a.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.cb8aa2807a9ffde00e26.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.cb8aa2807a9ffde00e26.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.cc48b7d4715d5a829e30.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.cc48b7d4715d5a829e30.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.d6cc061ccbb4c0b48f60.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.d6cc061ccbb4c0b48f60.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.da67c8b8f001cfec1850.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.da67c8b8f001cfec1850.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.dc7798ad3e0f7d0d0797.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.dc7798ad3e0f7d0d0797.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.dc8cca7ec4eca3e12215.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.dc8cca7ec4eca3e12215.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.ddfedc1c47dc7af40f74.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.ddfedc1c47dc7af40f74.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.de5476744a563400c0f9.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.de5476744a563400c0f9.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.e169ad9fd222d4d5c9bd.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.e169ad9fd222d4d5c9bd.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.e7f413ef5365c1fe0af2.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.e7f413ef5365c1fe0af2.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.ec55c222a10ae9d8d955.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.ec55c222a10ae9d8d955.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.f1e89ac57327c5e08056.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.f1e89ac57327c5e08056.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.f212e3cbb2bd31372804.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.f212e3cbb2bd31372804.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.f2d320754fbb05738ef6.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.f2d320754fbb05738ef6.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.f576827b8df8bc467fe4.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.f576827b8df8bc467fe4.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.fd265b680a081619a701.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.fd265b680a081619a701.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.fd7d63319da912882e3b.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.fd7d63319da912882e3b.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.fef01f23d64604b539f1.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/app.fef01f23d64604b539f1.js.map" />
       <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/vendor.3a6155d336fb4eaa6ae7.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/vendor.3a6155d336fb4eaa6ae7.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/vendor.88b5164bda10a5921cce.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/vendor.88b5164bda10a5921cce.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/vendor.8bd4e0893fab156a96a3.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/vendor.8bd4e0893fab156a96a3.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/vendor.9a36e4eb74ea14aa6021.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/vendor.9a36e4eb74ea14aa6021.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/vendor.d24f2b3a323be99afc03.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/vendor.d24f2b3a323be99afc03.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/vendor.d8f577eb3118a1d7ce45.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/vendor.d8f577eb3118a1d7ce45.js.map" />
       <change beforePath="$PROJECT_DIR$/solar/target/classes/public/index.html" afterPath="$PROJECT_DIR$/solar/target/classes/public/index.html" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.016baa4f19bb035364cb591f4a637607.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.016baa4f19bb035364cb591f4a637607.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.0438606ca50fbb944e286cc32129f8e3.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.0438606ca50fbb944e286cc32129f8e3.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.08a7fe208e73f63a738fd1d4603e9556.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.08a7fe208e73f63a738fd1d4603e9556.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.0f983749f4740da9d0b15777ca08aaee.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.0f983749f4740da9d0b15777ca08aaee.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.11062ffe39d4d6b7303ae81de31f13b5.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.11062ffe39d4d6b7303ae81de31f13b5.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.16ce8649aac836ee27085cf19bcdc8b0.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.16ce8649aac836ee27085cf19bcdc8b0.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.24066c878bbd1c978937f6573eaa9f04.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.24066c878bbd1c978937f6573eaa9f04.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.26df0e2736c5d463df17d806421b94e1.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.26df0e2736c5d463df17d806421b94e1.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.29e5e0738e8c5c523488ef8f87390c00.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.29e5e0738e8c5c523488ef8f87390c00.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.2d449b0b14f3d7ac13727908610b7436.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.2d449b0b14f3d7ac13727908610b7436.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.35c79385ea98d7dec83e16fd55165221.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.35c79385ea98d7dec83e16fd55165221.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.36c2bf8a1120c5f0b972563a9e177038.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.36c2bf8a1120c5f0b972563a9e177038.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.37e1c908478012034c2159ed373912da.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.37e1c908478012034c2159ed373912da.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.3c2fd33193f0d01381225c2b66032dca.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.3c2fd33193f0d01381225c2b66032dca.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.3fb129f85bb04caff5fdbacb09c884c4.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.3fb129f85bb04caff5fdbacb09c884c4.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.40217396c69b7a25636e3235e808199b.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.40217396c69b7a25636e3235e808199b.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.43210cbe29dae0a2c912309ae893da0b.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.43210cbe29dae0a2c912309ae893da0b.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.43736baa02a8326ad014ef7330eae9ce.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.43736baa02a8326ad014ef7330eae9ce.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.49800c6a634a6fa2cebe0b1b02a0a883.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.49800c6a634a6fa2cebe0b1b02a0a883.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.4db806a8c71198394ca8434e40172197.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.4db806a8c71198394ca8434e40172197.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.4e97d64ec86b5970ac4ebf8d86db2ee1.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.4e97d64ec86b5970ac4ebf8d86db2ee1.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.595077025cb284154d8800fdb58944aa.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.595077025cb284154d8800fdb58944aa.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.5ac333d66d1f35dd332ebd56fbc2d673.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.5ac333d66d1f35dd332ebd56fbc2d673.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.5b559e79e1f97ab57898a5d45c185c42.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.5b559e79e1f97ab57898a5d45c185c42.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.5f0c925c2b3cc3e9c268b7ff1da09a4b.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.5f0c925c2b3cc3e9c268b7ff1da09a4b.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.6321dba471d1255710ae0e0e208e5e89.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.6321dba471d1255710ae0e0e208e5e89.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.65c0f1e067bc3ad1378a5bd04b66138d.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.65c0f1e067bc3ad1378a5bd04b66138d.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.69e82146a0111f7efc07fdc674bb7b97.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.69e82146a0111f7efc07fdc674bb7b97.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.6bc61b7c9b70407ac8e5be129ab68612.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.6bc61b7c9b70407ac8e5be129ab68612.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.6d12fee7fdaa34a1dd80e8c0b9baac9d.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.6d12fee7fdaa34a1dd80e8c0b9baac9d.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.70e3790b3f616a021a75d46522e0a744.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.70e3790b3f616a021a75d46522e0a744.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.769fbf6054263515e0da294d17fa0683.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.769fbf6054263515e0da294d17fa0683.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.7a7717358e776a3625d937c9b9192339.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.7a7717358e776a3625d937c9b9192339.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.7d2263cade28bb58e974caf30956c6be.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.7d2263cade28bb58e974caf30956c6be.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.83104422803c93b7e7533b841c9210f3.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.83104422803c93b7e7533b841c9210f3.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.874729d6946b05f92c267877151ae9fc.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.874729d6946b05f92c267877151ae9fc.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.8c80479d77223bb65b8754704583a9d7.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.8c80479d77223bb65b8754704583a9d7.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.8e650d27501d6e3486b7ef926caba15b.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.8e650d27501d6e3486b7ef926caba15b.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.8eb50c1daa76acb3dedf8c8b4e062b33.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.8eb50c1daa76acb3dedf8c8b4e062b33.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.94969481fe067af7526c9bac34fb0f66.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.94969481fe067af7526c9bac34fb0f66.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.95570e63fd70a34008dd0b12280fda14.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.95570e63fd70a34008dd0b12280fda14.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.97459281e38f39b55fc83043e2fea830.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.97459281e38f39b55fc83043e2fea830.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.977e53a844e65022e665a6902baf8b7e.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.977e53a844e65022e665a6902baf8b7e.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.9c43ea5b24a8122374b8a875cf20ba3a.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.9c43ea5b24a8122374b8a875cf20ba3a.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.a39e40d6a6eab02d9197f113b6ef77a5.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.a39e40d6a6eab02d9197f113b6ef77a5.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.a68df3a85f7bc48e34000e932d326e61.css.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/css/app.a68df3a85f7bc48e34000e932d326e61.css.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.0352600c8b1f88f933bb.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.0352600c8b1f88f933bb.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.159da798488836c96393.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.159da798488836c96393.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.1749c2271a527982df1a.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.1749c2271a527982df1a.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.1894fc218a7ef2b9f8a5.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.1894fc218a7ef2b9f8a5.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.19453b8f9aec868b4989.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.19453b8f9aec868b4989.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.19f4c16d1f383d480cb1.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.19f4c16d1f383d480cb1.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.1dece588ffbf6615477a.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.1dece588ffbf6615477a.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.236f2ec20695403f1853.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.236f2ec20695403f1853.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.24185590ac5def934dbb.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.24185590ac5def934dbb.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.2784d5e19be896e32994.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.2784d5e19be896e32994.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.31203cbbfdb38204213f.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.31203cbbfdb38204213f.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.36c63f452fd1f8ab1c00.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.36c63f452fd1f8ab1c00.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.36fc356c96a31edafb80.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.36fc356c96a31edafb80.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.384fd6c99ee5ba11240e.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.384fd6c99ee5ba11240e.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.3ebbc996bdea385d83a4.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.3ebbc996bdea385d83a4.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.3f89d3e6abbb671c6e4a.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.3f89d3e6abbb671c6e4a.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.4b8d677f0ec847a1bae2.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.4b8d677f0ec847a1bae2.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.4cc8507d23ed527c814c.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.4cc8507d23ed527c814c.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.508bbea62960ff087baa.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.508bbea62960ff087baa.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.522c5b18c68bcb5f592e.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.522c5b18c68bcb5f592e.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.52a910e31073d02057d7.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.52a910e31073d02057d7.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.5c9bcb4c91f3ed2dfbca.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.5c9bcb4c91f3ed2dfbca.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.634fed7589dc96cbff88.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.634fed7589dc96cbff88.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.6582ab037fe7cae37d1e.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.6582ab037fe7cae37d1e.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.658d7b71f0fd2546e85c.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.658d7b71f0fd2546e85c.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.68165087f56eb27acb95.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.68165087f56eb27acb95.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.6978a246383181ff6473.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.6978a246383181ff6473.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.6af469a056621725f3eb.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.6af469a056621725f3eb.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.6c73d8026be2500a8223.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.6c73d8026be2500a8223.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.6d147c0df79c47a9b71a.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.6d147c0df79c47a9b71a.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.6e35b3cf27f12b947fa9.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.6e35b3cf27f12b947fa9.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.701d73b2c86dd7a0c7cc.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.701d73b2c86dd7a0c7cc.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.717b465b1ff1b0737e48.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.717b465b1ff1b0737e48.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.744b4cc9fe71ea0cbbca.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.744b4cc9fe71ea0cbbca.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.77f446b29fc80ec6dbc9.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.77f446b29fc80ec6dbc9.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.77f95408452ec4a9bc7a.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.77f95408452ec4a9bc7a.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.787a8fa16258ff245330.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.787a8fa16258ff245330.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.79c00fb7ce23d817986c.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.79c00fb7ce23d817986c.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.7aa9629cc5d73ec97858.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.7aa9629cc5d73ec97858.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.7b0948fabfe7fbe7b06e.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.7b0948fabfe7fbe7b06e.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.8061e9194b1cfdeb3757.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.8061e9194b1cfdeb3757.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.82951209007ed9bcbaac.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.82951209007ed9bcbaac.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.875b1daf08c037a71119.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.875b1daf08c037a71119.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.8a69061ea9a4bd8bfcaa.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.8a69061ea9a4bd8bfcaa.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.9934d1d2456725493816.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.9934d1d2456725493816.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.99e56479e930b5331ab0.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.99e56479e930b5331ab0.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.9a5f25cf622e0f0b78f6.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.9a5f25cf622e0f0b78f6.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.9b7b8d0572d9543f90ae.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.9b7b8d0572d9543f90ae.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.9efea6fbf132ded0a542.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.9efea6fbf132ded0a542.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.9f138c1ba9ff2c59d7e9.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.9f138c1ba9ff2c59d7e9.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.a05a1ef816ac10a19fea.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.a05a1ef816ac10a19fea.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.a1e3279e9d53dffa4e1c.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.a1e3279e9d53dffa4e1c.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.a86ac3372724d3921dd4.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.a86ac3372724d3921dd4.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.a965e98113ee46e45ba4.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.a965e98113ee46e45ba4.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.acaf49a035d1c62836c8.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.acaf49a035d1c62836c8.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.ae429b368b5f78be3ca3.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.ae429b368b5f78be3ca3.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.b6e801900366c44073ee.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.b6e801900366c44073ee.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.b76c25fbc13b157b971f.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.b76c25fbc13b157b971f.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.b98370b03a172c4c994e.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.b98370b03a172c4c994e.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.c41c1f70aa7c8c44633f.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.c41c1f70aa7c8c44633f.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.c7c047479edb34b0817a.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.c7c047479edb34b0817a.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.cb8aa2807a9ffde00e26.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.cb8aa2807a9ffde00e26.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.cc48b7d4715d5a829e30.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.cc48b7d4715d5a829e30.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.d6cc061ccbb4c0b48f60.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.d6cc061ccbb4c0b48f60.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.da67c8b8f001cfec1850.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.da67c8b8f001cfec1850.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.dc7798ad3e0f7d0d0797.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.dc7798ad3e0f7d0d0797.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.dc8cca7ec4eca3e12215.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.dc8cca7ec4eca3e12215.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.ddfedc1c47dc7af40f74.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.ddfedc1c47dc7af40f74.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.de5476744a563400c0f9.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.de5476744a563400c0f9.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.e169ad9fd222d4d5c9bd.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.e169ad9fd222d4d5c9bd.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.e7f413ef5365c1fe0af2.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.e7f413ef5365c1fe0af2.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.ec55c222a10ae9d8d955.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.ec55c222a10ae9d8d955.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.f1e89ac57327c5e08056.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.f1e89ac57327c5e08056.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.f212e3cbb2bd31372804.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.f212e3cbb2bd31372804.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.f2d320754fbb05738ef6.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.f2d320754fbb05738ef6.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.f576827b8df8bc467fe4.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.f576827b8df8bc467fe4.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.fd265b680a081619a701.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.fd265b680a081619a701.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.fd7d63319da912882e3b.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.fd7d63319da912882e3b.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.fef01f23d64604b539f1.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/app.fef01f23d64604b539f1.js.map" />
       <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/vendor.3a6155d336fb4eaa6ae7.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/vendor.3a6155d336fb4eaa6ae7.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/vendor.88b5164bda10a5921cce.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/vendor.88b5164bda10a5921cce.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/vendor.8bd4e0893fab156a96a3.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/vendor.8bd4e0893fab156a96a3.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/vendor.9a36e4eb74ea14aa6021.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/vendor.9a36e4eb74ea14aa6021.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/vendor.d24f2b3a323be99afc03.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/vendor.d24f2b3a323be99afc03.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/vendor.d8f577eb3118a1d7ce45.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/vendor.d8f577eb3118a1d7ce45.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar_v2.iml" afterPath="$PROJECT_DIR$/solar_v2.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -473,6 +67,24 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="solar@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="solar@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="solar@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="solar: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="solar@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="solar: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="solar: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -481,22 +93,22 @@
       <file leaf-file-name="MeasurementController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/solar/src/main/classes/controllers/MeasurementController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+            <state relative-caret-position="2110">
+              <caret line="168" column="57" lean-forward="false" selection-start-line="168" selection-start-column="57" selection-end-line="168" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="APIController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="APIController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/solar/src/main/classes/controllers/APIController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="55" column="36" lean-forward="false" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
+            <state relative-caret-position="291">
+              <caret line="26" column="10" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
               <folding>
-                <element signature="e#1535#1536#0" expanded="true" />
+                <element signature="imports" expanded="true" />
                 <element signature="method#request#0;class#APIController#0" expanded="false" />
-                <element signature="method#getLatestData#0;class#APIController#0" expanded="false" />
+                <element signature="method#scheduleDownlink#0;class#APIController#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -505,80 +117,84 @@
       <file leaf-file-name="FrontPageController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/solar/src/main/classes/controllers/FrontPageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+            <state relative-caret-position="85">
+              <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/pom.xml">
+      <file leaf-file-name="Measurement.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/solar/src/main/classes/models/Measurement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="20" column="88" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="88" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/solar/pom.xml">
+      <file leaf-file-name="MeasurementDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/solar/src/main/classes/daos/MeasurementDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2295">
-              <caret line="135" column="12" lean-forward="false" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="10" lean-forward="false" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="frontPage.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/Views/frontPage.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="107" column="37" lean-forward="true" selection-start-line="107" selection-start-column="37" selection-end-line="107" selection-end-column="37" />
+            <state relative-caret-position="255">
+              <caret line="20" column="52" lean-forward="false" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
               <folding>
-                <element signature="e#4638#4893#0" expanded="false" />
+                <marker date="1522943772996" expanded="true" signature="405:525" ph="SELECT s.id,... solar" />
+                <marker date="1522943772996" expanded="true" signature="655:706" ph="SELECT AVG(s... solar" />
+                <marker date="1522943772996" expanded="true" signature="789:837" ph="SELECT * FRO... solar" />
+                <marker date="1522943772996" expanded="true" signature="912:939" ph="SELECT * FRO... solar" />
+                <marker date="1522943772996" expanded="true" signature="912:952" ph="SELECT * FRO... solar" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="googleMap.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/modals/googleMap.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1083">
+              <caret line="66" column="56" lean-forward="false" selection-start-line="66" selection-start-column="56" selection-end-line="66" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="store.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/store/store.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="solarPanel.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/modals/solarPanel.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="statisticsPage.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/Views/statisticsPage.vue">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/views/statisticsPage.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1632">
-              <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+            <state relative-caret-position="34">
+              <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/main.js">
+      <file leaf-file-name="lineChart.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/modals/lineChart.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/router/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="50" column="17" lean-forward="false" selection-start-line="49" selection-start-column="3" selection-end-line="50" selection-end-column="17" />
+            <state relative-caret-position="221">
+              <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -598,6 +214,7 @@
     <findStrings>
       <find>index:</find>
       <find>index:core.i</find>
+      <find>current lat</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Projects\Java\solar\ULSolarProject\frontend\node_modules\chart.js</dir>
@@ -619,10 +236,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/my-project/src/components/frontPage.vue" />
-        <option value="$PROJECT_DIR$/my-project/src/components/alert.vue" />
-        <option value="$PROJECT_DIR$/my-project/postcss.config.js" />
-        <option value="$PROJECT_DIR$/my-project/src/components/Modals/popup.vue" />
         <option value="$PROJECT_DIR$/my-project/src/App.vue" />
         <option value="$PROJECT_DIR$/my-project/index.html" />
         <option value="$PROJECT_DIR$/my-project/package.json" />
@@ -643,7 +256,6 @@
         <option value="$PROJECT_DIR$/solar/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/frontend/src/components/Views/locationPage.vue" />
         <option value="$PROJECT_DIR$/frontend/build/webpack.dev.conf.js" />
-        <option value="$PROJECT_DIR$/frontend/src/main.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/Modals/googleMap.vue" />
         <option value="src:table:/97504807/fe98e7d7-d128-4bb5-b8d2-da6cfe615428/solar.solar" />
         <option value="$PROJECT_DIR$/solar/src/main/classes/Main.java" />
@@ -655,16 +267,26 @@
         <option value="$PROJECT_DIR$/frontend/src/components/Modals/navbar.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/Views/managementPage.vue" />
         <option value="$PROJECT_DIR$/solar/src/main/classes/models/Measurement.java" />
-        <option value="$PROJECT_DIR$/solar/src/main/classes/services/MeasurementService.java" />
-        <option value="$PROJECT_DIR$/solar/src/main/classes/daos/MeasurementDao.java" />
         <option value="$PROJECT_DIR$/frontend/src/components/Views/statisticsPage.vue" />
         <option value="$PROJECT_DIR$/frontend/src/router/index.js" />
-        <option value="$PROJECT_DIR$/solar/src/main/classes/controllers/FrontPageController.java" />
-        <option value="$PROJECT_DIR$/solar/src/main/classes/controllers/APIController.java" />
-        <option value="$PROJECT_DIR$/solar/src/main/classes/controllers/MeasurementController.java" />
-        <option value="$PROJECT_DIR$/solar/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/solar/pom.xml" />
+        <option value="$PROJECT_DIR$/solar/src/main/classes/controllers/FrontPageController.java" />
         <option value="$PROJECT_DIR$/frontend/src/components/Views/frontPage.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/store/store.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/main.js" />
+        <option value="$PROJECT_DIR$/frontend/src/components/views/managementPage.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/modals/page.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/store/store.js" />
+        <option value="$PROJECT_DIR$/frontend/src/components/views/frontPage.vue" />
+        <option value="$PROJECT_DIR$/solar/src/main/classes/services/MeasurementService.java" />
+        <option value="$PROJECT_DIR$/solar/src/main/classes/controllers/MeasurementController.java" />
+        <option value="$PROJECT_DIR$/frontend/src/components/modals/googleMap.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/views/locationPage.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/views/statisticsPage.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/modals/solarPanel.vue" />
+        <option value="$PROJECT_DIR$/solar/src/main/classes/daos/MeasurementDao.java" />
+        <option value="$PROJECT_DIR$/solar/src/main/classes/controllers/APIController.java" />
       </list>
     </option>
   </component>
@@ -686,8 +308,8 @@
     <handled-path value="$PROJECT_DIR$/frontend/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1916" />
-    <option name="y" value="-109" />
+    <option name="x" value="2111" />
+    <option name="y" value="-132" />
     <option name="width" value="1258" />
     <option name="height" value="949" />
   </component>
@@ -720,6 +342,54 @@
               <item name="solar" type="b2602c69:ProjectViewProjectNode" />
               <item name="ULSolarProject" type="462c0819:PsiDirectoryNode" />
               <item name="solar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="solar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ULSolarProject" type="462c0819:PsiDirectoryNode" />
+              <item name="solar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="solar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ULSolarProject" type="462c0819:PsiDirectoryNode" />
+              <item name="solar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="solar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ULSolarProject" type="462c0819:PsiDirectoryNode" />
+              <item name="solar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="solar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ULSolarProject" type="462c0819:PsiDirectoryNode" />
+              <item name="solar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="solar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ULSolarProject" type="462c0819:PsiDirectoryNode" />
+              <item name="solar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="daos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="solar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ULSolarProject" type="462c0819:PsiDirectoryNode" />
+              <item name="solar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -919,7 +589,7 @@
       <workItem from="1522741537705" duration="1027000" />
       <workItem from="1522828716511" duration="22247000" />
       <workItem from="1522856299298" duration="13321000" />
-      <workItem from="1522917155792" duration="1437000" />
+      <workItem from="1522917155792" duration="27027000" />
     </task>
     <task id="LOCAL-00001" summary="Moved cookie alert&#10;Added About and Location to navbar">
       <created>1521457565396</created>
@@ -956,11 +626,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522850456078</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Statistics per period">
+      <created>1522919564475</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1522919564475</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216946000" />
+    <option name="totallyTimeSpent" value="242536000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-117" width="1616" height="1186" extended-state="6" />
@@ -975,7 +652,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12291667" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3998136" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280522" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -986,9 +663,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.214375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -999,7 +677,6 @@
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969034" sideWeight="0.49771988" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2941712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1053,23 +730,16 @@
     <MESSAGE value="Real time updating chart on statistics page" />
     <MESSAGE value="Working schedule change interogation time downlink" />
     <MESSAGE value="Working - Device Management - front + back" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working - Device Management - front + back" />
+    <MESSAGE value="Statistics per period" />
+    <option name="LAST_COMMIT_MESSAGE" value="Statistics per period" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="16" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-dependencies/2.0.0.RELEASE/spring-boot-dependencies-2.0.0.RELEASE.pom" />
-    <entry file="file://$PROJECT_DIR$/solar/src/main/resources/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/solar/src/main/classes/model.java" />
     <entry file="file://$PROJECT_DIR$/solar/src/main/classes/Daos.java" />
     <entry file="das://table:/ef8eff0b/fe98e7d7-d128-4bb5-b8d2-da6cfe615428/solar.Measurement" />
@@ -1133,13 +803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Modals/googleMap.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="121" column="23" lean-forward="false" selection-start-line="121" selection-start-column="23" selection-end-line="121" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://src:table:/97504807/fe98e7d7-d128-4bb5-b8d2-da6cfe615428/solar.solar">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1158,13 +821,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Modals/solarPanel.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -1189,14 +845,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Modals/lineChart.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Modals/navbar.vue">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/modals/navbar.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1513">
           <caret line="104" column="19" lean-forward="false" selection-start-line="104" selection-start-column="19" selection-end-line="104" selection-end-column="19" />
@@ -1204,25 +853,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Modals/page.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="33" lean-forward="false" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Views/locationPage.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" column="46" lean-forward="false" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="84" lean-forward="false" selection-start-line="6" selection-start-column="84" selection-end-line="6" selection-end-column="84" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1230,50 +865,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/models/Measurement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Views/managementPage.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-799">
-          <caret line="10" column="91" lean-forward="false" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/services/MeasurementService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/daos/MeasurementDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="44" lean-forward="false" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Views/statisticsPage.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
-          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1286,46 +877,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/controllers/FrontPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/controllers/APIController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="55" column="36" lean-forward="false" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
-          <folding>
-            <element signature="e#1535#1536#0" expanded="true" />
-            <element signature="method#request#0;class#APIController#0" expanded="false" />
-            <element signature="method#getLatestData#0;class#APIController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/controllers/MeasurementController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solar/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2295">
-          <caret line="135" column="12" lean-forward="false" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1338,12 +893,168 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Views/frontPage.vue">
+    <entry file="file://$PROJECT_DIR$/solar/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="107" column="37" lean-forward="true" selection-start-line="107" selection-start-column="37" selection-end-line="107" selection-end-column="37" />
+        <state relative-caret-position="175">
+          <caret line="96" column="7" lean-forward="false" selection-start-line="96" selection-start-column="7" selection-end-line="99" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/store/store.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/views/managementPage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/modals/page.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/views/frontPage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="158" column="7" lean-forward="false" selection-start-line="146" selection-start-column="6" selection-end-line="158" selection-end-column="7" />
           <folding>
-            <element signature="e#4638#4893#0" expanded="false" />
+            <element signature="e#1300#1313#0" expanded="false" />
+            <element signature="e#1367#1409#0" expanded="false" />
+            <element signature="e#1450#4263#0" expanded="false" />
+            <element signature="e#4307#4654#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/services/MeasurementService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <element signature="e#3126#3127#0" expanded="false" />
+            <element signature="e#3176#3177#0" expanded="false" />
+            <element signature="e#3212#3213#0" expanded="false" />
+            <element signature="e#3248#3249#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/views/locationPage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="27" selection-start-column="7" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="e#239#278#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/modals/googleMap.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1083">
+          <caret line="66" column="56" lean-forward="false" selection-start-line="66" selection-start-column="56" selection-end-line="66" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/store/store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/modals/lineChart.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/views/statisticsPage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/modals/solarPanel.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/models/Measurement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="88" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/daos/MeasurementDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="52" lean-forward="false" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+          <folding>
+            <marker date="1522943772996" expanded="true" signature="405:525" ph="SELECT s.id,... solar" />
+            <marker date="1522943772996" expanded="true" signature="655:706" ph="SELECT AVG(s... solar" />
+            <marker date="1522943772996" expanded="true" signature="789:837" ph="SELECT * FRO... solar" />
+            <marker date="1522943772996" expanded="true" signature="912:939" ph="SELECT * FRO... solar" />
+            <marker date="1522943772996" expanded="true" signature="912:952" ph="SELECT * FRO... solar" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/controllers/FrontPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/controllers/MeasurementController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2110">
+          <caret line="168" column="57" lean-forward="false" selection-start-line="168" selection-start-column="57" selection-end-line="168" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/controllers/APIController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="26" column="10" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#request#0;class#APIController#0" expanded="false" />
+            <element signature="method#scheduleDownlink#0;class#APIController#0" expanded="false" />
           </folding>
         </state>
       </provider>

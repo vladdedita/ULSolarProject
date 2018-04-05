@@ -4,6 +4,7 @@ package main.classes.controllers;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import main.classes.models.Measurement;
 import main.classes.services.MeasurementService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,27 +24,25 @@ public class MeasurementController {
     @Autowired
     APIController ttn;
 
-    @RequestMapping(value = "/isauthorized", method = RequestMethod.POST, produces = {"application/json"})
-    @CrossOrigin
-    public Boolean isAuthorized(@RequestBody String str) throws IOException {
-
-        ObjectMapper objectMapper = new ObjectMapper();
-        JsonNode node = objectMapper.readTree(str);
-
-       return ttn.getAuthorized();
-    }
+//    @RequestMapping(value = "/isauthorized", method = RequestMethod.POST, produces = {"application/json"})
+//    @CrossOrigin
+//    public Boolean isAuthorized(@RequestBody String str) throws IOException {
+//
+//        ObjectMapper objectMapper = new ObjectMapper();
+//        JsonNode node = objectMapper.readTree(str);
+//
+//       return ttn.getAuthorized();
+//    }
 
     @RequestMapping(value = "/measurements", method = RequestMethod.GET, produces = {"application/json"})
     @CrossOrigin
     public @ResponseBody
     String getMeasurements() {
+        JsonObject obj=new JsonObject();
 
-        Gson gson = new Gson();
-        String jsonString = gson.toJson(ms.getAllMeasurements());
-        System.out.println(jsonString);
-
-        return jsonString;
-
+        obj.addProperty("average",ms.getAverage());
+        obj.addProperty("last",ms.getLast().getPower());
+        return obj.toString();
     }
 
     @RequestMapping(value = "/auth", method = RequestMethod.POST, produces = {"application/json"})
@@ -160,6 +159,14 @@ public class MeasurementController {
         } catch (IOException e) {
             System.out.printf(e.toString());
         }
+    }
+
+    @RequestMapping(value = "/getSolarData/{latitude}/{longitude}", method=RequestMethod.GET, produces = {"application/json"})
+    @CrossOrigin
+    public String getSolarData(@PathVariable Double latitude, @PathVariable Double longitude){
+
+
+        return ms.getSolarInsulation(latitude,longitude);
     }
 
 

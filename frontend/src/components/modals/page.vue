@@ -1,5 +1,5 @@
 <template>
-  <div id="divPage">
+  <div id="divPage" v-if="this.$store.getters.isAuthorized">
     <div id="blur"></div>
     <navbar></navbar>
     <div id="divPageDiv">
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-  import navbar from '../Modals/navbar'
+  import navbar from './/navbar'
 
   export default {
     name: 'pageLayout',

@@ -5,6 +5,12 @@ import main.classes.models.Measurement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +31,48 @@ public class MeasurementService {
 
         return measurements;
     }
+    public String getSolarInsulation(Double latitude, Double longitude) {
 
+
+        //https://developer.nrel.gov/api/solar/solar_resource/v1.json?api_key=DEMO_KEY&lat=40&lon=-105
+        //api key KuBHzEKFbBS0aVC66QzBc8QQbVuKJC63LkhRTgox
+        String URL = "https://developer.nrel.gov/api/solar/solar_resource/v1.json?" +
+                "api_key=KuBHzEKFbBS0aVC66QzBc8QQbVuKJC63LkhRTgox&" +
+                "lat="+latitude+"&" +
+                "lon="+longitude+"&" +
+                "format=JSON";
+
+
+        URL url = null;
+        try {
+            url = new URL(URL);
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+            con.setRequestMethod("GET");
+            con.setRequestProperty("Content-Type", "application/json");
+
+            int status = con.getResponseCode();
+            if (status != 200) {
+                return null;
+            }
+            System.out.println("Status Code: " + status);
+            BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+            String inputLine;
+            StringBuffer content = new StringBuffer();
+
+            while ((inputLine = in.readLine()) != null) {
+                content.append(inputLine);
+                content.append(System.getProperty("line.separator"));
+            }
+            return content.toString();
+        } catch (MalformedURLException e) {
+            System.out.println(e.toString());
+            return null;
+        } catch (IOException urlError) {
+            System.out.println("Could not open connection:" + urlError.toString());
+            return null;
+        }
+
+    }
     public List<Measurement> getMeasurements(String unit,Integer period) {
 
 
@@ -51,6 +98,15 @@ public class MeasurementService {
         }
         return dao.getMeasurementByCustomTime(period);
 
+    }
+
+    public Double getAverage(){
+        return dao.getMeasurementAverage();
+    }
+
+
+    public Measurement getLast(){
+        return dao.getLast();
     }
 
 }

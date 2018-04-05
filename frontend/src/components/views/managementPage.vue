@@ -3,25 +3,25 @@
     <div class="optionDiv">
       <h1> Update Time: </h1>
       <button @submit.prevent="submitForm" class="submitButton" @click="changeTime()"> SUBMIT</button>
-      <v-select class="dropdown" label="Update period" v-model="selectedTime" :options="this.optionsTime"></v-select>
+      <v-select class="dropdown" v-model="selectedTime" :options="this.optionsTime"></v-select>
 
     </div>
     <div class="optionDiv">
       <h1> Power state: </h1>
       <button @submit.prevent="submitForm" class="submitButton" @click="changePowerState()"> SUBMIT</button>
-      <v-select class="dropdown" label="Update period" v-model="selectedPower" :options="this.optionsPower"></v-select>
+      <v-select class="dropdown" v-model="selectedPower" :options="this.optionsPower"></v-select>
     </div>
     <div class="optionDiv">
       <h1> Position: </h1>
       <button @submit.prevent="submitForm" class="submitButton" @click="changePosition()"> SUBMIT</button>
-      <v-select class="dropdown" label="Update period" v-model="selectedPosition"
+      <v-select class="dropdown" v-model="selectedPosition"
                 :options="this.optionsPosition"></v-select>
     </div>
   </page-layout>
 </template>
 
 <script>
-  import PageLayout from "../Modals/page";
+  import PageLayout from "../modals/page";
   import vSelect from 'vue-select'
   import axios from 'axios'
 
@@ -36,6 +36,7 @@
         if (!this.$cookies.isKey('processId')) {
           const {value: formValues} = await this.$swal({
             title: 'Authorization',
+            allowOutsideClick: false,
             confirmButtonText: 'Submit',
             confirmButtonClass: 'btn btn-success',
             text: "Please enter your HTTP Integration Process ID",
