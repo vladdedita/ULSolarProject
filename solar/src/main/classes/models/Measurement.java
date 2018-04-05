@@ -11,16 +11,17 @@ import java.util.Date;
 public class Measurement {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name="power")
+    @Column(name = "power")
     private String power;
 
-    @Column(name="time")
-    private @DateTimeFormat(pattern = "2018-03-27T13:52:39.057164Z yyyy-mm-ddThh:mm:ss") Date time;
+    @Column(name = "time")
+    private @DateTimeFormat(pattern = "2018-03-27T13:52:39.057164Z yyyy-mm-ddThh:mm:ss")
+    Date time;
 
-    protected Measurement(){
+    protected Measurement() {
 
     }
 

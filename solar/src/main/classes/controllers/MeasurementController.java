@@ -23,11 +23,20 @@ public class MeasurementController {
     @Autowired
     APIController ttn;
 
-
-
-    @RequestMapping(value ="/measurements", method= RequestMethod.GET, produces={"application/json"} )
+    @RequestMapping(value = "/isauthorized", method = RequestMethod.POST, produces = {"application/json"})
     @CrossOrigin
-    public @ResponseBody String getMeasurements(){
+    public Boolean isAuthorized(@RequestBody String str) throws IOException {
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        JsonNode node = objectMapper.readTree(str);
+
+       return ttn.getAuthorized();
+    }
+
+    @RequestMapping(value = "/measurements", method = RequestMethod.GET, produces = {"application/json"})
+    @CrossOrigin
+    public @ResponseBody
+    String getMeasurements() {
 
         Gson gson = new Gson();
         String jsonString = gson.toJson(ms.getAllMeasurements());
@@ -37,73 +46,77 @@ public class MeasurementController {
 
     }
 
-    @RequestMapping(value="/auth", method=RequestMethod.POST,produces={"application/json"})
+    @RequestMapping(value = "/auth", method = RequestMethod.POST, produces = {"application/json"})
     @CrossOrigin
     public Integer authorize(@RequestBody String str) throws IOException {
 
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode node = objectMapper.readTree(str);
 
-        String name = objectMapper.convertValue(node.get("name"),String.class);
-        String accessKey = objectMapper.convertValue(node.get("key"),String.class);
+        String name = objectMapper.convertValue(node.get("name"), String.class);
+        String accessKey = objectMapper.convertValue(node.get("key"), String.class);
 
 
-        if(name == null || name.isEmpty()){
+        if (name == null || name.isEmpty()) {
             System.out.println("authorize: empty name");
             return 0;
 
         }
 
-        if(accessKey == null || accessKey.isEmpty()) {
+        if (accessKey == null || accessKey.isEmpty()) {
             System.out.println("authorize: empty key");
             return 0;
 
         }
 
-        if(ttn.authorize(name,accessKey,"ded-things-uno"))
+        if (ttn.authorize(name, accessKey, "ded-things-uno"))
             return 1;
 
         return 0;
     }
 
     /**
-     *
-     *
      * @return list of registered data
      */
 
-    @RequestMapping(value="/getdata", method=RequestMethod.GET,produces={"application/json"})
+    @RequestMapping(value = "/getdata/{unit}/{time}", method = RequestMethod.GET, produces = {"application/json"})
     @CrossOrigin
-    public void getData() {
+    public void getData(@PathVariable String unit, @PathVariable Integer time) {
 
-//        if(period == 0)
-//            return ms.getAllMeasurements();
-//        else {
-//            return ms.getMeasurements(period);
-//        }
-        Gson gson = new Gson();
-          List<Measurement> measurementList = ms.getAllMeasurements();
+        List<Measurement> measurementList;
         List<Measurement> toSendBuffer = new ArrayList<>();
-        for (Measurement m: measurementList) {
-            toSendBuffer.add(m);
-            if(toSendBuffer.size() == 10)
-            {
-                ttn.getPusher().trigger("chart", "chartData", gson.toJson(Collections.singletonMap("data",toSendBuffer)));
-                System.out.println("Pushing" + gson.toJson(Collections.singletonMap("data",toSendBuffer)));
 
+        if(time == 0)
+            measurementList = ms.getAllMeasurements();
+        else {
+            measurementList = ms.getMeasurements(unit,time);
+        }
+        Gson gson = new Gson();
+
+        for (Measurement m : measurementList) {
+            toSendBuffer.add(m);
+            if(measurementList.indexOf(m) != measurementList.size()-1) {
+                if (toSendBuffer.size() >= 10) {
+                    ttn.getPusher().trigger("chart", "chartData", gson.toJson(Collections.singletonMap("data", toSendBuffer)));
+                    System.out.println("Pushing: " + gson.toJson(Collections.singletonMap("data", toSendBuffer)));
+                    toSendBuffer.clear();
+                }
+            }
+            else
+            {
+                ttn.getPusher().trigger("chart", "chartData", gson.toJson(Collections.singletonMap("data", toSendBuffer)));
+                System.out.println("Pushing: " + gson.toJson(Collections.singletonMap("data", toSendBuffer)));
                 toSendBuffer.clear();
             }
 
+
+
         }
-
-
-       // return ms.getAllMeasurements();
-
     }
 
-    @RequestMapping(value = "/changeTime",method = RequestMethod.POST)
+    @RequestMapping(value = "/changeTime", method = RequestMethod.POST)
     @CrossOrigin
-    public void changeTime(@RequestBody String str)  {
+    public void changeTime(@RequestBody String str) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode node = objectMapper.readTree(str);
@@ -112,15 +125,14 @@ public class MeasurementController {
             System.out.println("Trying to schedule changetime downlink: " + time + " - " + processId);
             System.out.println(ttn.scheduleDownlink(processId, APIController.DOWNLINK_TYPE.INTEROGATION_TIME, time));
             System.out.println("Done");
-        }
-        catch(IOException e){
+        } catch (IOException e) {
             System.out.printf(e.toString());
         }
     }
 
-    @RequestMapping(value = "/changePosition",method = RequestMethod.POST)
+    @RequestMapping(value = "/changePosition", method = RequestMethod.POST)
     @CrossOrigin
-    public void changePosition(@RequestBody String str)  {
+    public void changePosition(@RequestBody String str) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode node = objectMapper.readTree(str);
@@ -129,15 +141,14 @@ public class MeasurementController {
             System.out.println("Trying to schedule change position downlink: " + position + " - " + processId);
             System.out.println(ttn.scheduleDownlink(processId, APIController.DOWNLINK_TYPE.POSITION, position));
             System.out.println("Done");
-        }
-        catch(IOException e){
+        } catch (IOException e) {
             System.out.printf(e.toString());
         }
     }
 
-    @RequestMapping(value = "/changeState",method = RequestMethod.POST)
+    @RequestMapping(value = "/changeState", method = RequestMethod.POST)
     @CrossOrigin
-    public void changeState(@RequestBody String str)  {
+    public void changeState(@RequestBody String str) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode node = objectMapper.readTree(str);
@@ -146,12 +157,10 @@ public class MeasurementController {
             System.out.println("Trying to schedule change state downlink: " + state + " - " + processId);
             System.out.println(ttn.scheduleDownlink(processId, APIController.DOWNLINK_TYPE.STATE, state));
             System.out.println("Done");
-        }
-        catch(IOException e){
+        } catch (IOException e) {
             System.out.printf(e.toString());
         }
     }
-
 
 
 }

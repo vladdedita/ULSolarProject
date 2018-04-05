@@ -5,7 +5,6 @@ import App from './App';
 import router from './router';
 import VueSweetAlert2 from 'vue-sweetalert2';
 // import jQuery from 'jquery'
-import $ from 'jquery'
 
 
 Vue.config.productionTip = false;
@@ -15,11 +14,11 @@ Vue.use(VueSweetAlert2);
 
 
 window.ApiUrl = "http://localhost:8090";
-window.ttnUrl=".data.thethingsnetwork.org/";
+window.ttnUrl = ".data.thethingsnetwork.org/";
 
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: {App},
   template: '<App/>'
 })

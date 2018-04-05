@@ -38,28 +38,13 @@ public class APIController {
     private String devName;
     private String accessKey;
     private String processId;
-    private Boolean authorized=false;
+    private Boolean authorized = false;
 
-    private int updateRate=7; // time period to check for updates
-    private TimeUnit timeUnit= TimeUnit.DAYS;
+    private int updateRate = 7; // time period to check for updates
+    private TimeUnit timeUnit = TimeUnit.DAYS;
     private Pusher pusher;
 
     private ScheduledExecutorService executor;
-
-    public enum DOWNLINK_TYPE{
-        INTEROGATION_TIME(2),
-        POSITION(3),
-        STATE(4);
-        private int value;
-
-        DOWNLINK_TYPE(int i) {
-            this.value=i;
-        }
-
-        public int getValue() {
-            return value;
-        }
-    }
     Runnable dataUpdate = new Runnable() {
         public void run() {
 
@@ -67,6 +52,10 @@ public class APIController {
 
         }
     };
+
+    public Boolean getAuthorized() {
+        return authorized;
+    }
 
     APIController() {
 
@@ -79,41 +68,36 @@ public class APIController {
 
     }
 
-    boolean authorize (String appName, String accessKey, String devName) {
+    boolean authorize(String appName, String accessKey, String devName) {
 
-        this.appName=appName;
-        this.accessKey=accessKey;
-        this.devName=devName;
+        this.appName = appName;
+        this.accessKey = accessKey;
+        this.devName = devName;
 
-        apiUrl=new StringBuilder("https://");
+        apiUrl = new StringBuilder("https://");
         apiUrl.append(appName);
         apiUrl.append(".data.thethingsnetwork.org/api/v2");
 
         String deviceUrl = apiUrl.toString() + "/devices";
-        URL url=null;
-        try{
-            url = new URL (deviceUrl);
+        URL url = null;
+        try {
+            url = new URL(deviceUrl);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
-            con.setRequestProperty("Content-Type","application/json");
-            con.setRequestProperty("Authorization","key "+accessKey);
+            con.setRequestProperty("Content-Type", "application/json");
+            con.setRequestProperty("Authorization", "key " + accessKey);
             int status = con.getResponseCode();
-            if(status == 200)
-            {
-                authorized=true;
+            if (status == 200) {
+                authorized = true;
                 getLatestData();
                 return true;
             }
             return false;
-        }
-        catch (MalformedURLException e)
-        {
+        } catch (MalformedURLException e) {
             System.out.println(e.toString());
             return false;
 
-        }
-        catch (IOException urlError)
-        {
+        } catch (IOException urlError) {
             System.out.println("Could not open connection" + urlError.toString());
             return false;
 
@@ -122,16 +106,15 @@ public class APIController {
 
     private String request(String URL) {
 
-        URL url=null;
-        try{
-            url = new URL (URL);
+        URL url = null;
+        try {
+            url = new URL(URL);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
-            con.setRequestProperty("Content-Type","application/json");
-            con.setRequestProperty("Authorization","key "+this.accessKey);
+            con.setRequestProperty("Content-Type", "application/json");
+            con.setRequestProperty("Authorization", "key " + this.accessKey);
             int status = con.getResponseCode();
-            if(status != 200)
-            {
+            if (status != 200) {
                 return null;
             }
             System.out.println("Status Code: " + status);
@@ -139,19 +122,15 @@ public class APIController {
             String inputLine;
             StringBuffer content = new StringBuffer();
 
-            while((inputLine = in.readLine()) != null){
+            while ((inputLine = in.readLine()) != null) {
                 content.append(inputLine);
                 content.append(System.getProperty("line.separator"));
             }
             return content.toString();
-        }
-        catch (MalformedURLException e)
-        {
+        } catch (MalformedURLException e) {
             System.out.println(e.toString());
             return null;
-        }
-        catch (IOException urlError)
-        {
+        } catch (IOException urlError) {
             System.out.println("Could not open connection:" + urlError.toString());
             return null;
         }
@@ -167,17 +146,16 @@ public class APIController {
             System.out.println("\tNot authorized!");
 
         } else {
-            String dataUrl = apiUrl.toString() + "/query/" + this.devName +"?last="+updateRate;
+            String dataUrl = apiUrl.toString() + "/query/" + this.devName + "?last=" + updateRate;
 
-            if(timeUnit==TimeUnit.MINUTES)
-                dataUrl+="m";
+            if (timeUnit == TimeUnit.MINUTES)
+                dataUrl += "m";
             else
-                dataUrl+="d";
+                dataUrl += "d";
 
-            System.out.println("Send request to:"+dataUrl);
+            System.out.println("Send request to:" + dataUrl);
             String jsonData = request(dataUrl);
-            if(jsonData == null)
-            {
+            if (jsonData == null) {
                 System.out.println("No data to fetch");
                 return;
             }
@@ -185,18 +163,15 @@ public class APIController {
 
             Gson gson = new Gson();
             Measurement[] data = gson.fromJson(jsonData, Measurement[].class);
-            Measurement last=null;
+            Measurement last = null;
 
             System.out.print("Updating database...");
-            for (Measurement m : data)
-            {
-                if(m.getPower() != null && m.getTime()!=null)
-                {
-                    try{
-                        last=dao.save(m);
+            for (Measurement m : data) {
+                if (m.getPower() != null && m.getTime() != null) {
+                    try {
+                        last = dao.save(m);
                         pusher.trigger("chart", "chartData", new ArrayList<Measurement>().add(dao.findById(m.getId())));
-                    }
-                    catch(DataIntegrityViolationException e){
+                    } catch (DataIntegrityViolationException e) {
 
                     }
                 }
@@ -208,23 +183,22 @@ public class APIController {
             Date d1 = null;
 
             try {
-                if(last!=null) {
-                    System.out.println("Trying to parse date:"+ last.getTime().toString());
+                if (last != null) {
+                    System.out.println("Trying to parse date:" + last.getTime().toString());
                     d1 = format.parse(last.getTime().toString());
-                    System.out.println("Parsed:"+d1.toString());
+                    System.out.println("Parsed:" + d1.toString());
                     DateTime dt1 = new DateTime(d1);
                     DateTime dt2 = new DateTime();
-                    if(abs(Minutes.minutesBetween(dt1, dt2).getMinutes()) > 15)
-                        updateRate=Minutes.minutesBetween(dt1, dt2).getMinutes();
+                    if (abs(Minutes.minutesBetween(dt1, dt2).getMinutes()) > 15)
+                        updateRate = Minutes.minutesBetween(dt1, dt2).getMinutes();
                     else
-                        updateRate = 15- abs(Minutes.minutesBetween(dt1, dt2).getMinutes());
+                        updateRate = 15 - abs(Minutes.minutesBetween(dt1, dt2).getMinutes());
                     System.out.println("Update rate:" + updateRate);
                     timeUnit = TimeUnit.MINUTES;
                     executor.scheduleAtFixedRate(dataUpdate, 0, 1/*(updateRate==15?1:15-updateRate)*/, timeUnit);
                     System.out.print("Scheduled task...");
 
-                }
-                else
+                } else
                     System.out.println("Nothing found");
             } catch (Exception e) {
                 e.printStackTrace();
@@ -235,7 +209,7 @@ public class APIController {
         }
     }
 
-    public Integer scheduleDownlink(String processId, DOWNLINK_TYPE type, String value ) {
+    public Integer scheduleDownlink(String processId, DOWNLINK_TYPE type, String value) {
 //        {
 //            "dev_id": "my-dev-id", // The device ID
 //                "port": 1,             // LoRaWAN FPort
@@ -246,26 +220,25 @@ public class APIController {
 //        }
 //        }
 
-            //https://integrations.thethingsnetwork.org/ttn-eu/api/v2/down/my-app-id/my-process-id?key=ttn-account-v2.secret
+        //https://integrations.thethingsnetwork.org/ttn-eu/api/v2/down/my-app-id/my-process-id?key=ttn-account-v2.secret
         //authorized=true;
-        if(authorized)
-        {
+        if (authorized) {
 
 
-            if(!processId.isEmpty())
-                this.processId=processId;
+            if (!processId.isEmpty())
+                this.processId = processId;
             try {
-                URL url = new URL("https://integrations.thethingsnetwork.org/ttn-eu/api/v2/down/" + this.appName+ "/" + this.processId+ "?key=" + this.accessKey);
+                URL url = new URL("https://integrations.thethingsnetwork.org/ttn-eu/api/v2/down/" + this.appName + "/" + this.processId + "?key=" + this.accessKey);
                 System.out.println("Sending request to:" + url.toString());
                 HttpURLConnection con = (HttpURLConnection) url.openConnection();
                 String payload = "{" +
-                        "\"port\":"+ type.getValue() +"," +
+                        "\"port\":" + type.getValue() + "," +
                         "\"dev_id\" : \"" + this.devName + "\"," +
                         "\"confirmed\":false," +
                         "\"payload_fields\" : {" +
-                        "\"value\": "+ (type.getValue()==1 ? value : "\""+ value + "\"") + "}}";
+                        "\"value\": " + (type.getValue() == 1 ? value : "\"" + value + "\"") + "}}";
 
-                System.out.println("Payload:"+payload);
+                System.out.println("Payload:" + payload);
                 con.setRequestMethod("POST");
                 con.setDoOutput(true);
                 con.setRequestProperty("Content-Type", "application/json; CHARSET=UTF-8");
@@ -275,13 +248,27 @@ public class APIController {
                 os.close();
                 int status = con.getResponseCode();
                 return status;
-            }
-            catch(IOException e){
+            } catch (IOException e) {
                 System.out.println(e.toString());
             }
         }
         return 500;
 
+    }
+
+    public enum DOWNLINK_TYPE {
+        INTEROGATION_TIME(2),
+        POSITION(3),
+        STATE(4);
+        private int value;
+
+        DOWNLINK_TYPE(int i) {
+            this.value = i;
+        }
+
+        public int getValue() {
+            return value;
+        }
     }
 
 
