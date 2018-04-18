@@ -1,12 +1,10 @@
-package main.classes.services;
+package main.classes.measurement;
 
-import main.classes.daos.MeasurementDao;
-import main.classes.models.Measurement;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,8 +16,8 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
-
-@RestController
+//
+@Component
 public class MeasurementService {
 
     @Autowired

@@ -57,7 +57,7 @@
     methods: {
       async authorize() {
         if (this.$store.getters.isAuthorized !== true) {
-          if (!this.$cookies.isKey('devName') && !this.$cookies.isKey('appKey')) {
+          if (!this.$cookies.isKey('appID') && !this.$cookies.isKey('appKey') && !this.$cookies.isKey('devID')) {
             const {value: formValues} = await this.$swal({
               title: 'Authorization',
               allowOutsideClick: false,
@@ -74,28 +74,26 @@
                 return [
                   document.getElementById('swal-input1').value,
                   document.getElementById('swal-input2').value,
+                  document.getElementById('swal-input3').value,
                   document.getElementById('swal-checkbox1').checked
                 ]
               }
             });
             if (formValues) {
-              await this.checkCredentials(formValues[0], formValues[1]);
+              await this.checkCredentials(formValues[0], formValues[1],formValues[2]);
 
               if (this.authorized == '1') {
                 await this.$swal({
                     title: 'Authorized!',
                     text: 'Your app has been successfully authorized!',
                     type: 'success'
-
                   }
                 );
-
                 this.$store.commit('authorize');
-
-                console.log("Checkbox:" + formValues[2]);
-                if (formValues[2] == 1) {
-                  this.$cookies.set('devName', formValues[0]);
+                if (formValues[3] == 1) {
+                  this.$cookies.set('appID', formValues[0]);
                   this.$cookies.set('appKey', formValues[1]);
+                  this.$cookies.set('devID', formValues[2]);
                   console.log("Cookies set");
                 }
               }
@@ -109,14 +107,13 @@
                 this.authorize();
               }
             }
-
-
           }
           else {
-            await this.checkCredentials(this.$cookies.get('devName'), this.$cookies.get('appKey'));
+            await this.checkCredentials(this.$cookies.get('appID'), this.$cookies.get('appKey'),this.$cookies.get('devID'));
             if (!this.authorized) {
-              this.$cookies.remove('devName');
+              this.$cookies.remove('appID');
               this.$cookies.remove('appKey');
+              this.$cookies.remove('devID');
               this.authorize();
             }
             else {
@@ -133,11 +130,12 @@
         }
         console.log("State authorized:"+this.$store.getters.isAuthorized);
       },
-      async checkCredentials(_name, _key) {
+      async checkCredentials(_appID, _appKey, _devID) {
         await axios.post(/auth/,
           {
-            name: _name,
-            key: _key
+            appID: _appID,
+            appKey: _appKey,
+            devID: _devID
           })
           .then(response => {
 
@@ -171,7 +169,6 @@
             // '<p>Estimated average per day: '+ this.getDailyEnergy() + ' KWh/day/m<sup>2</sup><br/>',
             // '<p>Monthly power output: '+ this.getMonthlyEnergy() + ' MWh/month/m<sup>2</sup><br/>' +
             // '<p>Yearly power output: '+ this.getYearlyEnergy() + ' MWh/year/m<sup>2</sup><br/>',
-
             showCloseButton: true,
             showCancelButton: true,
             focusConfirm: false,

@@ -1,12 +1,11 @@
-package main.classes.controllers;
+package main.classes.measurement;
 
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-import main.classes.models.Measurement;
-import main.classes.services.MeasurementService;
+import main.classes.api.APIService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,14 +15,20 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Controller for Measurements
+ */
 @RestController
 public class MeasurementController {
 
+    /**
+     * Instantiating the service responsible for Measurements
+     */
     @Autowired
-    MeasurementService ms;
+     private MeasurementService ms;
 
     @Autowired
-    APIController ttn;
+    private APIService ttn;
 
 //    @RequestMapping(value = "/isauthorized", method = RequestMethod.POST, produces = {"application/json"})
 //    @CrossOrigin
@@ -36,6 +41,10 @@ public class MeasurementController {
 //    }
 
 
+    /**
+     *
+     * @return JSON encoded object with the average of all entries in the database and the last one
+     */
     @RequestMapping(value = "/measurements", method = RequestMethod.GET, produces = {"application/json"})
     @CrossOrigin
     public @ResponseBody
@@ -46,34 +55,12 @@ public class MeasurementController {
         return obj.toString();
     }
 
-    @RequestMapping(value = "/auth", method = RequestMethod.POST, produces = {"application/json"})
-    @CrossOrigin
-    public Integer authorize(@RequestBody String str) throws IOException {
-
-        ObjectMapper objectMapper = new ObjectMapper();
-        JsonNode node = objectMapper.readTree(str);
-
-        String name = objectMapper.convertValue(node.get("name"), String.class);
-        String accessKey = objectMapper.convertValue(node.get("key"), String.class);
-
-
-        if (name == null || name.isEmpty()) {
-            System.out.println("authorize: empty name");
-            return 0;
-
-        }
-
-        if (accessKey == null || accessKey.isEmpty()) {
-            System.out.println("authorize: empty key");
-            return 0;
-
-        }
-
-        if (ttn.authorize(name, accessKey, "ded-things-uno"))
-            return 1;
-
-        return 0;
-    }
+    /**
+     *
+     * @param str POST Request Body containing the app id, access key and device name
+     * @return  Authorization Yes/No (0/1) - return Integer because JavaScript has a hard time decoding booleans
+     * @throws IOException
+     */
 
     /**
      * @return list of registered data
@@ -152,7 +139,7 @@ public class MeasurementController {
             String time = objectMapper.convertValue(node.get("time"), String.class);
             String processId = objectMapper.convertValue(node.get("processId"), String.class);
             System.out.println("Trying to schedule changetime downlink: " + time + " - " + processId);
-            System.out.println(ttn.scheduleDownlink(processId, APIController.DOWNLINK_TYPE.INTEROGATION_TIME, time));
+            System.out.println(ttn.scheduleDownlink(processId, APIService.DOWNLINK_TYPE.INTEROGATION_TIME, time));
             System.out.println("Done");
         } catch (IOException e) {
             System.out.printf(e.toString());
@@ -168,7 +155,7 @@ public class MeasurementController {
             String position = objectMapper.convertValue(node.get("position"), String.class);
             String processId = objectMapper.convertValue(node.get("processId"), String.class);
             System.out.println("Trying to schedule change position downlink: " + position + " - " + processId);
-            System.out.println(ttn.scheduleDownlink(processId, APIController.DOWNLINK_TYPE.POSITION, position));
+            System.out.println(ttn.scheduleDownlink(processId, APIService.DOWNLINK_TYPE.POSITION, position));
             System.out.println("Done");
         } catch (IOException e) {
             System.out.printf(e.toString());
@@ -184,7 +171,7 @@ public class MeasurementController {
             String state = objectMapper.convertValue(node.get("state"), String.class);
             String processId = objectMapper.convertValue(node.get("processId"), String.class);
             System.out.println("Trying to schedule change state downlink: " + state + " - " + processId);
-            System.out.println(ttn.scheduleDownlink(processId, APIController.DOWNLINK_TYPE.STATE, state));
+            System.out.println(ttn.scheduleDownlink(processId, APIService.DOWNLINK_TYPE.STATE, state));
             System.out.println("Done");
         } catch (IOException e) {
             System.out.printf(e.toString());

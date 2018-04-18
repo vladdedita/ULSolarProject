@@ -927,75 +927,122 @@
     <table id="234" parent="7" name="solar">
       <Engine>MyISAM</Engine>
     </table>
-    <column id="235" parent="233" name="id">
+    <table id="235" parent="7" name="user">
+      <Engine>MyISAM</Engine>
+    </table>
+    <column id="236" parent="233" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="236" parent="233" name="deviceName">
+    <column id="237" parent="233" name="name">
       <Position>2</Position>
       <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="237" parent="233" name="appName">
+    <column id="238" parent="233" name="location">
       <Position>3</Position>
-      <DataType>varchar(30)|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="238" parent="233" name="appKey">
-      <Position>4</Position>
       <DataType>varchar(50)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="239" parent="233" name="authorized">
-      <Position>5</Position>
-      <DataType>tinyint(1)|0</DataType>
-      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    <column id="239" parent="233" name="user_id">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="240" parent="233" name="PRIMARY">
+    <index id="240" parent="233" name="device_id_uindex">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="241" parent="233" name="device_user_id_fk">
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="242" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="241" parent="234" name="id">
+    <key id="243" parent="233" name="device_id_uindex">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>device_id_uindex</UnderlyingIndexName>
+    </key>
+    <column id="244" parent="234" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="234" name="power">
+    <column id="245" parent="234" name="power">
       <Position>2</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="234" name="time">
+    <column id="246" parent="234" name="time">
       <Position>3</Position>
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="234" name="direction">
+    <column id="247" parent="234" name="direction">
       <Position>4</Position>
       <DataType>int(1)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="245" parent="234" name="solar_time_uindex">
+    <index id="248" parent="234" name="solar_time_uindex">
       <ColNames>time</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="246" parent="234" name="PRIMARY">
+    <key id="249" parent="234" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="247" parent="234" name="solar_time_uindex">
+    <key id="250" parent="234" name="solar_time_uindex">
       <ColNames>time</ColNames>
       <UnderlyingIndexName>solar_time_uindex</UnderlyingIndexName>
+    </key>
+    <column id="251" parent="235" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="252" parent="235" name="app_name">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="253" parent="235" name="app_key">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="254" parent="235" name="authorized">
+      <Position>4</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="255" parent="235" name="token">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="256" parent="235" name="born">
+      <Position>6</Position>
+      <DataType>datetime|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="257" parent="235" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
     </key>
   </database-model>
 </dataSource>

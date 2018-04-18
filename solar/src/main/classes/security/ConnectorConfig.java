@@ -1,4 +1,4 @@
-package main.classes.controllers;
+package main.classes.security;
 
 //@Configuration
 //public class ConnectorConfig {

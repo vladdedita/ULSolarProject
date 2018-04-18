@@ -1,4 +1,4 @@
-package main.classes.models;
+package main.classes.measurement;
 
 
 import org.springframework.format.annotation.DateTimeFormat;
