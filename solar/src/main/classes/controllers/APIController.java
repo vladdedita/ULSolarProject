@@ -28,7 +28,7 @@ import java.util.concurrent.TimeUnit;
 public class APIController {
 
 
-    private static final int DEFAULT_UPDATERATE=1;
+    private static final int DEFAULT_UPDATERATE=15;
     private static final TimeUnit DEFAULT_UPDATERATE_TIMEUNIT=TimeUnit.MINUTES;
 
     @Autowired
@@ -41,8 +41,8 @@ public class APIController {
     private String processId;
     private Boolean authorized = false;
 
-    private Integer updateRate=null; // time period to check for updates
-    private TimeUnit timeUnit = null;
+    private Integer updateRate=15; // time period to check for updates
+    private TimeUnit timeUnit = TimeUnit.MINUTES;
     private Pusher pusher;
 
     private ScheduledExecutorService executor;
@@ -94,6 +94,7 @@ public class APIController {
             int status = con.getResponseCode();
             if (status == 200) {
                 authorized = true;
+                getAllData();
                 getLatestData();
                 return true;
             }
@@ -145,6 +146,14 @@ public class APIController {
         return pusher;
     }
 
+    private void getAllData(){
+        if(!authorized)
+        {
+            System.out.println("Not authorized");
+            return;
+        }
+
+    }
     private void getLatestData() {
 
         if (!authorized) {
@@ -167,41 +176,39 @@ public class APIController {
             String jsonData = request(dataUrl);
             if (jsonData == null) {
                 System.out.println("No data to fetch");
-                return;
             }
 
             System.out.println("OK");
             Gson gson = new Gson();
-            Measurement[] data = gson.fromJson(jsonData, Measurement[].class);
+            Measurement[] data=null;
+            if(jsonData!= null)
+            {
+                data = gson.fromJson(jsonData, Measurement[].class);
+                System.out.print("Updating database...");
 
-            System.out.print("Updating database...");
-
-            for (Measurement m : data) {
-                if (m.getPower() != null && m.getTime() != null) {
-                    try {
-                        SimpleDateFormat format = new SimpleDateFormat("EEE MMM dd hh:mm:ss zzz yyyy");
-                        Date d1 = null;
-                        d1=format.parse(m.getTime().toString());
-
-                        String d2 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(d1);
-                        System.out.println("DB: "+dao.findByTime(d2));
-                        System.out.println("Response: " + d2);
-                        if(dao.findByTime(d2) == null) {
-                            dao.save(m);
-                            pusher.trigger("chart", "chartData", new ArrayList<Measurement>().add(dao.findById(m.getId())));
-                        }
+                for (Measurement m : data) {
+                    if (m.getPower() != null && m.getTime() != null) {
+                        try {
+                            SimpleDateFormat format = new SimpleDateFormat("EEE MMM dd hh:mm:ss zzz yyyy");
+                            Date d1 = null;
+                            d1=format.parse(m.getTime().toString());
+                            String d2 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(d1);
+//                            System.out.println("DB: "+dao.findByTime(d2));
+//                            System.out.println("Response: " + d2);
+                            if(dao.findByTime(d2) == null) {
+                                dao.save(m);
+                                pusher.trigger("chart", "chartData", new ArrayList<Measurement>().add(dao.findById(m.getId())));
+                            }
                         } catch (DataIntegrityViolationException ee) {
 
+                        }
+                        catch(ParseException parseEx){System.out.println(parseEx.toString());}
                     }
-                    catch(ParseException parseEx){System.out.println(parseEx.toString());}
-
-                    }
+                }
             }
+
             System.out.println("OK");
             Date d =  dao.getLast().getTime();
-
-
-
             System.out.println("OK");
 
 

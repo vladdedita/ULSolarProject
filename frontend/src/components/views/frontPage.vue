@@ -19,11 +19,17 @@
 
 
   <pageLayout v-if="this.toBeShown">
+    <div id="customInputDiv">
+      <input v-model = "customDimension" placeholder="Desired dimension">
+      <button v-on:click = "showCustomInputPanel">CHECK</button>
+    </div>
+
     <solarpanel style="width:10%; height: 10%;" :dimension='0.014' :energy="this.energy" :lastEnergy="this.lastEnergy"></solarpanel>
     <solarpanel style="width:15%; height: 15%;" :dimension='8' :energy="this.energy" :lastEnergy="this.lastEnergy"></solarpanel>
     <solarpanel style="width:20%; height: 20%;" :dimension='14' :energy="this.energy" :lastEnergy="this.lastEnergy"></solarpanel>
     <solarpanel style="width:30%; height: 30%;" :dimension='21' :energy="this.energy" :lastEnergy="this.lastEnergy"></solarpanel>
     <solarpanel style="width:40%; height: 40%;" :dimension='28' :energy="this.energy" :lastEnergy="this.lastEnergy"></solarpanel>
+
   </pageLayout>
 
 </template>
@@ -52,15 +58,15 @@
       async authorize() {
         if (this.$store.getters.isAuthorized !== true) {
           if (!this.$cookies.isKey('devName') && !this.$cookies.isKey('appKey')) {
-
             const {value: formValues} = await this.$swal({
               title: 'Authorization',
               allowOutsideClick: false,
               confirmButtonText: 'Submit',
               confirmButtonClass: 'btn btn-success',
               html:
-              '<input id="swal-input1" class="swal2-input" placeholder="Device name">' +
-              '<input id="swal-input2" class="swal2-input" placeholder="App Access Key">' +
+              '<input id="swal-input1" class="swal2-input" placeholder="Application ID">' +
+              '<input id="swal-input2" class="swal2-input" placeholder="Application Access Key">' +
+              '<input id="swal-input3" class="swal2-input" placeholder="Device ID">' +
               '<input id="swal-checkbox1" class="swal2-checkbox" type="checkbox" value="1"><span>' +
               'Remember me</span>',
               focusConfirm: false,
@@ -143,7 +149,6 @@
           })
       },
       async getMeasurements() {
-
        await axios.get(window.ApiUrl + /measurements/)
           .then(response=>{
           //   console.log(response.data);
@@ -151,12 +156,36 @@
             this.energy=response.data.average;
             this.lastEnergy = response.data.last;
             this.toBeShown = true;
-
             console.log(this.energy)
           })
           .catch(e=>{console.log("ERROR:",e);
           })
-      }
+      },
+      showCustomInputPanel(){
+        if(!isNaN(this.customDimension)) {
+          this.$swal({
+            title: "Solar panel",
+            html:
+            '<p>Dimension: ' + this.customDimension + ' m<sup>2</sup><br/>' +
+            '<p>Last recorded energy output: ' + (((this.lastEnergy / 10000) * this.customDimension) / 0.014) * 60 + 'Wh</p>',
+            // '<p>Estimated average per day: '+ this.getDailyEnergy() + ' KWh/day/m<sup>2</sup><br/>',
+            // '<p>Monthly power output: '+ this.getMonthlyEnergy() + ' MWh/month/m<sup>2</sup><br/>' +
+            // '<p>Yearly power output: '+ this.getYearlyEnergy() + ' MWh/year/m<sup>2</sup><br/>',
+
+            showCloseButton: true,
+            showCancelButton: true,
+            focusConfirm: false,
+          });
+        }
+        else
+        {
+          this.$swal(
+            'Error',
+            'Invalid dimension',
+            'error'
+          );
+        }
+        }
     },
 
     mounted() {
@@ -165,6 +194,7 @@
     },
     data() {
       return {
+        customDimension: "",
         authorized: false,
         toBeShown:false,
         energy: 0,
@@ -180,4 +210,32 @@
 </script>
 
 <style>
+  #customInputDiv{
+    display:block;
+    width:50%;
+    height:50px;
+    margin:auto;
+    overflow:visible;
+    padding-right:40px;
+  }
+  #customInputDiv > input {
+    float:left;
+    width:49%;
+    height: 40px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+  }
+  #customInputDiv > button {
+    margin-top:5px;
+    float:right;
+    width:40%;
+    height: 40px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    color:grey;
+    font-family: 'Metrophobic', sans-serif;
+  }
+
 </style>

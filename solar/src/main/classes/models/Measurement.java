@@ -21,6 +21,9 @@ public class Measurement {
     private @DateTimeFormat(pattern = "2018-03-27T13:52:39.057164Z yyyy-mm-ddThh:mm:ss")
     Date time;
 
+    @Column(name = "direction")
+    private Integer direction;
+
     protected Measurement() {
 
     }

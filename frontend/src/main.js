@@ -16,7 +16,7 @@ Vue.use(VueSweetAlert2);
 /* eslint-disable */
 
 
-window.ApiUrl = "http://localhost:8090";
+window.ApiUrl = window.location.href;
 window.ttnUrl = ".data.thethingsnetwork.org/";
 
 new Vue({

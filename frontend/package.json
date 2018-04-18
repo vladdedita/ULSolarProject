@@ -22,6 +22,7 @@
     "pusher-js": "^4.2.2",
     "vue": "^2.5.2",
     "vue-cookies": "^1.5.6",
+    "vue-md-date-picker": "^1.0.15",
     "vue-router": "^3.0.1",
     "vue-select": "^2.4.0",
     "vue-sweetalert2": "^1.2.4",

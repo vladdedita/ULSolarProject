@@ -5,6 +5,7 @@ import Index from '../components/views/frontPage.vue'
 import Statistics from '../components/views/statisticsPage.vue'
 import LocationPage from '../components/views/locationPage.vue'
 import ManagementPage from '../components/views/managementPage.vue'
+import AboutPage from '../components/views/aboutPage.vue'
 import vSelect from 'vue-select'
 
 import VueCookies from 'vue-cookies';
@@ -35,6 +36,11 @@ export default new Router({
       path: '/management',
       name: 'management-page',
       component: ManagementPage
+    },
+    {
+      path:'/about',
+      name: 'about-page',
+      component: AboutPage
     }
     //
     // {

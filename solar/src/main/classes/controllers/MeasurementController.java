@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -34,12 +35,12 @@ public class MeasurementController {
 //       return ttn.getAuthorized();
 //    }
 
+
     @RequestMapping(value = "/measurements", method = RequestMethod.GET, produces = {"application/json"})
     @CrossOrigin
     public @ResponseBody
     String getMeasurements() {
         JsonObject obj=new JsonObject();
-
         obj.addProperty("average",ms.getAverage());
         obj.addProperty("last",ms.getLast().getPower());
         return obj.toString();
@@ -83,7 +84,7 @@ public class MeasurementController {
     public void getData(@PathVariable String unit, @PathVariable Integer time) {
 
         List<Measurement> measurementList;
-        List<Measurement> toSendBuffer = new ArrayList<>();
+        List<Measurement> toSendBuffer = new ArrayList<Measurement>();
 
         if(time == 0)
             measurementList = ms.getAllMeasurements();
@@ -110,6 +111,35 @@ public class MeasurementController {
 
 
 
+        }
+    }
+
+    @RequestMapping(value = "/getdata/date/{date}", method = RequestMethod.GET, produces = {"application/json"})
+    @CrossOrigin
+    public void getDateData(@PathVariable String date) throws ParseException {
+
+        List<Measurement> measurementList;
+        List<Measurement> toSendBuffer = new ArrayList<Measurement>();
+        System.out.println("Fetching measurements for:"+date);
+        measurementList = ms.getMeasurementsByDate(date);
+        Gson gson = new Gson();
+
+        for (Measurement m : measurementList) {
+            toSendBuffer.add(m);
+            if(measurementList.indexOf(m) != measurementList.size()-1) {
+                if (toSendBuffer.size() >= 10) {
+                    ttn.getPusher().trigger("chart", "chartData", gson.toJson(Collections.singletonMap("data", toSendBuffer)));
+                    System.out.println("Pushing: " + gson.toJson(Collections.singletonMap("data", toSendBuffer)));
+                    toSendBuffer.clear();
+
+                }
+            }
+            else
+            {
+                ttn.getPusher().trigger("chart", "chartData", gson.toJson(Collections.singletonMap("data", toSendBuffer)));
+                System.out.println("Pushing: " + gson.toJson(Collections.singletonMap("data", toSendBuffer)));
+                toSendBuffer.clear();
+            }
         }
     }
 
@@ -164,7 +194,6 @@ public class MeasurementController {
     @RequestMapping(value = "/getSolarData/{latitude}/{longitude}", method=RequestMethod.GET, produces = {"application/json"})
     @CrossOrigin
     public String getSolarData(@PathVariable Double latitude, @PathVariable Double longitude){
-
 
         return ms.getSolarInsulation(latitude,longitude);
     }

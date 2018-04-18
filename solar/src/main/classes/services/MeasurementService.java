@@ -2,6 +2,9 @@ package main.classes.services;
 
 import main.classes.daos.MeasurementDao;
 import main.classes.models.Measurement;
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,6 +14,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +27,7 @@ public class MeasurementService {
 
     public List<Measurement> getAllMeasurements() {
 
-        List<Measurement> measurements = new ArrayList<>();
+        List<Measurement> measurements = new ArrayList<Measurement>();
 
         for (Measurement m : dao.findAll())
             measurements.add(m);
@@ -95,11 +99,27 @@ public class MeasurementService {
                 period*=30;
                 period*=12;
                 break;
+
+
         }
         return dao.getMeasurementByCustomTime(period);
 
     }
+    public List<Measurement> getMeasurementsByDate(String date) throws ParseException {
+        List<Measurement> measurements = new ArrayList<Measurement>();
 
+
+        DateTimeFormatter format = DateTimeFormat.forPattern("yyyy-MM-dd");
+        DateTime d1 = format.parseDateTime(date);
+
+        for (Measurement m : dao.findAll()){
+            if(date.equals(m.getTime().toString().split(" ")[0]))
+            {
+                measurements.add(m);
+            }
+        }
+        return measurements;
+    }
     public Double getAverage(){
         return dao.getMeasurementAverage();
     }

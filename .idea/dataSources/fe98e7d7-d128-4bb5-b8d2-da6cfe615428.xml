@@ -921,43 +921,79 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="233" parent="7" name="solar">
+    <table id="233" parent="7" name="device">
       <Engine>MyISAM</Engine>
     </table>
-    <column id="234" parent="233" name="id">
+    <table id="234" parent="7" name="solar">
+      <Engine>MyISAM</Engine>
+    </table>
+    <column id="235" parent="233" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="235" parent="233" name="power">
+    <column id="236" parent="233" name="deviceName">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="237" parent="233" name="appName">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="238" parent="233" name="appKey">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="239" parent="233" name="authorized">
+      <Position>5</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="240" parent="233" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="241" parent="234" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="242" parent="234" name="power">
       <Position>2</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="236" parent="233" name="time">
+    <column id="243" parent="234" name="time">
       <Position>3</Position>
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="237" parent="233" name="direction">
+    <column id="244" parent="234" name="direction">
       <Position>4</Position>
       <DataType>int(1)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="238" parent="233" name="solar_time_uindex">
+    <index id="245" parent="234" name="solar_time_uindex">
       <ColNames>time</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="239" parent="233" name="PRIMARY">
+    <key id="246" parent="234" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="240" parent="233" name="solar_time_uindex">
+    <key id="247" parent="234" name="solar_time_uindex">
       <ColNames>time</ColNames>
       <UnderlyingIndexName>solar_time_uindex</UnderlyingIndexName>
     </key>

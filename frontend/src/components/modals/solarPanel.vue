@@ -1,8 +1,7 @@
 <template>
 
-  <img id="panel" src="../../utils/solar_panel_tr.png" v-on:click="alertDisplay">
-  <!--<p class="dimension">{{this.dimension}}</p>-->
 
+  <img id="panel" src="../../utils/solar_panel_tr.png" v-on:click="alertDisplay">
 
 </template>
 
@@ -12,7 +11,9 @@
     props:[
       'dimension',
       'energy', //average
-      'lastEnergy'
+      'lastEnergy',
+      'width',
+      'height'
     ],
     mounted() {
       this.energy = this.energy/10000; // to W
@@ -23,7 +24,7 @@
         return this.energy.toFixed(3)
       },
       getDailyEnergy(){
-        let e = (this.energy * 60 * 10/* hours of sunlight*/)/1000;
+        let e = (this.energy * 60 * 12/* hours of sunlight*/) / 1000;
         return e.toFixed(3)
       },
       getMonthlyEnergy(){
@@ -39,15 +40,24 @@
           title: "Solar panel",
           html:
           '<p>Dimension: '+ this.dimension +' m<sup>2</sup><br/>' +
-          '<p>Energy produced right now: ' + (this.lastEnergy*this.dimension)/0.014*60/10000 + 'Wh/m<sup>2</sup></p>' +
-          '<p>Estimated daily energy output: '+ this.getDailyEnergy() + ' KWh/day/m<sup>2</sup><br/>' +
-          '<p>Monthly power output: '+ this.getMonthlyEnergy() + ' MWh/month/m<sup>2</sup><br/>' +
-          '<p>Yearly power output: '+ this.getYearlyEnergy() + ' MWh/year/m<sup>2</sup><br/>',
+          '<p>Last recorded energy output: ' + (( (this.lastEnergy/10000) *this.dimension)/0.014 )*60 + 'Wh</p>',
+         // '<p>Estimated average per day: '+ this.getDailyEnergy() + ' KWh/day/m<sup>2</sup><br/>',
+          // '<p>Monthly power output: '+ this.getMonthlyEnergy() + ' MWh/month/m<sup>2</sup><br/>' +
+          // '<p>Yearly power output: '+ this.getYearlyEnergy() + ' MWh/year/m<sup>2</sup><br/>',
 
           showCloseButton: true,
           showCancelButton: true,
           focusConfirm: false,
         });
+      }
+    },
+    data () {
+      return {
+        styleObject: {
+          width: this.width + '%',
+          height: this.height + '%',
+          margin: 'auto'
+        }
       }
     }
   }

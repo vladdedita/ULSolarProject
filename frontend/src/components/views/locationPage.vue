@@ -1,10 +1,12 @@
 <template>
   <pageLayout>
-    <div id="divText">
-    <p>Please choose your location:</p>
-    </div>
+    <!--<div id="divText">-->
+
+    <!--</div>-->
     <div id="divMap">
+      <p>Please choose your location:</p>
       <google-map @updatedLocation="updateLocation"></google-map>
+
     </div>
   </pageLayout>
 </template>
@@ -56,8 +58,13 @@
 
   }
   #divMap {
-    float:right;
+    /*float:right;*/
+    margin:auto;
     overflow: visible;
+  }
+  #divMap > p {
+    margin: auto;
+    text-align: center;
   }
   #divText{
     float:left;

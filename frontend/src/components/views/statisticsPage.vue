@@ -1,28 +1,36 @@
 <template>
   <pageLayout>
     <!--<button @submit.prevent="submitForm" @click="requestData()"></button>-->
-    <v-select id="dropdown" label="value" @changedV v-model="selected" :options="options" ></v-select>
+    <div>
+    <v-select  style="float:left;" id="dropdown" label="value" @changedV v-model="selected" :options="options" ></v-select>
+      <button>SHOW CALENDAR</button>
+      <date-picker @close="requestDateData" v-if="calShow" v-model="date" color="#94baf7"></date-picker>
+    </div>
     <line-chart id="chart" v-if="visible" :chart-data="chartData" :options="this.chartOptions" ></line-chart>
+    <pie-chart id="pieChart":chart-data="pieChartData" :options="this.pieChartOptions"></pie-chart>
   </pageLayout>
 </template>
 
 <script>
   import LineChart from '../modals/lineChart'
+  import PieChart from '../modals/pieChart'
   import pageLayout from '../modals/page'
   import axios from 'axios'
 
   import Pusher from 'pusher-js' // import Pusher
   import vSelect from 'vue-select'
-
+  import DatePicker from 'vue-md-date-picker'
   Pusher.logToConsole = true;
 
 
   export default {
     name: 'statistics',
     components: {
+      PieChart,
       pageLayout,
       LineChart,
-      vSelect
+      vSelect,
+      DatePicker
     },
     watch : {
       selected : function (){
@@ -51,25 +59,50 @@
           this.incomingChartData(data)
         })
       },
-
       incomingChartData(data) {
         console.log("Updating data...")
         for (let i = 0; i < data.length; i++) {
-          this.msLabels.push(data[i].time);
-            this.msData.push(data[i].power*60/10000);
-          console.log(data[i].power)
+
+          {
+            let value = (data[i].power/10000/*to W*/ * 1/*square meter*/ /0.014 )* 60 ;
+            if(value > 0.0)
+            {
+              this.msData.push(value.toFixed(3));
+              this.msLabels.push(data[i].time);
+            }
+            if(data[i].direction == 0)
+            {
+              this.pieData[0]++;
+            }
+            else
+              this.pieData[1]++;
+
+          }
+          console.log(data[i].direction)
         }
 
         this.chartData = {
           labels: this.msLabels,
           datasets: [
             {
-              label: 'Radiation',
+              label: 'Solar Insolation (Wh / square meter)',
               // backgroundColor: '#dace69',
               borderColor: 'white',
               pointBackgroundColor: 'red',
               data: this.msData
             }
+          ]
+        }
+
+       this.pieChartData= {
+          labels: ['East','West'],
+            datasets: [
+            {
+              backgroundColor: ['orange','red'],
+              label: 'Solar Insolation (Wh / square meter)',
+              // backgroundColor: '#dace69',
+              data: this.pieData
+            },
           ]
         }
 
@@ -86,7 +119,7 @@
           labels:this.msLabel=['0'],
           datasets: [
             {
-              label: 'Radiation',
+              label: 'Solar Insolation (Wh / square meter)',
               // backgroundColor: '#dace69',
               borderColor: 'white',
               pointBackgroundColor: 'red',
@@ -100,6 +133,7 @@
           this.selected.value="1 day";
           this.selected.unit="day";
         }
+
         let unit = this.selected.unit;
 
         if(this.selected.unit === "all")
@@ -108,9 +142,35 @@
          value="0 "
         }
         let value = this.selected.value.split(" ")[0];
+        axios.get(window.ApiUrl + "getdata/" + unit + "/" + value)
+          .then(response => {
+            this.visible = true;
+          })
+          .catch(e => {
+            console.log("ERROR:", e);
+          })
+      },
+      requestDateData() {
+        this.calShow=false;
+        this.msLabels=[];
+        this.msLabels=['0'];
+        this.msData=[];
+        this.msData=['0'];
 
+        this.chartData = {
+          labels:this.msLabel=['0'],
+          datasets: [
+            {
+              label: 'Solar Insolation (Wh / square meter)',
+              // backgroundColor: '#dace69',
+              borderColor: 'white',
+              pointBackgroundColor: 'red',
+              data: this.msData
+            }
+          ]
+        };
 
-        axios.get(window.ApiUrl + /getdata/ + unit + "/" + value)
+        axios.get(window.ApiUrl + "/getdata/date/"+this.date)
           .then(response => {
             this.visible = true;
           })
@@ -120,7 +180,8 @@
       }
     },
     mounted() {
-    this.requestData();
+    //this.requestData();
+     // this.requestDateData();
     },
 
     data() {
@@ -132,21 +193,24 @@
           {unit:"hour", value:"6 hour"},
           {unit:"hour", value:"12 hour"},
           {unit:"day", value:"1 day"},
+          {unit:"day", value:"2 day"},
           {unit:"day", value:"7 day"},
-          {unit:"day", value:"1 month"},
+          {unit:"month", value:"1 month"},
           {unit:"month", value:"6 month"},
           {unit:"year", value:"1 year"},
           {unit:"all", value:"All time"}
         ],
         selected: {
-          unit:null,
-          value:null
+          unit:"day",
+          value:"1 day"
         },
         pusher: null,
         channel: null,
         visible: false,
         msLabels: ['0'],
         msData: ['0'],
+        pieLabels: ['East','West'],
+        pieData:[0,0],
         chartOptions: {
           legend: {
             labels: {
@@ -178,16 +242,36 @@
           labels: ['0'],
           datasets: [
             {
-              label: 'Radiation',
+              label: 'Solar Insolation (Wh / square meter)',
               // backgroundColor: '#dace69',
               borderColor: 'white',
               pointBackgroundColor: 'red',
               data: ['0']
             }
           ]
-        }
+        },
+        pieChartData: {
+          labels: ['East','West'],
+          datasets: [
+            {
+              backgroundColor: ['orange','red'],
+              label: 'Solar Insolation (Wh / square meter)',
+              // backgroundColor: '#dace69',
+              data: [0,0]
+            },
 
-
+          ]
+        },
+        pieChartOptions: {
+          legend: {
+            labels: {
+              fontColor: 'white'
+            }
+          },
+          responsive: true,
+          },
+        date: null,
+        calShow:true
       }
     }
   }

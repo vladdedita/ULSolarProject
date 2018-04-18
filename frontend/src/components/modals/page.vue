@@ -106,7 +106,7 @@
   }
 
   .divPageFlexboxDiv > img {
-
+    margin-top:10px;
     display: block;
     position: relative;
     margin: auto;

@@ -34,7 +34,9 @@
 
       <div class="navBarChoice">
         <div class="opac"></div>
-        <p>About</p>
+        <p>
+          <router-link to="/about" class="navBarChoiceLink">About</router-link>
+        </p>
       </div>
     </div>
 
