@@ -6,7 +6,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import main.classes.api.APIService;
+import main.classes.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
@@ -26,7 +29,8 @@ public class MeasurementController {
      */
     @Autowired
      private MeasurementService ms;
-
+    @Autowired
+    private UserService us;
     @Autowired
     private APIService ttn;
 
@@ -45,14 +49,21 @@ public class MeasurementController {
      *
      * @return JSON encoded object with the average of all entries in the database and the last one
      */
-    @RequestMapping(value = "/measurements", method = RequestMethod.GET, produces = {"application/json"})
+    @RequestMapping(value = "/measurements", method = RequestMethod.POST, produces = {"application/json"})
     @CrossOrigin
     public @ResponseBody
-    String getMeasurements() {
+    ResponseEntity getMeasurements(@RequestHeader(value="Authorization") String token, @RequestBody String body) throws IOException{
         JsonObject obj=new JsonObject();
+
+        if(!us.isAuthorized(token))
+        {
+            obj.addProperty("error","Token not authorized");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(obj.toString());
+        }
+
         obj.addProperty("average",ms.getAverage());
         obj.addProperty("last",ms.getLast().getPower());
-        return obj.toString();
+        return ResponseEntity.status(HttpStatus.OK).body(obj.toString());
     }
 
     /**
@@ -66,9 +77,19 @@ public class MeasurementController {
      * @return list of registered data
      */
 
-    @RequestMapping(value = "/getdata/{unit}/{time}", method = RequestMethod.GET, produces = {"application/json"})
+
+
+    @RequestMapping(value = "/getdata/{unit}/{time}", method = RequestMethod.POST, produces = {"application/json"})
     @CrossOrigin
-    public void getData(@PathVariable String unit, @PathVariable Integer time) {
+    public ResponseEntity getData(@RequestHeader(value = "Authorization") String token, @PathVariable String unit, @PathVariable Integer time) {
+        JsonObject obj=new JsonObject();
+        if(!us.isAuthorized(token))
+        {
+
+            obj.addProperty("error","Token not authorized");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(obj.toString());
+        }
+
 
         List<Measurement> measurementList;
         List<Measurement> toSendBuffer = new ArrayList<Measurement>();
@@ -99,12 +120,18 @@ public class MeasurementController {
 
 
         }
+        return new ResponseEntity(HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/getdata/date/{date}", method = RequestMethod.GET, produces = {"application/json"})
+    @RequestMapping(value = "/getdata/date/{date}", method = RequestMethod.POST, produces = {"application/json"})
     @CrossOrigin
-    public void getDateData(@PathVariable String date) throws ParseException {
-
+    public ResponseEntity getDateData(@RequestHeader(value="Authorization") String token, @PathVariable String date) throws ParseException {
+        JsonObject obj=new JsonObject();
+        if(!us.isAuthorized(token))
+        {
+            obj.addProperty("error","Token not authorized");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(obj.toString());
+        }
         List<Measurement> measurementList;
         List<Measurement> toSendBuffer = new ArrayList<Measurement>();
         System.out.println("Fetching measurements for:"+date);
@@ -128,11 +155,19 @@ public class MeasurementController {
                 toSendBuffer.clear();
             }
         }
+        return new ResponseEntity(HttpStatus.OK);
     }
 
     @RequestMapping(value = "/changeTime", method = RequestMethod.POST)
     @CrossOrigin
-    public void changeTime(@RequestBody String str) {
+    public ResponseEntity changeTime(@RequestHeader(value="Authorization") String token, @RequestBody String str) {
+        if(!us.isAuthorized(token))
+        {
+            JsonObject obj=new JsonObject();
+            obj.addProperty("error","Token not authorized");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(obj.toString());
+        }
+
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode node = objectMapper.readTree(str);
@@ -141,14 +176,22 @@ public class MeasurementController {
             System.out.println("Trying to schedule changetime downlink: " + time + " - " + processId);
             System.out.println(ttn.scheduleDownlink(processId, APIService.DOWNLINK_TYPE.INTEROGATION_TIME, time));
             System.out.println("Done");
+            return new ResponseEntity(HttpStatus.OK);
         } catch (IOException e) {
             System.out.printf(e.toString());
         }
+        return new ResponseEntity(HttpStatus.BAD_REQUEST);
     }
 
     @RequestMapping(value = "/changePosition", method = RequestMethod.POST)
     @CrossOrigin
-    public void changePosition(@RequestBody String str) {
+    public ResponseEntity changePosition(@RequestHeader(value="Authorization") String token,@RequestBody String str) {
+        if(!us.isAuthorized(token))
+        {
+            JsonObject obj=new JsonObject();
+            obj.addProperty("error","Token not authorized");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(obj.toString());
+        }
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode node = objectMapper.readTree(str);
@@ -157,14 +200,22 @@ public class MeasurementController {
             System.out.println("Trying to schedule change position downlink: " + position + " - " + processId);
             System.out.println(ttn.scheduleDownlink(processId, APIService.DOWNLINK_TYPE.POSITION, position));
             System.out.println("Done");
+            return new ResponseEntity(HttpStatus.OK);
         } catch (IOException e) {
             System.out.printf(e.toString());
         }
+        return new ResponseEntity(HttpStatus.BAD_REQUEST);
     }
 
     @RequestMapping(value = "/changeState", method = RequestMethod.POST)
     @CrossOrigin
-    public void changeState(@RequestBody String str) {
+    public ResponseEntity changeState(@RequestHeader(value="Authorization") String token,@RequestBody String str) {
+        if(!us.isAuthorized(token))
+        {
+            JsonObject obj=new JsonObject();
+            obj.addProperty("error","Token not authorized");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(obj.toString());
+        }
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode node = objectMapper.readTree(str);
@@ -173,17 +224,27 @@ public class MeasurementController {
             System.out.println("Trying to schedule change state downlink: " + state + " - " + processId);
             System.out.println(ttn.scheduleDownlink(processId, APIService.DOWNLINK_TYPE.STATE, state));
             System.out.println("Done");
+            return new ResponseEntity(HttpStatus.OK);
         } catch (IOException e) {
             System.out.printf(e.toString());
         }
+        return new ResponseEntity(HttpStatus.BAD_REQUEST);
     }
 
-    @RequestMapping(value = "/getSolarData/{latitude}/{longitude}", method=RequestMethod.GET, produces = {"application/json"})
-    @CrossOrigin
-    public String getSolarData(@PathVariable Double latitude, @PathVariable Double longitude){
-
-        return ms.getSolarInsulation(latitude,longitude);
-    }
+//    @RequestMapping(value = "/getSolarData/{latitude}/{longitude}", method=RequestMethod.GET, produces = {"application/json"})
+//    @CrossOrigin
+//    public ResponseEntity getSolarData(@RequestHeader(value="Authorization") String token, @PathVariable Double latitude, @PathVariable Double longitude){
+//        JsonObject obj=new JsonObject();
+//        if(!us.isAuthorized(token))
+//        {
+//
+//            obj.addProperty("error","Token not authorized");
+//            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(obj.toString());
+//        }
+//
+//        ms.getSolarInsulation(latitude,longitude);
+//
+//    }
 
 
 }

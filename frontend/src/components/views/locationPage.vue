@@ -6,7 +6,7 @@
     <div id="divMap">
       <p>Please choose your location:</p>
       <google-map @updatedLocation="updateLocation"></google-map>
-
+      <button @submit.prevent="submitForm" @click="showLocation()" id="registerButton">Register location</button>
     </div>
   </pageLayout>
 </template>
@@ -21,6 +21,9 @@
     methods: {
       showMap: function () {
         console.log("Trying to show map ...");
+      },
+      showLocation() {
+        console.log(this.latitude +"   "+ this.longitude)
       },
       updateLocation(value) {
         console.log(value);
@@ -69,6 +72,25 @@
   #divText{
     float:left;
 
+  }
+  #registerButton {
+
+    width:250px;
+    height: 50px;
+    display:block;
+    margin: auto;
+    margin-top: 20px;
+
+    background: transparent;
+    color:white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+  }
+  #registerButton:hover{
+    background: lightblue;
+    color:darkblue;
   }
 
 </style>

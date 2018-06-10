@@ -4,16 +4,22 @@ Vue.use(Vuex);
 
 
 const store = new Vuex.Store({
+
   state: {
-    authorized :false
+    authorized :false,
+    key:""
   },
   mutations: {
     authorize : state => state.authorized=true,
-    unauthorize: state=> state.authorized=false
+    unauthorize: state=> state.authorized=false,
+    setKey(state,_key) {
+      state.key = _key
+    }
   },
   getters: {
-    isAuthorized: state => state.authorized
-  }
+    isAuthorized: state => state.authorized,
+    getKey: state => state.key
+}
 
 });
 

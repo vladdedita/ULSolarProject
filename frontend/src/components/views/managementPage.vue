@@ -98,6 +98,10 @@
               {
                 processId: this.processId,
                 time: this.selectedTime
+              },{
+                headers: {
+                  'Authorization': this.$store.getters.getKey
+                }
               })
               .then(response => {
               })
@@ -115,6 +119,10 @@
               {
                 processId: this.processId,
                 position: this.selectedPosition
+              },{
+                headers: {
+                  'Authorization': this.$store.getters.getKey
+                }
               })
               .then(response => {
               })
@@ -132,6 +140,10 @@
               {
                 processId: this.processId,
                 state: this.selectedPower
+              },{
+                headers: {
+                  'Authorization': this.$store.getters.getKey
+                }
               })
               .then(response => {
               })

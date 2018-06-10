@@ -28,6 +28,7 @@ public class APIService {
     @Autowired
     //Data access object
     MeasurementDao dao;
+
     private StringBuilder apiUrl;
 
     private Integer updateRate=15; // time period to check for updates

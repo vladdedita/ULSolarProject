@@ -1,15 +1,21 @@
 package main.classes.web;
 
 
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+//import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 
 
 @Controller
-public class WebController extends WebMvcConfigurerAdapter{
+@Configuration
+//@EnableWebMvc
+@ComponentScan(basePackages="main.classes.security")
+public class WebController extends WebMvcConfigurerAdapter {
 
     @RequestMapping("/")
     @CrossOrigin
@@ -19,7 +25,8 @@ public class WebController extends WebMvcConfigurerAdapter{
     }
 
 
-    }
+}
+
 
 //    @RequestMapping("/statistics")
 //    @CrossOrigin

@@ -5,4 +5,6 @@ import org.springframework.data.repository.CrudRepository;
 public interface UserDao extends CrudRepository<User, Long> {
 
     User findByAppKey(String appKey);
+    User findByToken(String token);
+
 }

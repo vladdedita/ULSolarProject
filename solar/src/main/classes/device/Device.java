@@ -12,8 +12,11 @@ public class Device {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "location")
-    private String location;
+    @Column(name = "latitude")
+    private String latitude;
+
+    @Column(name = "longitude")
+    private String longitude;
 
     @Column(name ="userId")
     private Integer userId;
@@ -25,4 +28,10 @@ public class Device {
        this.name=name;
    }
 
+    public Device(String name, String latitude, String longitude, Integer userId) {
+        this.name = name;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.userId = userId;
+    }
 }

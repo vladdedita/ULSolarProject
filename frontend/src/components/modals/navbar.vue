@@ -10,7 +10,7 @@
       <div class="navBarChoice">
         <div class="opac"></div>
         <p>
-          <router-link to="/" class="navBarChoiceLink">Homepage</router-link>
+          <router-link to="/front" class="navBarChoiceLink">Homepage</router-link>
         </p>
       </div>
       <div class="navBarChoice">

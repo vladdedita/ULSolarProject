@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld'
-import Index from '../components/views/frontPage.vue'
+import Auth from '../components/views/authPage.vue'
+import Front from '../components/views/frontPage.vue'
 import Statistics from '../components/views/statisticsPage.vue'
 import LocationPage from '../components/views/locationPage.vue'
 import ManagementPage from '../components/views/managementPage.vue'
@@ -13,14 +14,19 @@ import VueCookies from 'vue-cookies';
 Vue.use(Router)
 Vue.use(VueCookies)
 Vue.use('v-select', vSelect)
-
+import axios from 'axios'
 export default new Router({
   name: 'router',
   routes: [
     {
       path: '/',
-      name: 'index',
-      component: Index
+      name: 'auth',
+      component: Auth
+    },
+    {
+      path: '/front',
+      name: 'front',
+      component: Front
     },
     {
       path: '/statistics',
@@ -54,5 +60,27 @@ export default new Router({
     //   component: Index
     // }
   ],
-  mode: 'history'
+  mode: 'history',
+  methods:{
+    customPush(path) {
+
+      axios.post(window.ApiUrl + 'isAuth/',
+        {
+         key:this.$store.getKey
+        })
+        .then(response => {
+          if(response.data.authorized===true)
+          {
+            this.push(path)
+          }
+          else
+            this.push("/")
+        })
+        .catch(e => {
+          console.log("ERROR:", e);
+        })
+    },
+
+    }
+
 })

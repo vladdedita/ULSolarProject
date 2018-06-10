@@ -18,7 +18,7 @@
   <!--</div>-->
 
 
-  <pageLayout v-if="this.toBeShown">
+ <pageLayout v-if="this.toBeShown">
     <div id="customInputDiv">
       <input v-model = "customDimension" placeholder="Desired dimension">
       <button v-on:click = "showCustomInputPanel">CHECK</button>
@@ -45,7 +45,7 @@
 
 
   export default {
-    name: 'index',
+    name: 'front',
 
     // mounted(){
     //   this.authorize();
@@ -55,104 +55,21 @@
       pageLayout
     },
     methods: {
-      async authorize() {
-        if (this.$store.getters.isAuthorized !== true) {
-          if (!this.$cookies.isKey('appID') && !this.$cookies.isKey('appKey') && !this.$cookies.isKey('devID')) {
-            const {value: formValues} = await this.$swal({
-              title: 'Authorization',
-              allowOutsideClick: false,
-              confirmButtonText: 'Submit',
-              confirmButtonClass: 'btn btn-success',
-              html:
-              '<input id="swal-input1" class="swal2-input" placeholder="Application ID">' +
-              '<input id="swal-input2" class="swal2-input" placeholder="Application Access Key">' +
-              '<input id="swal-input3" class="swal2-input" placeholder="Device ID">' +
-              '<input id="swal-checkbox1" class="swal2-checkbox" type="checkbox" value="1"><span>' +
-              'Remember me</span>',
-              focusConfirm: false,
-              preConfirm: () => {
-                return [
-                  document.getElementById('swal-input1').value,
-                  document.getElementById('swal-input2').value,
-                  document.getElementById('swal-input3').value,
-                  document.getElementById('swal-checkbox1').checked
-                ]
-              }
-            });
-            if (formValues) {
-              await this.checkCredentials(formValues[0], formValues[1],formValues[2]);
-
-              if (this.authorized == '1') {
-                await this.$swal({
-                    title: 'Authorized!',
-                    text: 'Your app has been successfully authorized!',
-                    type: 'success'
-                  }
-                );
-                this.$store.commit('authorize');
-                if (formValues[3] == 1) {
-                  this.$cookies.set('appID', formValues[0]);
-                  this.$cookies.set('appKey', formValues[1]);
-                  this.$cookies.set('devID', formValues[2]);
-                  console.log("Cookies set");
-                }
-              }
-              else {
-                await this.$swal(
-                  'Error',
-                  'Invalid credentials',
-                  'error'
-                );
-                console.log("Actually here");
-                this.authorize();
-              }
-            }
-          }
-          else {
-            await this.checkCredentials(this.$cookies.get('appID'), this.$cookies.get('appKey'),this.$cookies.get('devID'));
-            if (!this.authorized) {
-              this.$cookies.remove('appID');
-              this.$cookies.remove('appKey');
-              this.$cookies.remove('devID');
-              this.authorize();
-            }
-            else {
-              await this.$swal({
-                  title: 'Authorized by cookies!',
-                  text: 'Your app has been successfully authorized!',
-                  type: 'success',
-                  position: 'top-end'
-                }
-              );
-              this.$store.commit('authorize');
-            }
-          }
+      getMeasurements() {
+        console.log("Inside measurements...")
+        axios.post(window.ApiUrl + 'measurements/',{},{
+        headers: {
+          'Authorization': this.$store.getters.getKey,
         }
-        console.log("State authorized:"+this.$store.getters.isAuthorized);
-      },
-      async checkCredentials(_appID, _appKey, _devID) {
-        await axios.post(/auth/,
-          {
-            appID: _appID,
-            appKey: _appKey,
-            devID: _devID
-          })
-          .then(response => {
-
-            this.authorized = response.data;
-            console.log("Authorization response:" + this.authorized)
-          })
-          .catch(e => {
-            console.log("ERROR:", e);
-          })
-      },
-      async getMeasurements() {
-       await axios.get(window.ApiUrl + /measurements/)
+        })
           .then(response=>{
           //   console.log(response.data);
           //   let data = JSON.parse(response.data)
+            console.log("Success1")
             this.energy=response.data.average;
+            console.log("Success2")
             this.lastEnergy = response.data.last;
+            console.log("Success3")
             this.toBeShown = true;
             console.log(this.energy)
           })
@@ -186,7 +103,7 @@
     },
 
     mounted() {
-      this.authorize();
+      //this.authorize();
       this.getMeasurements();
     },
     data() {

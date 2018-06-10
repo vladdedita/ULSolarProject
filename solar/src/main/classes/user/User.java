@@ -47,7 +47,7 @@ public class User {
         this.appName=appName;
     }
 
-    public Boolean getAuthorized() {
+    public Boolean isAuthorized() {
         return authorized;
     }
 
@@ -62,4 +62,13 @@ public class User {
     public Integer getId() {
         return id;
     }
+
+    public void setAuthorized(){
+            this.authorized = true;
+    }
+
+    public void unsetAuthorize() {
+        this.authorized = false;
+    }
+
 }

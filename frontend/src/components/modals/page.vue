@@ -1,5 +1,6 @@
 <template>
-  <div id="divPage" v-if="this.$store.getters.isAuthorized">
+  <div id="divPage" v-if="true">
+    <!--this.$store.getters.isAuthorized-->
     <div id="blur"></div>
     <navbar></navbar>
     <div id="divPageDiv">

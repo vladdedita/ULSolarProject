@@ -142,7 +142,11 @@
          value="0 "
         }
         let value = this.selected.value.split(" ")[0];
-        axios.get(window.ApiUrl + "getdata/" + unit + "/" + value)
+        axios.post(window.ApiUrl + "getdata/" + unit + "/" + value,{},{
+          headers: {
+            'Authorization': this.$store.getters.getKey
+          }
+        })
           .then(response => {
             this.visible = true;
           })
@@ -170,7 +174,11 @@
           ]
         };
 
-        axios.get(window.ApiUrl + "/getdata/date/"+this.date)
+        axios.post(window.ApiUrl + "/getdata/date/"+this.date,{},{
+          headers: {
+            'Authorization': this.$store.getters.getKey
+          }
+        })
           .then(response => {
             this.visible = true;
           })
