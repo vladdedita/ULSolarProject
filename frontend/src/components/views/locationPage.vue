@@ -6,8 +6,15 @@
     <div id="divMap">
       <p>Please choose your location:</p>
       <google-map @updatedLocation="updateLocation"></google-map>
-      <button @submit.prevent="submitForm" @click="showLocation()" id="registerButton">Register location</button>
+          <button @submit.prevent="submitForm" @click="registerLocation()" id="registerButton">Register location</button>
+        <input type="checkbox" id="checkbox" v-model="checked">
+        <span>Make your location public?</span>
+
+
     </div>
+
+
+
   </pageLayout>
 </template>
 
@@ -25,6 +32,24 @@
       showLocation() {
         console.log(this.latitude +"   "+ this.longitude)
       },
+      registerLocation(){
+        axios.post(window.ApiUrl + "setlocation/",{
+          lat:this.latitude,
+          lon:this.longitude,
+          public:this.checked
+        },{
+          headers: {
+            'Authorization': this.$store.getters.getKey
+          }
+        })
+          .then(response => {
+            if(response.data.succes)
+              console.log(response.data.succes);
+          })
+          .catch(e => {
+            console.log("ERROR:", e);
+          })
+      },
       updateLocation(value) {
         console.log(value);
         this.latitude=value.lat;
@@ -40,14 +65,19 @@
 
       }
     },
+    mounted() {
+
+    },
     components: {
       pageLayout,
       googleMap
     },
    data() {
       return {
+        locations: [],
         longitude:0,
-        latitude:0
+        latitude:0,
+        checked:false
       }
   }
   }
@@ -91,6 +121,14 @@
   #registerButton:hover{
     background: lightblue;
     color:darkblue;
+  }
+  #checkbox {
+    /*width:250px;*/
+    /*height: 50px;*/
+    /*margin: auto;*/
+    /*margin-top: 20px;*/
+    margin-left:40%;
+
   }
 
 </style>

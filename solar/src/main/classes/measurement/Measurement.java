@@ -6,11 +6,11 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.util.Date;
 
-@Entity
-@Table(name = "solar")
+@Entity //defines this as a table entity
+@Table(name = "solar") //named solar
 public class Measurement {
 
-    @Id
+    @Id //specifices that this column represents an ID and enables autoincrementi
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
@@ -24,8 +24,19 @@ public class Measurement {
     @Column(name = "direction")
     private Integer direction;
 
+    @Column(name = "deviceId")
+    private Integer deviceId;
+
     protected Measurement() {
 
+    }
+
+    public Integer getDirection() {
+        return direction;
+    }
+
+    public Integer getDeviceId() {
+        return deviceId;
     }
 
     public Measurement(String power, Date time) {
@@ -56,4 +67,14 @@ public class Measurement {
     public void setTime(Date time) {
         this.time = time;
     }
+
+
+    public void setDirection(Integer direction) {
+        this.direction = direction;
+    }
+
+    public void setDeviceId(Integer deviceId) {
+        this.deviceId = deviceId;
+    }
+
 }

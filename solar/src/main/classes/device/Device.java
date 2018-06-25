@@ -12,26 +12,50 @@ public class Device {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "latitude")
-    private String latitude;
-
-    @Column(name = "longitude")
-    private String longitude;
-
     @Column(name ="userId")
     private Integer userId;
 
-   public Device() {
+    @Column(name="locationId")
+    private Integer locationId;
+
+
+    public Device() {
    }
    public Device(String name, Integer userId)
    {
        this.name=name;
    }
 
-    public Device(String name, String latitude, String longitude, Integer userId) {
+    public Integer getLocationId() {
+        return locationId;
+    }
+
+    public void setLocationId(Integer locationId) {
+        this.locationId = locationId;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
         this.name = name;
-        this.latitude = latitude;
-        this.longitude = longitude;
+    }
+
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 }

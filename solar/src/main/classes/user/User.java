@@ -27,6 +27,10 @@ public class User {
     @Column(name="token")
     private String token;
 
+    @Column(name="currentDeviceId")
+    private Integer currentDeviceId;
+
+
     @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
     @Column(name="born")
     private Date born;
@@ -36,6 +40,22 @@ public class User {
         this.born=new Date();
 
 
+    }
+
+    public Integer getCurrentDeviceId() {
+        return currentDeviceId;
+    }
+
+    public void setCurrentDeviceId(Integer currentDeviceId) {
+        this.currentDeviceId = currentDeviceId;
+    }
+
+    public String getAppName() {
+        return appName;
+    }
+
+    public String getAppKey() {
+        return appKey;
     }
 
     User() {

@@ -23,13 +23,11 @@
       <input v-model = "customDimension" placeholder="Desired dimension">
       <button v-on:click = "showCustomInputPanel">CHECK</button>
     </div>
-
     <solarpanel style="width:10%; height: 10%;" :dimension='0.014' :energy="this.energy" :lastEnergy="this.lastEnergy"></solarpanel>
     <solarpanel style="width:15%; height: 15%;" :dimension='8' :energy="this.energy" :lastEnergy="this.lastEnergy"></solarpanel>
     <solarpanel style="width:20%; height: 20%;" :dimension='14' :energy="this.energy" :lastEnergy="this.lastEnergy"></solarpanel>
     <solarpanel style="width:30%; height: 30%;" :dimension='21' :energy="this.energy" :lastEnergy="this.lastEnergy"></solarpanel>
     <solarpanel style="width:40%; height: 40%;" :dimension='28' :energy="this.energy" :lastEnergy="this.lastEnergy"></solarpanel>
-
   </pageLayout>
 
 </template>
@@ -82,7 +80,7 @@
             title: "Solar panel",
             html:
             '<p>Dimension: ' + this.customDimension + ' m<sup>2</sup><br/>' +
-            '<p>Last recorded energy output: ' + (((this.lastEnergy / 10000) * this.customDimension) / 0.014) * 60 + 'Wh</p>',
+            '<p>Last recorded energy output: ' + (((this.lastEnergy / 10000) * this.customDimension) / 0.014) * 60 + 'Wh</p>', //MOVE THIS TO DB !!!!!!!!!!!!!
             // '<p>Estimated average per day: '+ this.getDailyEnergy() + ' KWh/day/m<sup>2</sup><br/>',
             // '<p>Monthly power output: '+ this.getMonthlyEnergy() + ' MWh/month/m<sup>2</sup><br/>' +
             // '<p>Yearly power output: '+ this.getYearlyEnergy() + ' MWh/year/m<sup>2</sup><br/>',

@@ -6,6 +6,7 @@
 
 <script>
   import jQuery from 'jquery'
+  import axios from 'axios'
 
   export default {
     name: "googleMap",
@@ -49,11 +50,25 @@
                 // infoWindow.setContent('Current location');
                 // infoWindow.open(map);
                 map.setCenter(self.pos);
+
+
+                for(let i=0;i<self.locations.length;i++)
+                {
+
+                  let posMarker = new google.maps.Marker({
+                    position: {
+                      lat: parseFloat(self.locations[i].lat),
+                      lng: parseFloat(self.locations[i].lon)
+                    },
+                    map:map,
+                    draggable: false
+                  })
+                }
                 var marker = new google.maps.Marker({
                   position: self.pos,
                   map: map,
                   draggable: true
-                })
+                });
                 self.$emit('updatedLocation',self.pos)
                 google.maps.event.addListener(marker, 'dragend', function (evt) {
                   self.pos.lat = evt.latLng.lat().toFixed(5);
@@ -100,10 +115,26 @@
     },
 
     mounted() {
-      this.initMap()
+      axios.post(window.ApiUrl + "getlocations/",{
+      },{
+        headers: {
+          'Authorization': this.$store.getters.getKey
+        }
+      })
+        .then(response => {
+          if(response.data)
+            this.locations=response.data;
+        })
+        .catch(e => {
+          console.log("ERROR:", e);
+        });
+
+      this.initMap();
+
     },
     data() {
       return {
+        locations:[],
         mapName: this.name + "-map",
         apiKey: 'AIzaSyCEa7UB7Y4uQpvQvD7a0SBwo7y8p91h6P8',
         pos: {

@@ -1,7 +1,6 @@
 package main.classes.user;
 
 
-import com.google.gson.JsonObject;
 import main.classes.api.APIService;
 import main.classes.device.Device;
 import main.classes.device.DeviceDao;
@@ -44,23 +43,9 @@ public class UserService {
      * @return generated access/auth token
      */
     public String authorize(String appID, String accessKey, String devID) {
-        JsonObject jsonError = new JsonObject();
 
-        if (appID == null || appID.isEmpty()) {
-            System.out.println("authorize: empty appID");
-            jsonError.addProperty("error", "empty appId");
-            return jsonError.toString();
-        }
-        if (accessKey == null || accessKey.isEmpty()) {
-            System.out.println("authorize: empty key");
-            jsonError.addProperty("error", "empty key");
-            return jsonError.toString();
-        }
-        if (devID == null || devID.isEmpty()) {
-            System.out.println("authorize: empty devID");
-            jsonError.addProperty("error", "empty devId");
-            return jsonError.toString();
-        }
+
+
 
         //Calling authorize method for provided credentials
         if (ttn.authorize(appID, accessKey, devID)) {
@@ -71,12 +56,11 @@ public class UserService {
             }
             //generating auth token
             generateToken(appID, accessKey, devID);
-
-            //returning token
-            JsonObject jsonToken = new JsonObject();
-            //jsonToken.add("key",  us.getToken(appID, accessKey, devID));
-            jsonToken.addProperty("key", getToken(appID, accessKey, devID));
-            return jsonToken.toString();
+//            //returning token
+//            JsonObject jsonToken = new JsonObject();
+//            //jsonToken.add("key",  us.getToken(appID, accessKey, devID));
+//            jsonToken.addProperty("key", );
+            return getToken(appID, accessKey, devID);
         }
         return null;
     }
@@ -89,6 +73,10 @@ public class UserService {
             }
         }
         return false;
+    }
+
+    public User currentUser(String token){
+        return userDao.findByToken(token);
     }
 
 
@@ -120,6 +108,7 @@ public class UserService {
             if (user != null) {
                 user.setToken(new tokenGenerator().nextString());
                 user.setAuthorized();
+                user.setCurrentDeviceId(devDao.findByNameAndUserId(devID,user.getId()).getId());
                 userDao.save(user);
             }
         }

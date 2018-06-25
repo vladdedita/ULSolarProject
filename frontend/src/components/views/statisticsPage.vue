@@ -2,8 +2,8 @@
   <pageLayout>
     <!--<button @submit.prevent="submitForm" @click="requestData()"></button>-->
     <div>
-    <v-select  style="float:left;" id="dropdown" label="value" @changedV v-model="selected" :options="options" ></v-select>
-      <button>SHOW CALENDAR</button>
+    <v-select  style="float:left;" id="dropdown" label="value" v-model="selected" :options="options" ></v-select>
+      <button id="buttonShowCalendar" @click="showCalendar">SHOW CALENDAR</button>
       <date-picker @close="requestDateData" v-if="calShow" v-model="date" color="#94baf7"></date-picker>
     </div>
     <line-chart id="chart" v-if="visible" :chart-data="chartData" :options="this.chartOptions" ></line-chart>
@@ -47,7 +47,7 @@
           cluster: 'eu'
         });
         let that = this;
-        this.channel = this.pusher.subscribe('chart');
+        this.channel = this.pusher.subscribe('chart' + this.$store.getters.getKey);
         this.channel.bind('chartData', function (data) {
           //that.incomingChartData(data)
           let theData = JSON.parse(data)
@@ -185,7 +185,11 @@
           .catch(e => {
             console.log("ERROR:", e);
           })
+      },
+      showCalendar(){
+        this.calShow=true;
       }
+
     },
     mounted() {
     //this.requestData();
@@ -292,4 +296,16 @@
     margin-top:15px;
     width:350px;
   }
+  #buttonShowCalendar {
+    margin-top:15px;
+    float:right;
+    width:40%;
+    height: 40px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    color:grey;
+    font-family: 'Metrophobic', sans-serif;
+  }
+
 </style>
