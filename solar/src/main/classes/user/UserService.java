@@ -1,7 +1,7 @@
 package main.classes.user;
 
 
-import main.classes.api.APIService;
+import main.classes.controllers.APIController;
 import main.classes.device.Device;
 import main.classes.device.DeviceDao;
 import main.classes.token.tokenGenerator;
@@ -18,7 +18,7 @@ public class UserService {
     DeviceDao devDao;
 
     @Autowired
-    APIService ttn;
+    APIController ttn;
 
     /**
      * Method to add User to database
@@ -43,8 +43,6 @@ public class UserService {
      * @return generated access/auth token
      */
     public String authorize(String appID, String accessKey, String devID) {
-
-
 
 
         //Calling authorize method for provided credentials

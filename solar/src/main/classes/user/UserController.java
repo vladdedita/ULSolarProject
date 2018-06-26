@@ -4,7 +4,7 @@ package main.classes.user;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.JsonObject;
-import main.classes.api.APIService;
+import main.classes.controllers.APIController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +16,7 @@ import java.io.IOException;
 public class UserController {
 
     @Autowired
-    APIService ttn;
+    APIController ttn;
     @Autowired
     UserService us;
 
@@ -26,8 +26,7 @@ public class UserController {
 
         //Decoding JSON Request Body
         ObjectMapper objectMapper = new ObjectMapper();
-        JsonNode node = objectMapper.readTree(str);
-        //
+        JsonNode node = objectMapper.readTree(str);       //
 
 
         String appID = objectMapper.convertValue(node.get("appID"), String.class);
@@ -38,23 +37,27 @@ public class UserController {
         if (appID == null || appID.isEmpty()) {
             System.out.println("authorize: empty appID");
             jsonError.addProperty("error", "empty appId");
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(jsonError);
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(jsonError.toString());
         }
         if (accessKey == null || accessKey.isEmpty()) {
             System.out.println("authorize: empty key");
             jsonError.addProperty("error", "empty key");
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(jsonError);
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(jsonError.toString());
         }
         if (devID == null || devID.isEmpty()) {
             System.out.println("authorize: empty devID");
             jsonError.addProperty("error", "empty devId");
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(jsonError);
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(jsonError.toString());
         }
 
         String token = us.authorize(appID,accessKey,devID);
-        if(token != null)
-            return ResponseEntity.status(HttpStatus.OK).body(token);
-        else
+        JsonObject obj=new JsonObject();
+        if(token != null) {
+
+            obj.addProperty("key", token);
+            return ResponseEntity.status(HttpStatus.OK).body(obj.toString());
+        }
+           else
             return new ResponseEntity(HttpStatus.BAD_REQUEST);
 
     }

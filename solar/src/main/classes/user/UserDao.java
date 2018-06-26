@@ -2,9 +2,10 @@ package main.classes.user;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface UserDao extends CrudRepository<User, Long> {
+import java.util.List;
 
+public interface UserDao extends CrudRepository<User, Long> {
     User findByAppKey(String appKey);
     User findByToken(String token);
-
+    List<User> findAll();
 }

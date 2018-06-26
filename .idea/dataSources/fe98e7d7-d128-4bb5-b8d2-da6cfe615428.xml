@@ -922,16 +922,16 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="233" parent="7" name="device">
-      <Engine>MyISAM</Engine>
+      <Engine>InnoDB</Engine>
     </table>
     <table id="234" parent="7" name="location">
-      <Engine>MyISAM</Engine>
+      <Engine>InnoDB</Engine>
     </table>
     <table id="235" parent="7" name="solar">
-      <Engine>MyISAM</Engine>
+      <Engine>InnoDB</Engine>
     </table>
     <table id="236" parent="7" name="user">
-      <Engine>MyISAM</Engine>
+      <Engine>InnoDB</Engine>
     </table>
     <column id="237" parent="233" name="id">
       <Position>1</Position>
@@ -961,144 +961,187 @@
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="242" parent="233" name="device_user_id_fk">
+    <index id="242" parent="233" name="user_id">
       <ColNames>user_id</ColNames>
     </index>
-    <key id="243" parent="233" name="PRIMARY">
+    <index id="243" parent="233" name="location_id">
+      <ColNames>location_id</ColNames>
+    </index>
+    <key id="244" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="244" parent="233" name="device_id_uindex">
+    <key id="245" parent="233" name="device_id_uindex">
       <ColNames>id</ColNames>
       <UnderlyingIndexName>device_id_uindex</UnderlyingIndexName>
     </key>
-    <column id="245" parent="234" name="id">
+    <foreign-key id="246" parent="233" name="device_ibfk_1">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>solar</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="247" parent="233" name="device_ibfk_2">
+      <ColNames>location_id</ColNames>
+      <RefSchemaName>solar</RefSchemaName>
+      <RefTableName>location</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="248" parent="234" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="234" name="lon">
+    <column id="249" parent="234" name="lon">
       <Position>2</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="234" name="lat">
+    <column id="250" parent="234" name="lat">
       <Position>3</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="234" name="public">
+    <column id="251" parent="234" name="public">
       <Position>4</Position>
       <DataType>tinyint(1)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="249" parent="234" name="PRIMARY">
+    <key id="252" parent="234" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="250" parent="235" name="id">
+    <column id="253" parent="235" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="235" name="power">
+    <column id="254" parent="235" name="power">
       <Position>2</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="235" name="time">
+    <column id="255" parent="235" name="time">
       <Position>3</Position>
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="253" parent="235" name="direction">
+    <column id="256" parent="235" name="direction">
       <Position>4</Position>
       <DataType>int(1)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="235" name="user_id">
+    <column id="257" parent="235" name="device_id">
       <Position>5</Position>
       <DataType>int(10)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="235" name="location_id">
+    <column id="258" parent="235" name="location_id">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="256" parent="235" name="solar_time_uindex">
+    <index id="259" parent="235" name="solar_time_uindex">
       <ColNames>time</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="257" parent="235" name="user_id">
-      <ColNames>user_id</ColNames>
+    <index id="260" parent="235" name="user_id">
+      <ColNames>device_id</ColNames>
     </index>
-    <key id="258" parent="235" name="PRIMARY">
+    <index id="261" parent="235" name="location_id">
+      <ColNames>location_id</ColNames>
+    </index>
+    <key id="262" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="259" parent="235" name="solar_time_uindex">
+    <key id="263" parent="235" name="solar_time_uindex">
       <ColNames>time</ColNames>
       <UnderlyingIndexName>solar_time_uindex</UnderlyingIndexName>
     </key>
-    <column id="260" parent="236" name="id">
+    <foreign-key id="264" parent="235" name="solar_ibfk_2">
+      <ColNames>device_id</ColNames>
+      <RefSchemaName>solar</RefSchemaName>
+      <RefTableName>device</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="265" parent="235" name="solar_ibfk_1">
+      <ColNames>location_id</ColNames>
+      <RefSchemaName>solar</RefSchemaName>
+      <RefTableName>location</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="266" parent="236" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="236" name="app_name">
+    <column id="267" parent="236" name="app_name">
       <Position>2</Position>
       <DataType>varchar(30)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="236" name="app_key">
+    <column id="268" parent="236" name="app_key">
       <Position>3</Position>
       <DataType>varchar(100)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="236" name="authorized">
+    <column id="269" parent="236" name="authorized">
       <Position>4</Position>
       <DataType>tinyint(1)|0</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="236" name="token">
+    <column id="270" parent="236" name="token">
       <Position>5</Position>
       <DataType>varchar(30)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="236" name="born">
+    <column id="271" parent="236" name="born">
       <Position>6</Position>
       <DataType>datetime|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="236" name="current_device_id">
+    <column id="272" parent="236" name="current_device_id">
       <Position>7</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="267" parent="236" name="PRIMARY">
+    <index id="273" parent="236" name="current_device_id">
+      <ColNames>current_device_id</ColNames>
+    </index>
+    <key id="274" parent="236" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+    <foreign-key id="275" parent="236" name="user_ibfk_1">
+      <ColNames>current_device_id</ColNames>
+      <RefSchemaName>solar</RefSchemaName>
+      <RefTableName>device</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
   </database-model>
 </dataSource>

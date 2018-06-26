@@ -43,18 +43,28 @@ public class LocationController {
             String lon = objectMapper.convertValue(node.get("lon"), String.class);
             String lat = objectMapper.convertValue(node.get("lat"), String.class);
             Boolean isPublic = objectMapper.convertValue(node.get("public"), Boolean.class);
-
+            JsonObject obj = new JsonObject();
+            if(lon == null || lon.isEmpty())
+            {
+                obj.addProperty("error", "empty lon");
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(obj);
+            }
+            if(lat == null || lat.isEmpty())
+            {
+                obj.addProperty("error", "empty lat");
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(obj);
+            }
             System.out.print("Setting location: Lat:" + lat + " Lon:" + lon + "for token:" + token + "...");
 
             if (ls.addLocation(token, lat, lon, isPublic))
             {
-                JsonObject obj = new JsonObject();
-                obj.addProperty("success", "Location registered");
-                return ResponseEntity.status(HttpStatus.OK).body(obj.toString());
+
+
+                return new ResponseEntity(HttpStatus.OK);
             }
             else
             {
-                JsonObject obj = new JsonObject();
+
                 obj.addProperty("error", "Could not register location");
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(obj.toString());
             }

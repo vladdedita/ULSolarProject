@@ -2,35 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="316c03e6-2cef-42d7-bc77-a26707b94821" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/solar/src/main/classes/controllers/APIController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/solar/src/main/classes/device/DeviceController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/solar/src/main/classes/location/Location.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/solar/src/main/classes/location/LocationController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/solar/src/main/classes/location/LocationDao.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/solar/src/main/classes/location/LocationService.java" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/fe98e7d7-d128-4bb5-b8d2-da6cfe615428.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/fe98e7d7-d128-4bb5-b8d2-da6cfe615428.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/modals/googleMap.vue" afterPath="$PROJECT_DIR$/frontend/src/components/modals/googleMap.vue" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/views/frontPage.vue" afterPath="$PROJECT_DIR$/frontend/src/components/views/frontPage.vue" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/views/locationPage.vue" afterPath="$PROJECT_DIR$/frontend/src/components/views/locationPage.vue" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/views/statisticsPage.vue" afterPath="$PROJECT_DIR$/frontend/src/components/views/statisticsPage.vue" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/index.html" afterPath="$PROJECT_DIR$/frontend/target/dist/index.html" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterPath="$PROJECT_DIR$/frontend/target/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/classes/device/Device.java" afterPath="$PROJECT_DIR$/solar/src/main/classes/device/Device.java" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/classes/device/DeviceDao.java" afterPath="$PROJECT_DIR$/solar/src/main/classes/device/DeviceDao.java" />
+      <change beforePath="$PROJECT_DIR$/solar/src/main/classes/api/APIService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/solar/src/main/classes/controllers/APIController.java" afterPath="$PROJECT_DIR$/solar/src/main/classes/controllers/APIController.java" />
+      <change beforePath="$PROJECT_DIR$/solar/src/main/classes/device/DeviceController.java" afterPath="$PROJECT_DIR$/solar/src/main/classes/device/DeviceController.java" />
+      <change beforePath="$PROJECT_DIR$/solar/src/main/classes/location/LocationController.java" afterPath="$PROJECT_DIR$/solar/src/main/classes/location/LocationController.java" />
       <change beforePath="$PROJECT_DIR$/solar/src/main/classes/measurement/Measurement.java" afterPath="$PROJECT_DIR$/solar/src/main/classes/measurement/Measurement.java" />
       <change beforePath="$PROJECT_DIR$/solar/src/main/classes/measurement/MeasurementController.java" afterPath="$PROJECT_DIR$/solar/src/main/classes/measurement/MeasurementController.java" />
       <change beforePath="$PROJECT_DIR$/solar/src/main/classes/measurement/MeasurementDao.java" afterPath="$PROJECT_DIR$/solar/src/main/classes/measurement/MeasurementDao.java" />
       <change beforePath="$PROJECT_DIR$/solar/src/main/classes/measurement/MeasurementService.java" afterPath="$PROJECT_DIR$/solar/src/main/classes/measurement/MeasurementService.java" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/classes/user/User.java" afterPath="$PROJECT_DIR$/solar/src/main/classes/user/User.java" />
+      <change beforePath="$PROJECT_DIR$/solar/src/main/classes/security/SecurityConfig.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/solar/src/main/classes/user/UserController.java" afterPath="$PROJECT_DIR$/solar/src/main/classes/user/UserController.java" />
+      <change beforePath="$PROJECT_DIR$/solar/src/main/classes/user/UserDao.java" afterPath="$PROJECT_DIR$/solar/src/main/classes/user/UserDao.java" />
       <change beforePath="$PROJECT_DIR$/solar/src/main/classes/user/UserService.java" afterPath="$PROJECT_DIR$/solar/src/main/classes/user/UserService.java" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/index.html" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/index.html" />
-      <change beforePath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterPath="$PROJECT_DIR$/solar/src/main/resources/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" />
       <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/index.html" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/index.html" />
       <change beforePath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/main/resources/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/index.html" afterPath="$PROJECT_DIR$/solar/target/classes/public/index.html" />
-      <change beforePath="$PROJECT_DIR$/solar/target/classes/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterPath="$PROJECT_DIR$/solar/target/classes/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -79,7 +67,14 @@
         <item name="solar@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="solar: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="location: table" type="98d5ac3d:MysqlImplModel$Table" />
+        <item name="solar: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="solar@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="solar: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="user: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -89,43 +84,12 @@
       <file leaf-file-name="MeasurementController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/solar/src/main/classes/measurement/MeasurementController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="152" column="0" lean-forward="false" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
+            <state relative-caret-position="204">
+              <caret line="47" column="35" lean-forward="true" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
               <folding>
-                <element signature="e#2892#2905#0" expanded="true" />
-                <element signature="e#4746#4759#0" expanded="true" />
-                <element signature="e#5842#5915#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeviceController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/solar/src/main/classes/device/DeviceController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="43" column="44" lean-forward="true" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#597#664#0" expanded="false" />
-                <element signature="e#1842#1913#0" expanded="false" />
-                <element signature="method#changePosition#0;class#DeviceController#0" expanded="false" />
-                <element signature="e#3103#3171#0" expanded="false" />
-                <element signature="method#changeState#0;class#DeviceController#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MeasurementService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/solar/src/main/classes/measurement/MeasurementService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-119">
-              <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-              <folding>
-                <element signature="method#getAllMeasurements#0;class#MeasurementService#0" expanded="false" />
-                <element signature="method#getAverage#0;class#MeasurementService#0" expanded="false" />
-                <element signature="e#2392#2467#0" expanded="false" />
+                <element signature="e#2918#2931#0" expanded="true" />
+                <element signature="e#4964#4977#0" expanded="true" />
+                <element signature="e#6060#6133#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -134,7 +98,7 @@
       <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/solar/src/main/classes/user/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
+            <state relative-caret-position="272">
               <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
               <folding>
                 <element signature="method#setToken#0;class#User#0" expanded="false" />
@@ -146,35 +110,9 @@
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/solar/src/main/classes/user/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="40" column="81" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="40" selection-end-column="81" />
+            <state relative-caret-position="816">
+              <caret line="57" column="75" lean-forward="false" selection-start-line="57" selection-start-column="75" selection-end-line="57" selection-end-column="75" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/solar/src/main/classes/web/WebController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MeasurementDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/solar/src/main/classes/measurement/MeasurementDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="23" column="79" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="79" />
-              <folding>
-                <marker date="1529835603361" expanded="true" signature="430:582" ph="SELECT s.id,... solar" />
-                <marker date="1529835603361" expanded="true" signature="745:796" ph="SELECT AVG(s... solar" />
-                <marker date="1529835603361" expanded="true" signature="745:818" ph="SELECT AVG(s... solar" />
-                <marker date="1529835603361" expanded="true" signature="932:1004" ph="SELECT * FRO... solar" />
-                <marker date="1529835603361" expanded="true" signature="1110:1150" ph="SELECT * FRO... solar" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -182,11 +120,9 @@
       <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/solar/src/main/classes/user/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-              <folding>
-                <element signature="method#isAuthorized#0;class#UserService#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="1047">
+              <caret line="112" column="5" lean-forward="true" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -194,25 +130,72 @@
       <file leaf-file-name="Measurement.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/solar/src/main/classes/measurement/Measurement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+            <state relative-caret-position="204">
+              <caret line="36" column="36" lean-forward="false" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#904#905#0" expanded="true" />
+                <element signature="e#957#958#0" expanded="true" />
+                <element signature="e#1001#1002#0" expanded="true" />
                 <element signature="method#Measurement#1;class#Measurement#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="googleMap.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/modals/googleMap.vue">
+      <file leaf-file-name="authPage.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/views/authPage.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="71" column="54" lean-forward="false" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
+            <state relative-caret-position="102">
+              <caret line="114" column="9" lean-forward="true" selection-start-line="114" selection-start-column="9" selection-end-line="114" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="statisticsPage.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/views/statisticsPage.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="449">
+              <caret line="114" column="23" lean-forward="true" selection-start-line="114" selection-start-column="23" selection-end-line="114" selection-end-column="23" />
               <folding>
-                <element signature="e#100#127#0" expanded="true" />
-                <element signature="e#3723#4086#0" expanded="false" />
-                <element signature="e#3803#3868#0" expanded="false" />
+                <element signature="e#1061#1151#0" expanded="false" />
+                <element signature="e#1165#1237#0" expanded="false" />
+                <element signature="e#1253#1283#0" expanded="false" />
+                <element signature="e#1318#1910#0" expanded="false" />
+                <element signature="e#4418#5235#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="APIController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/solar/src/main/classes/controllers/APIController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="228" column="96" lean-forward="true" selection-start-line="228" selection-start-column="96" selection-end-line="228" selection-end-column="96" />
+              <folding>
+                <element signature="e#2356#2357#0" expanded="true" />
+                <element signature="e#2403#2404#0" expanded="true" />
+                <element signature="method#request#0;class#APIController#0" expanded="false" />
+                <element signature="method#getAllData#0;class#APIController#0" expanded="false" />
+                <element signature="method#scheduleDownlink#0;class#APIController#0" expanded="false" />
+                <element signature="class#DOWNLINK_TYPE#0;class#APIController#0" expanded="false" />
+                <element signature="e#10964#10965#0" expanded="true" />
+                <element signature="e#11002#11003#0" expanded="true" />
+                <element signature="e#11035#11036#0" expanded="true" />
+                <element signature="e#11071#11072#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/solar/src/main/classes/user/UserDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="61" lean-forward="false" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -246,6 +229,7 @@
       <find>axios</find>
       <find>not auth</find>
       <find>pusher</find>
+      <find>user</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Projects\Java\solar\ULSolarProject\frontend\node_modules\chart.js</dir>
@@ -267,7 +251,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/solar/src/main/classes/controllers/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/solar/src/main/classes/controllers/FrontPageController.java" />
         <option value="$PROJECT_DIR$/solar/src/main/classes/controllers/ConnectorConfig.java" />
         <option value="$PROJECT_DIR$/solar/src/main/classes/models/Measurement.java" />
@@ -283,7 +266,6 @@
         <option value="$PROJECT_DIR$/solar/src/main/classes/token/tokenGenerator.java" />
         <option value="$PROJECT_DIR$/solar/src/main/classes/Main.java" />
         <option value="$PROJECT_DIR$/solar/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/solar/src/main/classes/api/APIService.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/solar/pom.xml" />
         <option value="$PROJECT_DIR$/solar/src/main/classes/security/ConnectorConfig.java" />
@@ -297,27 +279,29 @@
         <option value="$PROJECT_DIR$/solar/src/main/classes/security/AuthenticationController.java" />
         <option value="$PROJECT_DIR$/frontend/src/components/views/managementPage.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/modals/page.vue" />
-        <option value="$PROJECT_DIR$/solar/src/main/classes/user/UserDao.java" />
-        <option value="$PROJECT_DIR$/solar/src/main/classes/controllers/APIController.java" />
         <option value="$PROJECT_DIR$/frontend/src/components/views/frontPage.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/views/statisticsPage.vue" />
         <option value="$PROJECT_DIR$/solar/src/main/classes/device/Device.java" />
-        <option value="$PROJECT_DIR$/solar/src/main/classes/measurement/MeasurementService.java" />
-        <option value="$PROJECT_DIR$/solar/src/main/classes/measurement/MeasurementDao.java" />
         <option value="$PROJECT_DIR$/solar/src/main/classes/user/User.java" />
         <option value="$PROJECT_DIR$/solar/src/main/classes/device/DeviceDao.java" />
         <option value="src:table:/97504807/fe98e7d7-d128-4bb5-b8d2-da6cfe615428/solar.location" />
         <option value="$PROJECT_DIR$/solar/src/main/classes/location/Location.java" />
         <option value="$PROJECT_DIR$/solar/src/main/classes/location/LocationDao.java" />
         <option value="$PROJECT_DIR$/solar/src/main/classes/location/LocationService.java" />
-        <option value="$PROJECT_DIR$/solar/src/main/classes/location/LocationController.java" />
         <option value="$PROJECT_DIR$/frontend/src/components/views/locationPage.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/modals/googleMap.vue" />
-        <option value="$PROJECT_DIR$/solar/src/main/classes/measurement/Measurement.java" />
+        <option value="$PROJECT_DIR$/solar/src/main/classes/device/DeviceController.java" />
+        <option value="$PROJECT_DIR$/solar/src/main/classes/location/LocationController.java" />
+        <option value="$PROJECT_DIR$/solar/src/main/classes/security/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/solar/src/main/classes/measurement/MeasurementDao.java" />
+        <option value="$PROJECT_DIR$/solar/src/main/classes/measurement/MeasurementService.java" />
+        <option value="$PROJECT_DIR$/solar/src/main/classes/api/APIService.java" />
+        <option value="$PROJECT_DIR$/solar/src/main/classes/measurement/MeasurementController.java" />
         <option value="$PROJECT_DIR$/solar/src/main/classes/user/UserService.java" />
         <option value="$PROJECT_DIR$/solar/src/main/classes/user/UserController.java" />
-        <option value="$PROJECT_DIR$/solar/src/main/classes/device/DeviceController.java" />
-        <option value="$PROJECT_DIR$/solar/src/main/classes/measurement/MeasurementController.java" />
+        <option value="$PROJECT_DIR$/solar/src/main/classes/user/UserDao.java" />
+        <option value="$PROJECT_DIR$/solar/src/main/classes/measurement/Measurement.java" />
+        <option value="$PROJECT_DIR$/solar/src/main/classes/controllers/APIController.java" />
+        <option value="$PROJECT_DIR$/frontend/src/components/views/statisticsPage.vue" />
       </list>
     </option>
   </component>
@@ -340,7 +324,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="1088" />
+    <option name="width" value="1164" />
     <option name="height" value="1057" />
   </component>
   <component name="ProjectView">
@@ -372,6 +356,32 @@
             <path>
               <item name="solar" type="b2602c69:ProjectViewProjectNode" />
               <item name="ULSolarProject" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="solar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ULSolarProject" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="solar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ULSolarProject" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="solar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ULSolarProject" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="solar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ULSolarProject" type="462c0819:PsiDirectoryNode" />
               <item name="solar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -402,16 +412,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="device" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="solar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ULSolarProject" type="462c0819:PsiDirectoryNode" />
-              <item name="solar" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="measurement" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="solar" type="b2602c69:ProjectViewProjectNode" />
@@ -436,7 +437,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tema3/src/ro/mta/se/lab/models/APIHandler.java" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelWidth1" value="75" />
@@ -446,13 +447,6 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Projects\Java\solar\ULSolarProject\solar\src\main\classes\security" />
-      <recent name="$PROJECT_DIR$/solar/src/main/resources" />
-      <recent name="$PROJECT_DIR$/solar/src/main" />
-      <recent name="$PROJECT_DIR$/solar/src" />
-      <recent name="$PROJECT_DIR$/solar" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
@@ -461,6 +455,13 @@
       <recent name="C:\Projects\Java\solar\ULSolarProject\Arduino-Sketches" />
       <recent name="C:\Projects\Java\solar\ULSolarProject\frontend\src\components\modals" />
       <recent name="C:\Projects\Java\solar\ULSolarProject\solar\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projects\Java\solar\ULSolarProject\solar\src\main\classes\security" />
+      <recent name="$PROJECT_DIR$/solar/src/main/resources" />
+      <recent name="$PROJECT_DIR$/solar/src/main" />
+      <recent name="$PROJECT_DIR$/solar/src" />
+      <recent name="$PROJECT_DIR$/solar" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -636,7 +637,7 @@
       <workItem from="1528379245155" duration="20244000" />
       <workItem from="1528555836332" duration="34638000" />
       <workItem from="1529050473076" duration="537000" />
-      <workItem from="1529777439611" duration="25040000" />
+      <workItem from="1529777439611" duration="35328000" />
     </task>
     <task id="LOCAL-00001" summary="Moved cookie alert&#10;Added About and Location to navbar">
       <created>1521457565396</created>
@@ -708,14 +709,21 @@
       <option name="project" value="LOCAL" />
       <updated>1528669305294</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Location registration">
+      <created>1529942483711</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1529942483711</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="391842000" />
+    <option name="totallyTimeSpent" value="402130000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1088" height="1057" extended-state="0" />
+    <frame x="-7" y="0" width="1164" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -723,7 +731,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.013937282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12291667" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -735,10 +743,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23411018" sideWeight="0.7609375" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35381356" sideWeight="0.7609375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20802239" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37543553" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -814,29 +822,30 @@
     <MESSAGE value="Arduino Sketches" />
     <MESSAGE value="Statistics Calendar" />
     <MESSAGE value="User authentication, location register button (no functionality)" />
-    <option name="LAST_COMMIT_MESSAGE" value="User authentication, location register button (no functionality)" />
+    <MESSAGE value="Location registration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Location registration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="50" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/solar/src/main/classes/controllers/APIController.java</url>
+          <line>185</line>
+          <properties />
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/solar/src/main/classes/controllers/APIController.java</url>
+          <line>186</line>
+          <properties />
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="59" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://table:/97504807/fe98e7d7-d128-4bb5-b8d2-da6cfe615428/solar.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/token/tokenGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="40" lean-forward="false" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -868,13 +877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/security/SecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-523">
@@ -899,16 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/security/ConnectorConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="36" column="26" lean-forward="false" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -923,20 +915,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/security/AuthenticationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/security/AuthenticationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="24" column="58" lean-forward="false" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/modals/page.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-413">
@@ -948,21 +926,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
           <caret line="119" column="20" lean-forward="true" selection-start-line="119" selection-start-column="7" selection-end-line="119" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/api/APIService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-472">
-          <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-          <folding>
-            <element signature="method#APIService#0;class#APIService#0" expanded="false" />
-            <element signature="docComment;method#authorize#0;class#APIService#0" expanded="false" />
-            <element signature="method#authorize#0;class#APIService#0" expanded="false" />
-            <element signature="e#3661#3703#0" expanded="false" />
-            <element signature="method#scheduleDownlink#0;class#APIService#0" expanded="false" />
-            <element signature="class#DOWNLINK_TYPE#0;class#APIService#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -987,32 +950,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/controllers/APIController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="234" column="11" lean-forward="false" selection-start-line="234" selection-start-column="11" selection-end-line="234" selection-end-column="11" />
-          <folding>
-            <element signature="method#APIController#0;class#APIController#0" expanded="false" />
-            <element signature="method#authorize#0;class#APIController#0" expanded="false" />
-            <element signature="method#request#0;class#APIController#0" expanded="false" />
-            <element signature="method#getAllData#0;class#APIController#0" expanded="false" />
-            <element signature="method#getLatestData#0;class#APIController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="110" column="19" lean-forward="false" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/user/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1030,29 +971,6 @@
         <state relative-caret-position="136">
           <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/views/authPage.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="50" column="89" lean-forward="false" selection-start-line="50" selection-start-column="89" selection-end-line="50" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/views/statisticsPage.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="154" column="12" lean-forward="false" selection-start-line="144" selection-start-column="8" selection-end-line="154" selection-end-column="12" />
-          <folding>
-            <element signature="e#1061#1151#0" expanded="false" />
-            <element signature="e#1165#1237#0" expanded="false" />
-            <element signature="e#1253#1283#0" expanded="false" />
-            <element signature="e#1318#1910#0" expanded="false" />
-            <element signature="e#1942#3239#0" expanded="false" />
-            <element signature="e#4411#5228#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1111,9 +1029,9 @@
         <state relative-caret-position="457">
           <caret line="59" column="43" lean-forward="false" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1552#1553#0" expanded="true" />
-            <element signature="e#1602#1603#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1552#1553#0" expanded="false" />
+            <element signature="e#1602#1603#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1123,16 +1041,6 @@
         <state relative-caret-position="233">
           <caret line="59" column="32" lean-forward="false" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/location/LocationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="81" column="46" lean-forward="false" selection-start-line="81" selection-start-column="46" selection-end-line="81" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1162,20 +1070,9 @@
         <state relative-caret-position="457">
           <caret line="71" column="54" lean-forward="false" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
           <folding>
-            <element signature="e#100#127#0" expanded="true" />
+            <element signature="e#100#127#0" expanded="false" />
             <element signature="e#3723#4086#0" expanded="false" />
             <element signature="e#3803#3868#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/measurement/Measurement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Measurement#1;class#Measurement#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1227,26 +1124,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/user/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-          <folding>
-            <element signature="method#setToken#0;class#User#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/user/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="method#isAuthorized#0;class#UserService#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/solar/src/main/classes/web/WebController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1255,63 +1132,521 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/user/UserController.java">
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/location/LocationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="40" column="81" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="40" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/measurement/MeasurementDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="23" column="79" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="79" />
+        <state relative-caret-position="-47">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding>
-            <marker date="1529835603361" expanded="true" signature="430:582" ph="SELECT s.id,... solar" />
-            <marker date="1529835603361" expanded="true" signature="745:796" ph="SELECT AVG(s... solar" />
-            <marker date="1529835603361" expanded="true" signature="745:818" ph="SELECT AVG(s... solar" />
-            <marker date="1529835603361" expanded="true" signature="932:1004" ph="SELECT * FRO... solar" />
-            <marker date="1529835603361" expanded="true" signature="1110:1150" ph="SELECT * FRO... solar" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/measurement/MeasurementService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-          <folding>
-            <element signature="method#getAllMeasurements#0;class#MeasurementService#0" expanded="false" />
-            <element signature="method#getAverage#0;class#MeasurementService#0" expanded="false" />
-            <element signature="e#2392#2467#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/measurement/MeasurementController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="152" column="0" lean-forward="false" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
-          <folding>
-            <element signature="e#2892#2905#0" expanded="true" />
-            <element signature="e#4746#4759#0" expanded="true" />
-            <element signature="e#5842#5915#0" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/solar/src/main/classes/device/DeviceController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="43" column="44" lean-forward="true" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+        <state relative-caret-position="575">
+          <caret line="46" column="13" lean-forward="false" selection-start-line="37" selection-start-column="11" selection-end-line="46" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#changePosition#0;class#DeviceController#0" expanded="false" />
+            <element signature="method#changeState#0;class#DeviceController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/security/SecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/main.classes">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>main.classes</OriginalElement>
+          <nodes>
+            <node x="572.5" y="198.0">main.classes.device.DeviceDao</node>
+            <node x="847.2377630121817" y="347.0">main.classes.location.LocationService</node>
+            <node x="696.5" y="198.0">main.classes.token.tokenGenerator</node>
+            <node x="6.75" y="0.0">main.classes.measurement.Measurement</node>
+            <node x="560.2139534883722" y="436.0">main.classes.security.AuthenticationService</node>
+            <node x="1115.0416666666665" y="79.0">main.classes.location.Location</node>
+            <node x="23.446096345515116" y="347.0">main.classes.measurement.MeasurementService</node>
+            <node x="258.8210963455151" y="79.0">main.classes.measurement.MeasurementDao</node>
+            <node x="588.2139534883722" y="347.0">main.classes.user.UserService</node>
+            <node x="552.2139534883722" y="515.0">main.classes.security.AuthenticationController</node>
+            <node x="0.0" y="589.0">main.classes.Main</node>
+            <node x="928.575442967885" y="198.0">main.classes.api.APIService</node>
+            <node x="0.0" y="436.0">main.classes.measurement.MeasurementController</node>
+            <node x="944.5754429678849" y="79.0">main.classes.api.APIService.DOWNLINK_TYPE</node>
+            <node x="306.49210963455164" y="436.0">main.classes.device.DeviceController</node>
+            <node x="448.5" y="198.0">main.classes.user.UserDao</node>
+            <node x="1058.1587763012185" y="198.0">main.classes.location.LocationDao</node>
+            <node x="802.4877630121817" y="436.0">main.classes.location.LocationController</node>
+            <node x="969.4877630121817" y="436.0">main.classes.user.UserController</node>
+            <node x="260.1587763012184" y="347.0">main.classes.controllers.APIController</node>
+            <node x="751.6889534883721" y="79.0">main.classes.device.Device</node>
+            <node x="286.5" y="198.0">main.classes.controllers.APIController.DOWNLINK_TYPE</node>
+            <node x="167.82109634551512" y="79.0">main.classes.user.User</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="main.classes.location.LocationService" target="main.classes.location.LocationDao">
+              <point x="10.916666666666686" y="-14.5" />
+              <point x="923.6544296788484" y="307.0" />
+              <point x="1115.6587763012185" y="307.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="main.classes.location.LocationService" target="main.classes.user.UserDao">
+              <point x="-54.583333333333314" y="-14.5" />
+              <point x="858.1544296788484" y="267.0" />
+              <point x="529.0" y="267.0" />
+              <point x="34.5" y="14.5" />
+            </edge>
+            <edge source="main.classes.controllers.APIController" target="main.classes.measurement.MeasurementDao">
+              <point x="-17.0" y="-14.5" />
+              <point x="302.6587763012184" y="277.0" />
+              <point x="276.0" y="277.0" />
+              <point x="276.0" y="178.0" />
+              <point x="329.8210963455151" y="178.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="main.classes.controllers.APIController.DOWNLINK_TYPE" target="main.classes.controllers.APIController">
+              <point x="0.0" y="14.5" />
+              <point x="357.5" y="297.0" />
+              <point x="336.6587763012184" y="297.0" />
+              <point x="17.0" y="-14.5" />
+            </edge>
+            <edge source="main.classes.location.LocationDao" target="main.classes.location.Location">
+              <point x="0.0" y="-14.5" />
+              <point x="1115.6587763012185" y="178.0" />
+              <point x="1130.7083333333333" y="178.0" />
+              <point x="-31.33333333333333" y="14.5" />
+            </edge>
+            <edge source="main.classes.location.LocationController" target="main.classes.location.LocationService">
+              <point x="36.75" y="-14.5" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="main.classes.user.UserService" target="main.classes.device.DeviceDao">
+              <point x="0.0" y="-14.5" />
+              <point x="642.2139534883722" y="287.0" />
+              <point x="624.5" y="287.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="main.classes.controllers.APIController" target="main.classes.device.DeviceDao">
+              <point x="51.0" y="-14.5" />
+              <point x="370.6587763012184" y="327.0" />
+              <point x="589.8333333333334" y="327.0" />
+              <point x="-34.66666666666663" y="14.5" />
+            </edge>
+            <edge source="main.classes.measurement.MeasurementService" target="main.classes.user.User">
+              <point x="-19.75" y="-14.5" />
+              <point x="82.69609634551512" y="327.0" />
+              <point x="81.5" y="327.0" />
+              <point x="81.5" y="158.0" />
+              <point x="185.57109634551512" y="158.0" />
+              <point x="-17.75" y="14.5" />
+            </edge>
+            <edge source="main.classes.user.UserService" target="main.classes.api.APIService">
+              <point x="46.285714285714334" y="-14.5" />
+              <point x="688.4996677740866" y="297.0" />
+              <point x="954.325442967885" y="297.0" />
+              <point x="-25.75" y="14.5" />
+            </edge>
+            <edge source="main.classes.measurement.MeasurementController" target="main.classes.user.UserService">
+              <point x="69.59999999999991" y="-14.5" />
+              <point x="156.5999999999999" y="406.0" />
+              <point x="599.0139534883722" y="406.0" />
+              <point x="-43.200000000000045" y="14.5" />
+            </edge>
+            <edge source="main.classes.device.DeviceController" target="main.classes.user.UserService">
+              <point x="51.0" y="-14.5" />
+              <point x="425.49210963455164" y="416.0" />
+              <point x="620.6139534883722" y="416.0" />
+              <point x="-21.600000000000023" y="14.5" />
+            </edge>
+            <edge source="main.classes.controllers.APIController" target="main.classes.user.User">
+              <point x="-34.0" y="-14.5" />
+              <point x="285.6587763012184" y="287.0" />
+              <point x="197.4044296788485" y="287.0" />
+              <point x="-5.916666666666629" y="14.5" />
+            </edge>
+            <edge source="main.classes.measurement.MeasurementController" target="main.classes.measurement.MeasurementService">
+              <point x="0.0" y="-14.5" />
+              <point x="87.0" y="416.0" />
+              <point x="102.44609634551512" y="416.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="main.classes.measurement.MeasurementController" target="main.classes.measurement.Measurement">
+              <point x="-69.60000000000002" y="-14.5" />
+              <point x="17.399999999999977" y="416.0" />
+              <point x="1.946096345515116" y="416.0" />
+              <point x="1.946096345515116" y="59.0" />
+              <point x="21.875" y="59.0" />
+              <point x="-45.375" y="14.5" />
+            </edge>
+            <edge source="main.classes.user.UserService" target="main.classes.device.Device">
+              <point x="30.85714285714289" y="-14.5" />
+              <point x="673.0710963455151" y="287.0" />
+              <point x="837.0" y="287.0" />
+              <point x="837.0" y="178.0" />
+              <point x="793.1889534883721" y="178.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="main.classes.user.UserController" target="main.classes.api.APIService">
+              <point x="31.0" y="-14.5" />
+              <point x="1062.4877630121819" y="297.0" />
+              <point x="1005.825442967885" y="297.0" />
+              <point x="25.75" y="14.5" />
+            </edge>
+            <edge source="main.classes.controllers.APIController" target="main.classes.controllers.APIController.DOWNLINK_TYPE">
+              <point x="0.0" y="-14.5" />
+              <point x="319.6587763012184" y="297.0" />
+              <point x="310.16666666666663" y="297.0" />
+              <point x="-47.33333333333337" y="14.5" />
+            </edge>
+            <edge source="main.classes.location.LocationService" target="main.classes.location.Location">
+              <point x="54.583333333333314" y="-14.5" />
+              <point x="967.3210963455151" y="327.0" />
+              <point x="1194.6587763012185" y="327.0" />
+              <point x="1194.6587763012185" y="178.0" />
+              <point x="1193.375" y="178.0" />
+              <point x="31.33333333333337" y="14.5" />
+            </edge>
+            <edge source="main.classes.user.UserController" target="main.classes.user.UserService">
+              <point x="-31.0" y="-14.5" />
+              <point x="1000.4877630121817" y="406.0" />
+              <point x="685.4139534883723" y="406.0" />
+              <point x="43.200000000000045" y="14.5" />
+            </edge>
+            <edge source="main.classes.user.UserService" target="main.classes.user.UserDao">
+              <point x="-46.28571428571422" y="-14.5" />
+              <point x="595.928239202658" y="317.0" />
+              <point x="506.0" y="317.0" />
+              <point x="11.5" y="14.5" />
+            </edge>
+            <edge source="main.classes.controllers.APIController" target="main.classes.measurement.Measurement">
+              <point x="-51.0" y="-14.5" />
+              <point x="268.6587763012184" y="297.0" />
+              <point x="157.32109634551512" y="297.0" />
+              <point x="157.32109634551512" y="59.0" />
+              <point x="82.375" y="59.0" />
+              <point x="15.125" y="14.5" />
+            </edge>
+            <edge source="main.classes.measurement.MeasurementDao" target="main.classes.measurement.Measurement">
+              <point x="0.0" y="-14.5" />
+              <point x="329.8210963455151" y="49.0" />
+              <point x="112.625" y="49.0" />
+              <point x="45.375" y="14.5" />
+            </edge>
+            <edge source="main.classes.controllers.APIController" target="main.classes.user.UserDao">
+              <point x="34.0" y="-14.5" />
+              <point x="353.6587763012184" y="317.0" />
+              <point x="483.0" y="317.0" />
+              <point x="-11.5" y="14.5" />
+            </edge>
+            <edge source="main.classes.measurement.MeasurementService" target="main.classes.user.UserDao">
+              <point x="59.25" y="-14.5" />
+              <point x="161.69609634551512" y="307.0" />
+              <point x="460.0" y="307.0" />
+              <point x="-34.5" y="14.5" />
+            </edge>
+            <edge source="main.classes.user.UserService" target="main.classes.user.User">
+              <point x="-30.85714285714289" y="-14.5" />
+              <point x="611.3568106312293" y="307.0" />
+              <point x="551.0" y="307.0" />
+              <point x="551.0" y="148.0" />
+              <point x="221.07109634551512" y="148.0" />
+              <point x="17.75" y="14.5" />
+            </edge>
+            <edge source="main.classes.api.APIService" target="main.classes.api.APIService.DOWNLINK_TYPE">
+              <point x="0.0" y="-14.5" />
+              <point x="-35.5" y="14.5" />
+            </edge>
+            <edge source="main.classes.measurement.MeasurementService" target="main.classes.measurement.Measurement">
+              <point x="-59.25" y="-14.5" />
+              <point x="43.196096345515116" y="327.0" />
+              <point x="46.625" y="327.0" />
+              <point x="46.625" y="59.0" />
+              <point x="52.125" y="59.0" />
+              <point x="-15.125" y="14.5" />
+            </edge>
+            <edge source="main.classes.location.LocationService" target="main.classes.device.DeviceDao">
+              <point x="-32.749999999999986" y="-14.5" />
+              <point x="879.9877630121817" y="257.0" />
+              <point x="659.1666666666666" y="257.0" />
+              <point x="34.66666666666663" y="14.5" />
+            </edge>
+            <edge source="main.classes.api.APIService" target="main.classes.measurement.MeasurementDao">
+              <point x="-34.333333333333314" y="-14.5" />
+              <point x="945.7421096345516" y="128.0" />
+              <point x="377.1544296788485" y="128.0" />
+              <point x="47.33333333333337" y="14.5" />
+            </edge>
+            <edge source="main.classes.device.DeviceController" target="main.classes.controllers.APIController">
+              <point x="-51.0" y="-14.5" />
+              <point x="323.49210963455164" y="396.0" />
+              <point x="319.6587763012184" y="396.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="main.classes.api.APIService.DOWNLINK_TYPE" target="main.classes.api.APIService">
+              <point x="35.5" y="14.5" />
+              <point x="1051.075442967885" y="178.0" />
+              <point x="1014.4087763012183" y="178.0" />
+              <point x="34.333333333333314" y="-14.5" />
+            </edge>
+            <edge source="main.classes.device.DeviceController" target="main.classes.controllers.APIController.DOWNLINK_TYPE">
+              <point x="17.0" y="-14.5" />
+              <point x="391.49210963455164" y="396.0" />
+              <point x="389.6587763012184" y="396.0" />
+              <point x="389.6587763012184" y="297.0" />
+              <point x="404.83333333333337" y="297.0" />
+              <point x="47.33333333333337" y="14.5" />
+            </edge>
+            <edge source="main.classes.user.UserDao" target="main.classes.user.User">
+              <point x="0.0" y="-14.5" />
+              <point x="494.5" y="158.0" />
+              <point x="209.23776301218174" y="158.0" />
+              <point x="5.916666666666629" y="14.5" />
+            </edge>
+            <edge source="main.classes.security.AuthenticationService" target="main.classes.user.UserService">
+              <point x="0.0" y="-14.5" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="main.classes.measurement.MeasurementController" target="main.classes.user.User">
+              <point x="-34.799999999999955" y="-14.5" />
+              <point x="52.200000000000045" y="406.0" />
+              <point x="12.946096345515116" y="406.0" />
+              <point x="12.946096345515116" y="148.0" />
+              <point x="173.73776301218174" y="148.0" />
+              <point x="-29.58333333333337" y="14.5" />
+            </edge>
+            <edge source="main.classes.location.LocationService" target="main.classes.device.Device">
+              <point x="-10.916666666666629" y="-14.5" />
+              <point x="901.8210963455151" y="247.0" />
+              <point x="878.3333333333334" y="247.0" />
+              <point x="878.3333333333334" y="168.0" />
+              <point x="820.8556201550388" y="168.0" />
+              <point x="27.666666666666686" y="14.5" />
+            </edge>
+            <edge source="main.classes.device.DeviceDao" target="main.classes.device.Device">
+              <point x="0.0" y="-14.5" />
+              <point x="624.5" y="178.0" />
+              <point x="765.5222868217054" y="178.0" />
+              <point x="-27.666666666666686" y="14.5" />
+            </edge>
+            <edge source="main.classes.measurement.MeasurementService" target="main.classes.measurement.MeasurementDao">
+              <point x="19.75" y="-14.5" />
+              <point x="122.19609634551512" y="327.0" />
+              <point x="92.5" y="327.0" />
+              <point x="92.5" y="168.0" />
+              <point x="282.48776301218174" y="168.0" />
+              <point x="-47.33333333333337" y="14.5" />
+            </edge>
+            <edge source="main.classes.user.UserService" target="main.classes.token.tokenGenerator">
+              <point x="15.428571428571445" y="-14.5" />
+              <point x="657.6425249169437" y="277.0" />
+              <point x="761.5" y="277.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="main.classes.measurement.MeasurementController" target="main.classes.controllers.APIController">
+              <point x="34.799999999999955" y="-14.5" />
+              <point x="121.79999999999995" y="396.0" />
+              <point x="279.99210963455175" y="396.0" />
+              <point x="-39.66666666666663" y="14.5" />
+            </edge>
+            <edge source="main.classes.security.AuthenticationController" target="main.classes.security.AuthenticationService">
+              <point x="0.0" y="-14.5" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="main.classes.location.LocationController" target="main.classes.user.UserService">
+              <point x="-36.75" y="-14.5" />
+              <point x="839.2377630121817" y="416.0" />
+              <point x="663.8139534883722" y="416.0" />
+              <point x="21.600000000000023" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-100.0" y="205.0" />
+          <SelectedNodes>
+            <node>main.classes.user.User</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>Project Files</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/security/AuthenticationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding>
+            <element signature="e#420#421#0" expanded="false" />
+            <element signature="e#465#466#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/security/AuthenticationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="24" column="58" lean-forward="false" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/security/ConnectorConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="36" column="26" lean-forward="false" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/measurement/MeasurementService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="28" column="73" lean-forward="false" selection-start-line="28" selection-start-column="73" selection-end-line="28" selection-end-column="73" />
+          <folding>
+            <element signature="method#getAverage#0;class#MeasurementService#0" expanded="false" />
+            <element signature="e#2422#2497#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/user/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+          <folding>
+            <element signature="method#setToken#0;class#User#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/measurement/MeasurementController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="47" column="35" lean-forward="true" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
+          <folding>
+            <element signature="e#2918#2931#0" expanded="true" />
+            <element signature="e#4964#4977#0" expanded="true" />
+            <element signature="e#6060#6133#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/views/authPage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="114" column="9" lean-forward="true" selection-start-line="114" selection-start-column="9" selection-end-line="114" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/user/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1047">
+          <caret line="112" column="5" lean-forward="true" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/user/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="57" column="75" lean-forward="false" selection-start-line="57" selection-start-column="75" selection-end-line="57" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/97504807/fe98e7d7-d128-4bb5-b8d2-da6cfe615428/solar.user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/api/APIService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/measurement/MeasurementDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="56" lean-forward="false" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
+          <folding>
+            <marker date="1530007225642" expanded="true" signature="432:590" ph="SELECT s.id,... solar" />
+            <marker date="1530007225642" expanded="true" signature="757:808" ph="SELECT AVG(s... solar" />
+            <marker date="1530007225642" expanded="true" signature="757:826" ph="SELECT AVG(s... solar" />
+            <marker date="1530007225642" expanded="true" signature="757:834" ph="SELECT AVG(s... solar" />
+            <marker date="1530007225642" expanded="true" signature="952:1028" ph="SELECT * FRO... solar" />
+            <marker date="1530007225642" expanded="true" signature="1138:1178" ph="SELECT * FRO... solar" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/user/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="61" lean-forward="false" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#597#664#0" expanded="false" />
-            <element signature="e#1842#1913#0" expanded="false" />
-            <element signature="method#changePosition#0;class#DeviceController#0" expanded="false" />
-            <element signature="e#3103#3171#0" expanded="false" />
-            <element signature="method#changeState#0;class#DeviceController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/measurement/Measurement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="36" column="36" lean-forward="false" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+          <folding>
+            <element signature="e#904#905#0" expanded="true" />
+            <element signature="e#957#958#0" expanded="true" />
+            <element signature="e#1001#1002#0" expanded="true" />
+            <element signature="method#Measurement#1;class#Measurement#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar/src/main/classes/controllers/APIController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="228" column="96" lean-forward="true" selection-start-line="228" selection-start-column="96" selection-end-line="228" selection-end-column="96" />
+          <folding>
+            <element signature="e#2356#2357#0" expanded="true" />
+            <element signature="e#2403#2404#0" expanded="true" />
+            <element signature="method#request#0;class#APIController#0" expanded="false" />
+            <element signature="method#getAllData#0;class#APIController#0" expanded="false" />
+            <element signature="method#scheduleDownlink#0;class#APIController#0" expanded="false" />
+            <element signature="class#DOWNLINK_TYPE#0;class#APIController#0" expanded="false" />
+            <element signature="e#10964#10965#0" expanded="true" />
+            <element signature="e#11002#11003#0" expanded="true" />
+            <element signature="e#11035#11036#0" expanded="true" />
+            <element signature="e#11071#11072#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/views/statisticsPage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="114" column="23" lean-forward="true" selection-start-line="114" selection-start-column="23" selection-end-line="114" selection-end-column="23" />
+          <folding>
+            <element signature="e#1061#1151#0" expanded="false" />
+            <element signature="e#1165#1237#0" expanded="false" />
+            <element signature="e#1253#1283#0" expanded="false" />
+            <element signature="e#1318#1910#0" expanded="false" />
+            <element signature="e#4418#5235#0" expanded="false" />
           </folding>
         </state>
       </provider>

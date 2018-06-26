@@ -51,8 +51,8 @@ public class MeasurementController {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(obj.toString());
         }
         User user = us.currentUser(token);
-        obj.addProperty("average",ms.getAverage(user.getId()));
-        obj.addProperty("last",ms.getLast(user.getId()).getPower());
+        obj.addProperty("average",ms.getAverage(user.getCurrentDeviceId()));
+        obj.addProperty("last",ms.getLast(user.getCurrentDeviceId()).getPower());
         return ResponseEntity.status(HttpStatus.OK).body(obj.toString());
     }
 
@@ -119,6 +119,12 @@ public class MeasurementController {
     @CrossOrigin
     public ResponseEntity getDateData(@RequestHeader(value="Authorization") String token, @PathVariable String date) throws ParseException {
         JsonObject obj=new JsonObject();
+        if(date == null || date.isEmpty())
+        {
+            obj.addProperty("error", "empty date");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(obj);
+        }
+
         if(!us.isAuthorized(token))
         {
             obj.addProperty("error","Token not authorized");

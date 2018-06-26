@@ -33,14 +33,14 @@ public class APIController {
 
     private static final int DEFAULT_UPDATERATE = 1;
     private static final TimeUnit DEFAULT_UPDATERATE_TIMEUNIT = TimeUnit.MINUTES;
-
-    @Autowired
+    private ScheduledExecutorService executor;
+    final
     MeasurementDao dao;
 
-    @Autowired
+    final
     UserDao userDao;
 
-    @Autowired
+    final
     DeviceDao deviceDao;
 
 
@@ -49,47 +49,54 @@ public class APIController {
     private String processId;
     private Boolean authorized = false;
 
-    private Integer updateRate = 15; // time period to check for updates
+    private Integer updateRate = 1; // time period to check for updates
     private TimeUnit timeUnit = TimeUnit.MINUTES;
     private Pusher pusher;
-
-    Runnable dataUpdate = new Runnable() {
-        public void run() {
-
-            getLatestData();
-
-        }
-    };
 
     public Boolean getAuthorized() {
         return authorized;
     }
 
-    APIController() {
+    @Autowired
+    APIController(MeasurementDao dao, UserDao userDao, DeviceDao deviceDao) {
 
-        ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
+
+
+
+       executor = Executors.newScheduledThreadPool(1);
         System.out.println("Created thread pool...");
-
 
         pusher = new Pusher("500372", "43efaf697390e4298a8f", "c5f63fc8d80b1ae2c138");
         pusher.setCluster("eu");
         pusher.setEncrypted(true);
 
-        executor.scheduleAtFixedRate(dataUpdate, 0, DEFAULT_UPDATERATE/*(updateRate==15?1:15-updateRate)*/, DEFAULT_UPDATERATE_TIMEUNIT);
 
-        System.out.println("Scheduled task at: " + DEFAULT_UPDATERATE + " " + DEFAULT_UPDATERATE_TIMEUNIT);
-
-
+        this.dao = dao;
+        this.userDao = userDao;
+        this.deviceDao = deviceDao;
     }
 
-    boolean authorize(String appName, String accessKey, String devName) {
-
+    public boolean authorize(String appName, String accessKey, String devName) {
 
         apiUrl = new StringBuilder("https://");
         apiUrl.append(appName);
         apiUrl.append(".data.thethingsnetwork.org/api/v2");
 
+
+        Runnable dataUpdate = new Runnable() {
+            public void run() {
+                getLatestData();
+            }
+        };
+        executor.scheduleAtFixedRate(dataUpdate, 0, DEFAULT_UPDATERATE/*(updateRate==15?1:15-updateRate)*/, DEFAULT_UPDATERATE_TIMEUNIT);
+
+        System.out.println("Scheduled task at: " + DEFAULT_UPDATERATE + " " + DEFAULT_UPDATERATE_TIMEUNIT);
+
+
+        //Building TTN Api URL
+
         String deviceUrl = apiUrl.toString() + "/devices";
+
         URL url = null;
         try {
             url = new URL(deviceUrl);
@@ -98,13 +105,21 @@ public class APIController {
             con.setRequestProperty("Content-Type", "application/json");
             con.setRequestProperty("Authorization", "key " + accessKey);
             int status = con.getResponseCode();
+
             if (status == 200) {
-                authorized = true;
-                getAllData();
-                getLatestData();
-                return true;
+//                getAllData();
+//                getLatestData();
+                BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+                String inputLine;
+                StringBuilder content = new StringBuilder();
+                while ((inputLine = in.readLine()) != null) {
+                    content.append(inputLine);
+                    content.append(System.getProperty("line.separator"));
+                }
+                // If TTN responds with 200 and the device name provided exists -> AUTHORIZED
+                return (content.indexOf(devName) != 0);
             }
-            return false;
+
         } catch (MalformedURLException e) {
             System.out.println(e.toString());
             return false;
@@ -112,8 +127,8 @@ public class APIController {
         } catch (IOException urlError) {
             System.out.println("Could not open connection" + urlError.toString());
             return false;
-
         }
+        return false;
     }
 
     private String request(String URL, String appKey) {
@@ -167,14 +182,14 @@ public class APIController {
         if (timeUnit == null)
             timeUnit = DEFAULT_UPDATERATE_TIMEUNIT;
 
-
+        System.out.println("Inside getlastdata");
         //foreach authorized user
         for (User u : userDao.findAll()) {
 
             if (u.isAuthorized()) {
 
                 String dataUrl = apiUrl.toString() + "/query/" + deviceDao.findByUserId(u.getId()).getName() + "?last=" + updateRate;
-
+                //System.out.println("Fetching data from URL: " + dataUrl);
                 if (timeUnit == TimeUnit.MINUTES)
                     dataUrl += "m";
                 else
@@ -211,6 +226,7 @@ public class APIController {
 
                                     //if not insert
                                     m.setDeviceId(u.getId());
+                                    m.setLocationId(deviceDao.findById(u.getCurrentDeviceId()).getLocationId());
                                     dao.save(m);
                                     pusher.trigger("chart" + u.getToken(), "chartData", new ArrayList<Measurement>().add(dao.findById(m.getId())));
                                 }
@@ -229,7 +245,6 @@ public class APIController {
 
 
     }
-
 
     public Integer scheduleDownlink(String token, String processId, DOWNLINK_TYPE type, String value) {
 //        {

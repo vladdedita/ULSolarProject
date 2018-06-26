@@ -64,7 +64,7 @@
         for (let i = 0; i < data.length; i++) {
 
           {
-            let value = (data[i].power/10000/*to W*/ * 1/*square meter*/ /0.014 )* 60 ;
+            let value = (data[i].power / 10000/*square meter*/ /0.014 )* 60 ;
             if(value > 0.0)
             {
               this.msData.push(value.toFixed(3));
@@ -78,18 +78,18 @@
               this.pieData[1]++;
 
           }
-          console.log(data[i].direction)
-        }
-
+      }
+      console.log("Teoretic e bine");
+        let self=this;
         this.chartData = {
-          labels: this.msLabels,
+          labels: self.msLabels,
           datasets: [
             {
               label: 'Solar Insolation (Wh / square meter)',
               // backgroundColor: '#dace69',
               borderColor: 'white',
               pointBackgroundColor: 'red',
-              data: this.msData
+              data: self.msData
             }
           ]
         }
@@ -101,7 +101,7 @@
               backgroundColor: ['orange','red'],
               label: 'Solar Insolation (Wh / square meter)',
               // backgroundColor: '#dace69',
-              data: this.pieData
+              data: self.pieData
             },
           ]
         }

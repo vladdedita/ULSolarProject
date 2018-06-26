@@ -27,8 +27,19 @@ public class Measurement {
     @Column(name = "deviceId")
     private Integer deviceId;
 
+    @Column(name = "locationId")
+    private Integer locationId;
+
     protected Measurement() {
 
+    }
+
+    public Integer getLocationId() {
+        return locationId;
+    }
+
+    public void setLocationId(Integer locationId) {
+        this.locationId = locationId;
     }
 
     public Integer getDirection() {

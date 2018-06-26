@@ -34,7 +34,17 @@ public class DeviceController {
             JsonNode node = objectMapper.readTree(str);
             String time = objectMapper.convertValue(node.get("time"), String.class);
             String processId = objectMapper.convertValue(node.get("processId"), String.class);
-
+            JsonObject obj = new JsonObject();
+            if(time == null || time.isEmpty())
+            {
+                obj.addProperty("error", "empty time");
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(obj);
+            }
+            if(processId == null || processId.isEmpty())
+            {
+                obj.addProperty("error", "empty processId");
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(obj);
+            }
 
             System.out.println("Trying to schedule changetime downlink: " + time + " - " + processId);
             System.out.println(ttn.scheduleDownlink(token, processId, APIController.DOWNLINK_TYPE.INTEROGATION_TIME, time));
@@ -60,6 +70,17 @@ public class DeviceController {
             JsonNode node = objectMapper.readTree(str);
             String position = objectMapper.convertValue(node.get("position"), String.class);
             String processId = objectMapper.convertValue(node.get("processId"), String.class);
+            JsonObject obj = new JsonObject();
+            if(position == null || position.isEmpty())
+            {
+                obj.addProperty("error", "empty position");
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(obj);
+            }
+            if(processId == null || processId.isEmpty())
+            {
+                obj.addProperty("error", "empty processId");
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(obj);
+            }
             System.out.println("Trying to schedule change position downlink: " + position + " - " + processId);
             System.out.println(ttn.scheduleDownlink(token, processId, APIController.DOWNLINK_TYPE.POSITION, position));
             System.out.println("Done");
@@ -85,6 +106,17 @@ public class DeviceController {
             JsonNode node = objectMapper.readTree(str);
             String state = objectMapper.convertValue(node.get("state"), String.class);
             String processId = objectMapper.convertValue(node.get("processId"), String.class);
+            JsonObject obj = new JsonObject();
+            if(state == null || state.isEmpty())
+            {
+                obj.addProperty("error", "empty state");
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(obj);
+            }
+            if(processId == null || processId.isEmpty())
+            {
+                obj.addProperty("error", "empty processId");
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(obj);
+            }
             System.out.println("Trying to schedule change state downlink: " + state + " - " + processId);
             System.out.println(ttn.scheduleDownlink(token, processId, APIController.DOWNLINK_TYPE.STATE, state));
             System.out.println("Done");

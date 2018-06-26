@@ -26,7 +26,7 @@ public class MeasurementService {
 
         List<Measurement> measurements = new ArrayList<Measurement>();
         User user = userDao.findByToken(token);
-        for (Measurement m : dao.findByUserId(user.getId()))
+        for (Measurement m : dao.findByDeviceId(user.getCurrentDeviceId()))
             measurements.add(m);
         return measurements;
     }
@@ -65,7 +65,7 @@ public class MeasurementService {
         DateTimeFormatter format = DateTimeFormat.forPattern("yyyy-MM-dd");
         DateTime d1 = format.parseDateTime(date);
         User user = userDao.findByToken(token);
-        for (Measurement m : dao.findByUserId(user.getId())){
+        for (Measurement m : dao.findByDeviceId(user.getCurrentDeviceId())){
             if(date.equals(m.getTime().toString().split(" ")[0]))
             {
                 measurements.add(m);
