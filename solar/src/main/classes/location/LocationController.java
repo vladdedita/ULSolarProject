@@ -19,12 +19,17 @@ import java.io.IOException;
 @RestController
 public class LocationController {
 
-    @Autowired
+    final
     UserService us;
 
-    @Autowired
+    final
     LocationService ls;
 
+    @Autowired
+    public LocationController(UserService us, LocationService ls) {
+        this.us = us;
+        this.ls = ls;
+    }
 
 
     @RequestMapping(value = "/setlocation")

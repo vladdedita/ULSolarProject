@@ -11,14 +11,21 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserService {
 
-    @Autowired
+    final
     UserDao userDao;
 
-    @Autowired
+    final
     DeviceDao devDao;
 
-    @Autowired
+    final
     APIController ttn;
+
+    @Autowired
+    public UserService(UserDao userDao, DeviceDao devDao, APIController ttn) {
+        this.userDao = userDao;
+        this.devDao = devDao;
+        this.ttn = ttn;
+    }
 
     /**
      * Method to add User to database

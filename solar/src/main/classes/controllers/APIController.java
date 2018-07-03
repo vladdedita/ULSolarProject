@@ -21,7 +21,9 @@ import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -60,17 +62,11 @@ public class APIController {
     @Autowired
     APIController(MeasurementDao dao, UserDao userDao, DeviceDao deviceDao) {
 
-
-
-
        executor = Executors.newScheduledThreadPool(1);
-        System.out.println("Created thread pool...");
-
+        System.out.println("Created thread poolaaaa...");
         pusher = new Pusher("500372", "43efaf697390e4298a8f", "c5f63fc8d80b1ae2c138");
         pusher.setCluster("eu");
         pusher.setEncrypted(true);
-
-
         this.dao = dao;
         this.userDao = userDao;
         this.deviceDao = deviceDao;
@@ -209,7 +205,6 @@ public class APIController {
                 if (jsonData != null) {
                     data = gson.fromJson(jsonData, Measurement[].class);
                     System.out.print("Updating database...");
-
                     for (Measurement m : data) {
                         if (m.getPower() != null && m.getTime() != null) {
                             try {
@@ -228,7 +223,13 @@ public class APIController {
                                     m.setDeviceId(u.getId());
                                     m.setLocationId(deviceDao.findById(u.getCurrentDeviceId()).getLocationId());
                                     dao.save(m);
-                                    pusher.trigger("chart" + u.getToken(), "chartData", new ArrayList<Measurement>().add(dao.findById(m.getId())));
+                                    List<Measurement> toSendBuffer = new ArrayList<Measurement>();
+                                    toSendBuffer.add(m);
+                                    m=dao.findById(m.getId());
+
+                                    pusher.trigger("chart" + u.getToken(), "chartData", gson.toJson(Collections.singletonMap("data", toSendBuffer)));
+                                   // pusher.trigger("chart"+token, "chartData", gson.toJson(Collections.singletonMap("data", toSendBuffer)));
+                                    System.out.println(m.toString());
                                 }
                             } catch (DataIntegrityViolationException ee) {
 

@@ -21,8 +21,6 @@
   import vSelect from 'vue-select'
   import DatePicker from 'vue-md-date-picker'
   Pusher.logToConsole = true;
-
-
   export default {
     name: 'statistics',
     components: {
@@ -47,29 +45,38 @@
           cluster: 'eu'
         });
         let that = this;
-        this.channel = this.pusher.subscribe('chart' + this.$store.getters.getKey);
+        let channelName = 'chart' + this.$store.getters.getKey;
+        this.channel = this.pusher.subscribe(channelName);
+        console.log("Pusher subscribed to: " + channelName);
+
         this.channel.bind('chartData', function (data) {
           //that.incomingChartData(data)
           let theData = JSON.parse(data)
+          console.log("Trying to emit:");
+          console.log(theData.data)
           that.$emit('incoming_chart_data', theData.data)
-          console.log("Was here")
+
         });
 
         this.$on('incoming_chart_data', function (data) {
+          console.log("Emitted..calling function:");
+          console.log("Emit:"+data)
           this.incomingChartData(data)
         })
       },
       incomingChartData(data) {
         console.log("Updating data...")
+        console.log(data)
+        let self=this;
         for (let i = 0; i < data.length; i++) {
-
           {
-            let value = (data[i].power / 10000/*square meter*/ /0.014 )* 60 ;
-            if(value > 0.0)
-            {
-              this.msData.push(value.toFixed(3));
-              this.msLabels.push(data[i].time);
-            }
+
+            let value = (parseFloat(data[i].power) / 10000/*square meter*/ /0.014 )* 60 ;
+
+              console.log("Data: " + value.toFixed(3) + " - " + data[i].time);
+              self.msData.push(value.toFixed(3));
+              self.msLabels.push(data[i].time);
+
             if(data[i].direction == 0)
             {
               this.pieData[0]++;
@@ -79,8 +86,8 @@
 
           }
       }
-      console.log("Teoretic e bine");
-        let self=this;
+      console.log("Teoretic e bine, vedem ce facem cu chartul");
+
         this.chartData = {
           labels: self.msLabels,
           datasets: [
@@ -93,6 +100,7 @@
             }
           ]
         }
+        console.log("Ar fi trebuit sa isi dea update");
 
        this.pieChartData= {
           labels: ['East','West'],
@@ -107,7 +115,7 @@
         }
 
         console.log("OK")
-        console.log(data);
+
       },
       requestData(){
         this.msLabels=[];

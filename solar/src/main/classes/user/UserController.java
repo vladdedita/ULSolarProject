@@ -15,10 +15,16 @@ import java.io.IOException;
 @RestController
 public class UserController {
 
-    @Autowired
+    final
     APIController ttn;
-    @Autowired
+    final
     UserService us;
+
+    @Autowired
+    public UserController(APIController ttn, UserService us) {
+        this.ttn = ttn;
+        this.us = us;
+    }
 
     @RequestMapping(value = "/auth", method = RequestMethod.POST, produces = {"application/json"})
     @CrossOrigin

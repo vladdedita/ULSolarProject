@@ -56,7 +56,9 @@ public class tokenGenerator {
      * Create session identifiers.
      */
     public tokenGenerator() {
+
         this(21);
+
     }
 
 }

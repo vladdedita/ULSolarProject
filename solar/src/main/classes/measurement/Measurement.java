@@ -88,4 +88,15 @@ public class Measurement {
         this.deviceId = deviceId;
     }
 
+    @Override
+    public String toString() {
+        return "Measurement{" +
+                "id=" + id +
+                ", power='" + power + '\'' +
+                ", time=" + time +
+                ", direction=" + direction +
+                ", deviceId=" + deviceId +
+                ", locationId=" + locationId +
+                '}';
+    }
 }

@@ -12,14 +12,21 @@ import java.util.List;
 public class LocationService {
 
 
-    @Autowired
+    final
     LocationDao dao;
 
-    @Autowired
+    final
     DeviceDao deviceDao;
 
-    @Autowired
+    final
     UserDao userDao;
+
+    @Autowired
+    public LocationService(LocationDao dao, DeviceDao deviceDao, UserDao userDao) {
+        this.dao = dao;
+        this.deviceDao = deviceDao;
+        this.userDao = userDao;
+    }
 
     Boolean addLocation(String token,String lat,String lon, Boolean isPublic){
 

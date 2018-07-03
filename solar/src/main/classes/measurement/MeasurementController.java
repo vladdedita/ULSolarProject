@@ -26,12 +26,16 @@ public class MeasurementController {
     /**
      * Instantiating the service responsible for Measurements
      */
+    private final MeasurementService ms;
+    private final UserService us;
+    private final APIController ttn;
+
     @Autowired
-     private MeasurementService ms;
-    @Autowired
-    private UserService us;
-    @Autowired
-    private APIController ttn;
+    public MeasurementController(MeasurementService ms, UserService us, APIController ttn) {
+        this.ms = ms;
+        this.us = us;
+        this.ttn = ttn;
+    }
 
     /***
      *
@@ -92,7 +96,7 @@ public class MeasurementController {
             if(time == 0)
                 measurementList = ms.getAllMeasurements(token);
             else {
-                measurementList = ms.getMeasurements(token, unit,time);
+                measurementList = ms.getMeasurements(token, unit, time);
             }
             Gson gson = new Gson();
 

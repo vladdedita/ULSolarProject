@@ -17,10 +17,14 @@ import java.util.List;
 public class MeasurementService {
 
 
+    private final MeasurementDao dao;
+    private final UserDao userDao;
+
     @Autowired
-    private MeasurementDao dao;
-    @Autowired
-    private UserDao userDao;
+    public MeasurementService(MeasurementDao dao, UserDao userDao) {
+        this.dao = dao;
+        this.userDao = userDao;
+    }
 
     public List<Measurement> getAllMeasurements(String token) {
 
