@@ -1,6 +1,7 @@
 <template>
   <pageLayout>
     <!--<button @submit.prevent="submitForm" @click="requestData()"></button>-->
+
     <div>
     <v-select  style="float:left;" id="dropdown" label="value" v-model="selected" :options="options" ></v-select>
       <button id="buttonShowCalendar" @click="showCalendar">SHOW CALENDAR</button>
@@ -20,6 +21,8 @@
   import Pusher from 'pusher-js' // import Pusher
   import vSelect from 'vue-select'
   import DatePicker from 'vue-md-date-picker'
+  import VueCarousel from 'vue-carousel';
+
   Pusher.logToConsole = true;
   export default {
     name: 'statistics',

@@ -4,9 +4,11 @@ package main.classes.user;
 import main.classes.controllers.APIController;
 import main.classes.device.Device;
 import main.classes.device.DeviceDao;
-import main.classes.token.tokenGenerator;
+import main.classes.token.TokenGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.util.Date;
 
 @Component
 public class UserService {
@@ -73,7 +75,8 @@ public class UserService {
     public Boolean isAuthorized(String token) {
         if(token != null && !token.isEmpty()) {
             User u = userDao.findByToken(token);
-            if (u != null) {
+            //System.out.println(new Date().getTime()+ "             " +u.getBorn().getTime() + 30000);
+            if (u != null && new Date().getTime() < u.getBorn().getTime() + 3000000) { //30 mins
                 return u.isAuthorized();
             }
         }
@@ -111,7 +114,7 @@ public class UserService {
         if (accessKey != null && !accessKey.isEmpty()) {
             User user = userDao.findByAppKey(accessKey);
             if (user != null) {
-                user.setToken(new tokenGenerator().nextString());
+                user.setToken(new TokenGenerator().nextString());
                 user.setAuthorized();
                 user.setCurrentDeviceId(devDao.findByNameAndUserId(devID,user.getId()).getId());
                 userDao.save(user);

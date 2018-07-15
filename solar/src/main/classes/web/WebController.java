@@ -20,7 +20,6 @@ public class WebController extends WebMvcConfigurerAdapter {
     @RequestMapping("/")
     @CrossOrigin
     public String index() {
-
         return "index.html";
     }
 

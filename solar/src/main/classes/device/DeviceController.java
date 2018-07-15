@@ -15,10 +15,16 @@ import java.io.IOException;
 @RestController
 public class DeviceController {
 
-    APIController ttn;
+    private final APIController ttn;
 
     @Autowired
     UserService us;
+
+    @Autowired
+    public DeviceController(APIController ttn) {
+        this.ttn = ttn;
+    }
+
     @RequestMapping(value = "/changeTime", method = RequestMethod.POST)
     @CrossOrigin
     public ResponseEntity changeTime(@RequestHeader(value="Authorization") String token, @RequestBody String str) {

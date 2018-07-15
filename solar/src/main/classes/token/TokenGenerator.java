@@ -5,7 +5,7 @@ import java.util.Locale;
 import java.util.Objects;
 import java.util.Random;
 
-public class tokenGenerator {
+public class TokenGenerator {
 
     /**
      * Generate a random string.
@@ -30,7 +30,7 @@ public class tokenGenerator {
 
     private final char[] buf;
 
-    public tokenGenerator(int length, Random random, String symbols) {
+    public TokenGenerator(int length, Random random, String symbols) {
         if (length < 1) throw new IllegalArgumentException();
         if (symbols.length() < 2) throw new IllegalArgumentException();
         this.random = Objects.requireNonNull(random);
@@ -41,21 +41,21 @@ public class tokenGenerator {
     /**
      * Create an alphanumeric string generator.
      */
-    public tokenGenerator(int length, Random random) {
+    public TokenGenerator(int length, Random random) {
         this(length, random, alphanum);
     }
 
     /**
-     * Create an alphanumeric strings from a secure generator.
+     * Create an alphanumeric string from a secure generator.
      */
-    public tokenGenerator(int length) {
+    public TokenGenerator(int length) {
         this(length, new SecureRandom());
     }
 
     /**
      * Create session identifiers.
      */
-    public tokenGenerator() {
+    public TokenGenerator() {
 
         this(21);
 

@@ -63,7 +63,7 @@ public class APIController {
     APIController(MeasurementDao dao, UserDao userDao, DeviceDao deviceDao) {
 
        executor = Executors.newScheduledThreadPool(1);
-        System.out.println("Created thread poolaaaa...");
+        System.out.println("Created thread...");
         pusher = new Pusher("500372", "43efaf697390e4298a8f", "c5f63fc8d80b1ae2c138");
         pusher.setCluster("eu");
         pusher.setEncrypted(true);

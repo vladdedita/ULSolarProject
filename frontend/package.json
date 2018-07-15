@@ -21,6 +21,7 @@
     "pusher": "^1.5.1",
     "pusher-js": "^4.2.2",
     "vue": "^2.5.2",
+    "vue-carousel": "^0.9.0",
     "vue-cookies": "^1.5.6",
     "vue-md-date-picker": "^1.0.15",
     "vue-router": "^3.0.1",
